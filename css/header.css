@@ -1,0 +1,162 @@
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 140px;
+    background-color: var(--color-acento-1);
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}
+
+#logotipo {
+    font-family: "Merriweather", serif;
+    color: var(--color-acento-4);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#contenedor-buscar {
+    display: flex;
+    position: relative;
+    width: 90%;
+}
+
+#buscar {
+    width: 100%;
+    height: 2.5em;
+    padding: 0.6em 1em 0.6em 2.5em;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+
+}
+
+#lupa {
+    position: absolute;
+    width: 1.2em;
+    margin-top: 0.4em;
+    margin-left: 0.6em;
+    cursor: pointer;
+}
+
+#navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--fondo-blanco);
+    font-family: "Oswald";
+    font-size: 1.3em;
+}
+
+.hamburger {
+    height: 3em;
+    cursor: pointer;
+    display: none;
+    border: 2px solid var(--fondo-blanco);
+    border-radius: 12px;
+}
+
+.hamburger:hover {
+    background-color: black;
+}
+
+.user {
+    background-color: var(--fondo-gris);
+    height: 4.5em;
+    border-radius: 50%;
+}
+
+.imgUser {
+    height: 4.5em;
+    border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 1600px) {
+
+    header {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+    header {
+        grid-template-columns: 1fr 2fr 3fr;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: auto;
+        padding: 0.5em;
+        row-gap: 0.5em;
+    }
+
+    #contenedor-buscar {
+        width: 60%;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #contenedor-buscar {
+        width: 70%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: auto;
+        padding: 0.5em;
+        row-gap: 0.5em;
+        padding-bottom: 1em;
+    }
+
+    #contenedor-buscar {
+        width: 80%;
+    }
+
+    .link {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    #navegacion {
+        justify-content: space-around;
+    }
+
+}

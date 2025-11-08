@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fondo-blanco);
+}
+
+:root {
+   --color-texto: #142108;
+   --color-acento-1: #243540;
+   --color-acento-2: #1b403c;
+   --color-acento-3: #05a65b;
+   --color-acento-4: #0DFD8D;
+   --color-acento-5: #183f8c;
+   --fondo-blanco: #ffffff;
+   --fondo-gris: #F4F3F3;
+}
