@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi página básica</title>
+  <link rel="stylesheet" href="./css/practica.css">
+  <link rel="stylesheet" href="./css/estilos-general.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+
+
+</head>
+    <body>
+
+  
+    <header>
+        <div id="logo">
+            <h1 id="logotipo">FormAr</h1>
+        </div>
+
+        <div id="buscador">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
+            <img src="./img/search1.png" id="lupa" alt="lupa">
+            </div>
+            
+        </div>
+
+        <div id="navegacion">
+            <img class="hamburger" src="./img/hamburger.png" alt="">
+            <a class="link" href="">Temas</a>
+            <a class="link" href="">Mis Temas</a>
+            <a class="link" href="">Mis Tarjetas</a>
+            <a class="link" href="">Sobre Nosotros</a>
+            <a class="user"  href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+        </div>
+    </header>
+ 
+
+    <main>
+        <section class="card" id="inicio">
+        <a href="home.html"> <h4> Home </a> > <a href="misTarjetas.html"> Tarjeta 1</h4></a>
+        <h3>Geometria </h3>
+    </section>
+      
+        <div class=" repeticion" >
+            <h1> Tipos de ángulos</h1>
+            <div class="centro" id="pregunta">
+                <h2> Cuantos tipos de angulos hay y en que se diferencian?</h2> 
+                <a href="" class="boton" id="mostrarRespuesta">
+                    Mostrar respuesta
+                </a> 
+            </div>
+            <div class=" Respuesta oculto" id="respuesta" >
+           
+                <div class="centro" >
+                    <div class="card">
+                    <h1>4 tipos de ángulos</h1>
+                        <ul>
+                            <li><h2>Agudo: </h2><h3>menos de 90°. Ej: 45°</h3> </li>
+                            <li><h2>Recto:</h2><h3>exactamente 90°. Ej: esquina de un cuadrado</h3></li>
+                            <li><h2> Obtuso:</h2><h3> entre 90° y 180°.Ej: 120°</h3></li>
+                            <li> <h2>Llano:</h2><h3> exactamente 180°. Ej: una línea recta</h3></li>
+                        </ul>
+                    </div>
+            
+                </div>
+                <a href="misTarjetas.html" class="botones noDeco">
+                    <div class="boton verde">
+                        Facil
+                    </div> 
+                    <div class="boton verde">
+                        Bien
+                    </div> 
+                    <div class="boton amarillo">
+                        Dificil
+                    </div> 
+                    <div class="boton rojo">
+                        Muy dificil
+                    </div> 
+
+                </a>
+            </div>
+
+        </div>
+
+
+
+   
+        
+
+
+    </main>
+
+    <footer>
+        <div style="font-size:0.9rem;color:#666">© 2025 — Ejemplo básico</div>
+    </footer>
+
+
+    </body>
+    <script>
+    const boton = document.getElementById('mostrarRespuesta');
+    const pregunta = document.getElementById('pregunta');
+    const respuesta = document.getElementById('respuesta');
+
+    boton.addEventListener('click', (e) => {
+        e.preventDefault(); // evita que el <a> recargue la página
+
+        // Ocultar pregunta
+        pregunta.classList.remove('visible');
+        pregunta.classList.add('oculto');
+
+        // Mostrar respuesta con retardo para que se vea la transición
+        setTimeout(() => {
+        respuesta.classList.remove('oculto');
+        respuesta.classList.add('visible');
+        }, 300);
+    });
+    </script>
+</html>

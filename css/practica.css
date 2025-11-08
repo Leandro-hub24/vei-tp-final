@@ -1,0 +1,90 @@
+body{
+    background-color: #243540;
+    padding-left: 10em;
+    padding-right: 10em;
+    color: antiquewhite;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+.tarjetas{
+    background-color: #1B403C;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 16px;                             
+    padding: 20px;
+}
+.repeticion{
+    background-color: #1B403C;
+    padding: 20px;
+}
+.centro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+.boton{
+    background-color: orangered;
+    width: 10em;
+    height: 3em;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    align-items: center;
+}
+.boton:hover {
+    transform: scale(1.1);
+    
+}
+
+.botones{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    row-gap: 3em;
+    gap: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+}
+
+a{
+    color: antiquewhite;
+}
+
+.rojo{
+    background-color: #980000;
+
+}
+.verde{
+    background-color: #2e9800;
+}
+.amarillo{
+    background-color: #989500;
+
+}
+.noDeco{
+    text-decoration: none;
+}
+
+.oculto {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition: opacity 0.5s ease, height 0.5s ease;
+}

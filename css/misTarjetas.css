@@ -1,0 +1,80 @@
+body{
+    background-color: #243540;
+    padding-left: 10em;
+    padding-right: 10em;
+    color: antiquewhite;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+.tarjetas{
+    background-color: #1B403C;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 16px;                             
+    padding: 20px;
+}
+
+.tarjeta{
+    display: flex;
+    height: 7em;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #05A65B;               /* 🔹 borde blanco */
+    border-radius: 10px;
+    padding: 16px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-bottom: 2em;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tema1{
+    background-color: #401b1b;
+}
+.tema2{
+    background-color: #1b3e40;
+}
+.tema3{
+    background-color: #401b3f;
+}
+.tema4{
+    background-color: #403f1b;
+}
+.spaceBetween {
+  display: flex;
+  justify-content: space-between; /* reparte a los extremos */
+  align-items: center;
+  width: 100%; /* ocupa todo el ancho disponible */
+}
+
+/* 🔹 Títulos */
+h1, h2, h3, .titulo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* bold */
+}
+
+/* 🔹 Subtítulos */
+h4, h5, h6, .subtitulo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* bold */
+}
+
+/* 🔹 Cuerpo del texto */
+p, span, div, body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; /* regular */
+}
+
+a{
+    color: antiquewhite;
+}
