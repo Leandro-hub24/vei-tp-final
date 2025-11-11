@@ -1,0 +1,144 @@
+body{
+    height: 98vh;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#183F8C ;
+}
+
+main{
+    outline: 1px solid gray;
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+    background-color: rgb(242, 242, 242);
+}
+
+article{
+    width: 50%;
+}
+
+#article-background{
+    background: url(../img/register.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#section-icon-formar{
+    height: 25%;
+    background: url(../img/formAr.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#section-icon-login{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-div{
+    
+}
+
+#section-div-iniciarSesion{
+}
+#section-div-iniciarSesion h1{
+    padding-left: 1.5em;
+    font-size: 2em;
+    font-family: "Oswald";
+}
+
+#section-div-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em 1em; /* Reducido el padding vertical */
+}
+
+/* Reglas base para todos los inputs dentro de la sección */
+#section-div-inputs input{
+    font-family: "Merriweather Sans";
+    font-size: 1.1em; /* Ligeramente más pequeño para que quepa */
+    border: none;
+    border-bottom: 1px solid #183F8C;
+    padding:.6em; /* Padding reducido */
+    padding-left: 1em;
+    background: none;
+    box-sizing: border-box; /* Importante para que el padding no afecte el width */
+}
+
+/* NUEVO: Contenedor para la fila de inputs */
+.input-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: .4em 0; /* Espaciado vertical para la fila */
+}
+
+/* NUEVO: Inputs dentro de una fila (ancho medio) */
+.input-row input {
+    width: 48%; /* Menos del 50% para dejar un hueco */
+    margin: 0;
+}
+
+/* NUEVO: Inputs que son hijos directos (ancho completo) */
+#section-div-inputs > input {
+    width: 90%;
+    margin: .4em 0; /* Espaciado vertical para inputs completos */
+}
+
+
+#section-div-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+    align-self: center;
+    padding: 0.5em 1em; /* Reducido el padding vertical */
+}
+
+#section-div-div-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: .5em 0 ; /* Margen reducido */
+}
+#section-div-div-login button{
+    width: 100%;
+    font-size: 1.2em;
+    border: 1px solid grey;
+    color: white;
+    background: #183F8C;
+    border-radius: 3em;
+    font-family: "Merriweather Sans";
+    padding: .7em;
+}
+
+#section-div-div-enlaces{
+    display: flex;
+    flex-direction: column;
+}
+#section-div-div-enlaces div {
+    margin: .5em 0; /* Margen reducido */
+}
+
+
+#section-div-div-gotoLogin a{
+    text-decoration: none;
+    margin: .5em 0 ; /* Margen reducido */
+    font-family: "Lato";
+    font-weight: 600;
+    color: #1B403C;
+
+}
+
+#button-register:active{
+    background-color: #183f8cd9;
+}
