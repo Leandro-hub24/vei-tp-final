@@ -167,6 +167,7 @@
 .contenedor-temas-arriba-der-info {
     display: flex;
     flex-direction: column;
+    width: 70%;
     gap: 1em;
     background-color: var(--fondo-gris);
     border-radius: 12px;
