@@ -62,7 +62,7 @@
 }
 
 .contenedor-info-arriba > h2 {
-    margin: 2em;
+    margin-top: 2em;
     font-size: 2em;
     font-family: "Merriweather";
 }
@@ -111,9 +111,73 @@
     font-size: 0.9em;
 }
 
+.contenedor-temas {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10em;
+    margin: 3em;
+}
 
+.contenedor-temas-arriba {
+    display: flex;
+}
 
+.contenedor-temas-arriba-izq {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 3em;
+}
 
+.contenedor-temas-arriba-izq-arriba {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.texto-temas {
+    width: 60%;
+}
+
+.contenedor-temas-arriba-izq-abajo {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.contenedor-temas-img {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    
+}
+
+.img-temas{
+    width: 20%;
+}
+
+.contenedor-temas-arriba-der {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.contenedor-temas-arriba-der-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--fondo-gris);
+    border-radius: 12px;
+    padding: 1em;
+}
+
+.link-temas {
+    text-decoration: none;
+    color: black;
+    font-family: "Oswald";
+}
 
 
 
@@ -167,6 +231,10 @@
 
 
 @media only screen and (max-width: 1200px) {
+
+    .contenedor-banner {
+        height: 500px;
+    }
     
     .contenedor-banner-izq {
         width: 70%;
@@ -174,6 +242,11 @@
 
     .contenedor-banner-der {
         display: none;
+    }
+
+    .contenedor-info-arriba {
+        margin-top: 0;
+        margin-bottom: 4em;
     }
 
     .contenedor-info-abajo {
