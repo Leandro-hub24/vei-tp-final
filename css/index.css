@@ -56,15 +56,31 @@
 }
 
 .contenedor-info {
+    display: flex;
+    flex-direction: column;
     padding: 0 10em;
+}
+
+.contenedor-info-arriba > h2 {
+    margin: 2em;
+    font-size: 2em;
+    font-family: "Merriweather";
+}
+
+.contenedor-info-arriba {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-info-abajo {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 700px;
     width: 100%;   
     gap: 2em; 
     align-items: center;
     justify-items: center;
-    background-color: var(--fondo-gris);
+    padding-bottom: 3em;
 }
 
 .contenedor-info-card {
@@ -73,11 +89,17 @@
     justify-content: center;
     gap: 2em;
     width: 75%;
-    clip-path: polygon(0 8%, 91% 0, 100% 91%, 8% 100%);
-    background-color: var(--color-acento-2);
-    color: white;
     height: 50%;
-    padding: 3em 3em;
+}
+
+.contenedor-info-img {
+    display: flex;
+    justify-content: center;
+}
+
+.imgInfo {
+    width: 30%;
+    
 }
 
 .card-cen {
@@ -104,7 +126,7 @@
 
 @media only screen and (max-width: 1600px) {
 
-    .contenedor-info {
+    .contenedor-info-abajo {
         gap: 1em;
     }
 
@@ -121,8 +143,9 @@
     }
 
     .contenedor-info {
-        padding: 0 6em;
-    }
+    padding: 0 6em;
+}
+
 
     .imgBanner {
         width: 90%;
@@ -153,9 +176,10 @@
         display: none;
     }
 
-    .contenedor-info {
+    .contenedor-info-abajo {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        gap: 2em;
     }
 
     .contenedor-info-card {
@@ -178,22 +202,28 @@
         height: auto;
         padding: 3em 3em;
     }
+
+    .contenedor-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 3em;
+}
     
     .contenedor-banner-izq {
         width: 80%;
     }
 
-    .contenedor-info {
+    .contenedor-info-abajo {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         height: auto;
-        padding: 0 3em;
+        gap: 3em;
     }
 
     .contenedor-info-card {
         height: fit-content;
         width: 60%;
-        padding: 4em 3em
+        padding: 2em 2em
     }
 
     .card-cen {
@@ -214,7 +244,6 @@
     .contenedor-info-card {
         height: 75%;
         width:60%;
-        padding: 5em 3em
     }
 
    
@@ -230,7 +259,6 @@
     .contenedor-info-card {
         height: 75%;
         width: 80%;
-        padding: 6em 3em;
     }
 
    
