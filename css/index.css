@@ -1,4 +1,3 @@
-
 .contenedor-banner {
     width: 100%;
     display: flex;
@@ -61,7 +60,7 @@
     padding: 0 10em;
 }
 
-.contenedor-info-arriba > h2 {
+.contenedor-info-arriba>h2 {
     margin-top: 2em;
     font-size: 2em;
     font-family: "Merriweather";
@@ -76,8 +75,8 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;   
-    gap: 2em; 
+    width: 100%;
+    gap: 2em;
     align-items: center;
     justify-items: center;
     padding-bottom: 3em;
@@ -99,7 +98,7 @@
 
 .imgInfo {
     width: 30%;
-    
+
 }
 
 .card-cen {
@@ -129,14 +128,8 @@
     gap: 3em;
 }
 
-.contenedor-temas-arriba-izq-arriba {
-    display: flex;
-    gap: 2em;
-    flex-direction: column;
-}
-
 .texto-temas {
-    width: 60%;
+    width: 70%;
 }
 
 .contenedor-temas-arriba-izq-abajo {
@@ -149,25 +142,39 @@
     display: flex;
     width: 60%;
     justify-content: center;
-    
+
 }
 
-.img-temas{
+.img-temas {
     width: 20%;
 }
 
-.contenedor-temas-arriba-der {
+.contenedor-temas-der {
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 2em;
+}
+
+.contenedor-temas-der-arriba {
+    display: flex;
+    gap: 2em;
     flex-direction: column;
+}
+
+.contenedor-temas-der-abajo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+    width: 50%;
 }
 
 .contenedor-temas-arriba-der-info {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    align-items: center;
+    width: 120px;
     gap: 1em;
     background-color: var(--fondo-gris);
     border-radius: 12px;
@@ -178,10 +185,13 @@
     text-decoration: none;
     color: black;
     font-family: "Oswald";
+    text-align: center;
+    font-size: 1.2em;
 }
 
-
-
+.img-temas-der {
+    width: 70px;
+}
 
 
 
@@ -208,9 +218,12 @@
     }
 
     .contenedor-info {
-    padding: 0 6em;
-}
+        padding: 0 6em;
+    }
 
+    .contenedor-temas {
+        padding: 0 6em;
+    }
 
     .imgBanner {
         width: 90%;
@@ -223,8 +236,8 @@
 }
 
 @media only screen and (max-width: 1300px) {
-    
-    .contenedor-titulo{
+
+    .contenedor-titulo {
         width: 100%;
     }
 
@@ -236,7 +249,7 @@
     .contenedor-banner {
         height: 500px;
     }
-    
+
     .contenedor-banner-izq {
         width: 70%;
     }
@@ -268,6 +281,42 @@
         grid-area: 2 / 1 / auto /span 2;
         width: 45%;
     }
+
+    .contenedor-temas-arriba {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-temas-der {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+
+    .contenedor-temas-der-arriba {
+        align-items: center;
+    }
+
+    .contenedor-temas-arriba-izq {
+        width: 100%;
+        align-items: center;
+    }
+
+
+
+    .contenedor-temas-arriba-izq-abajo {
+        align-items: center;
+    }
+
+    .texto-temas {
+        width: 70%;
+    }
+
+    .contenedor-temas-der-abajo {
+        width: 60%;
+    }
+
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -278,11 +327,15 @@
     }
 
     .contenedor-info {
-    display: flex;
-    flex-direction: column;
-    padding: 0 3em;
-}
-    
+        display: flex;
+        flex-direction: column;
+        padding: 0 3em;
+    }
+
+    .contenedor-temas {
+        padding: 0 3em;
+    }
+
     .contenedor-banner-izq {
         width: 80%;
     }
@@ -307,7 +360,18 @@
     .card-der {
         grid-area: 3 / 1;
     }
+
+    .texto-temas {
+        width: 70%;
+    }
+
+    .contenedor-temas-der-abajo {
+        width: 60%;
+    }
+
 }
+
+
 
 @media only screen and (max-width: 800px) {
 
@@ -317,10 +381,18 @@
 
     .contenedor-info-card {
         height: 75%;
-        width:60%;
+        width: 60%;
     }
 
-   
+    .texto-temas {
+        width: 80%;
+    }
+
+    .contenedor-temas-der-abajo {
+        width: 80%;
+    }
+
+
 }
 
 
@@ -335,5 +407,19 @@
         width: 80%;
     }
 
-   
+    .texto-temas {
+        width: 100%;
+    }
+
+    .contenedor-temas-der-abajo {
+        width: 100%;
+    }
+
+    .contenedor-temas-der-abajo {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 70%;
+    }
+
+
 }
