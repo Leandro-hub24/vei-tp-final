@@ -137,7 +137,6 @@
 .contenedor-temas {
     display: flex;
     flex-direction: column;
-    padding: 0 10em;
     margin: 3em 0;
 }
 
@@ -152,20 +151,19 @@
     width: 50%;
     gap: 3em;
     justify-content: center; 
-    background-color: #0DFD8D;
-    padding-left: 2em;
-    padding-right: 2em;
+    /* background-color: #0DFD8D; */
+    background-color: var(--color-acento-2);
+    padding: 1em 2em;
     border-radius: 15px;
+    color: white;
 }
 
 .conLinea{
-   border-top: 2px solid #1b403c;
-   
+   border-top: 2px solid white;
    padding-top: 2em;
 }
 
 .texto-temas {
-    
     flex: 1;
     margin: 0;
 }
@@ -189,7 +187,7 @@
 }
 
 .img-temas {
-    width: 100%; 
+    width: 50%; 
     height: auto;
     display: block;
 }
@@ -199,7 +197,6 @@
     flex-direction: column;
     width: 50%;
     gap: 1em;
-   
     padding: 1em;
 }
 
@@ -271,10 +268,6 @@
         padding: 0 6em;
     }
 
-    .contenedor-temas {
-        padding: 0 6em;
-    }
-
     .imgBanner {
         width: 90%;
     }
@@ -310,7 +303,7 @@
 
     .contenedor-info-arriba {
         margin-top: 0;
-        margin-bottom: 4em;
+        padding-bottom: 4em;
     }
 
     .contenedor-info-abajo {
@@ -320,7 +313,8 @@
     }
 
     .contenedor-info-card {
-        height: 70%;
+        height: 100%;
+        padding: 1em;
     }
 
     .card-cen {
@@ -363,7 +357,7 @@
     }
 
     .contenedor-temas-der-abajo {
-        width: 60%;
+        width: 80%;
     }
 
 
@@ -379,10 +373,6 @@
     .contenedor-info {
         display: flex;
         flex-direction: column;
-        padding: 0 3em;
-    }
-
-    .contenedor-temas {
         padding: 0 3em;
     }
 
@@ -416,7 +406,7 @@
     }
 
     .contenedor-temas-der-abajo {
-        width: 60%;
+        width: 80%;
     }
 
 }
@@ -430,7 +420,7 @@
     }
 
     .contenedor-info-card {
-        height: 75%;
+        height: 100%;
         width: 60%;
     }
 
@@ -439,7 +429,7 @@
     }
 
     .contenedor-temas-der-abajo {
-        width: 80%;
+        width: 90%;
     }
 
 
@@ -453,7 +443,7 @@
     }
 
     .contenedor-info-card {
-        height: 75%;
+        height: 100%;
         width: 80%;
     }
 
@@ -468,7 +458,7 @@
     .contenedor-temas-der-abajo {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        width: 70%;
+        width: 100%;
     }
 
 
