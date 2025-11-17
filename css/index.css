@@ -91,7 +91,7 @@
     gap: 2em;
     align-items: center;
     justify-items: center;
-    padding-bottom: 4em;
+    padding-bottom: 5em;
     padding-left: 1em;
     padding-right: 1em;
     background-color: #1b403c;
@@ -156,6 +156,7 @@
     padding: 1em 2em;
     border-radius: 15px;
     color: white;
+    align-items: center;
 }
 
 .conLinea{

@@ -1,0 +1,381 @@
+#profile_card{
+    background-color: var(--color-acento-3);
+    border-radius: 15px;
+    height: 10em;
+    margin-left: 9em;
+    margin-right: 9em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#profile_card a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#profile_card a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#marcoDeImg{
+    background-color: var(--fondo-blanco);
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#marcoDeImg img{
+    height: 8em;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#userData{
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#tituloDeUsuario{
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+#tituloDeUsuario h2{
+    font-family: "Merriweather Sans";
+}
+
+#tituloDeUsuario div{
+    background-color: gold;
+    border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    color: black;
+    font-family: "Oswald";
+    font-size: medium;
+    margin-left: 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+#userData h4 {
+    margin-bottom: 0.5em;
+    font-family: "Lato";
+    font-size: small;
+}
+
+#muestraLogros{
+    background-color: var(--color-acento-1);
+    border-radius: 10px;
+    height: 3em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5em;
+    padding-left: 1em;
+    font-family: "Lato";
+    font-size: medium;
+}
+
+#logroBox{
+    margin-left: 1em;
+    margin-right: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+#logroBox img{
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.logroIcon{
+    height: 1.80em;
+}
+
+#botonDeLogros div{
+    height: 3em;
+    width: 2em;
+    margin-right: 0%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#botonDeLogros:hover div{
+    background-color: #4f585e;
+    height: 3em;
+    width: 2em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#botonesLadoDerecho{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: space-between;
+    height: 8em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#botonesLadoDerecho a {
+    display: flex;
+    height: 2em;
+    width: 8em;
+    padding: 0.4em;
+    background-color: var(--color-acento-1);
+    border-radius: 5px;
+    font-family: "Lato";
+    font-size: small;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+#botonesLadoDerecho a:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #4f585e;
+}
+
+#botonesLadoDerecho a img {
+margin-right: 0.3em;
+margin-left: 0%;
+}
+
+/*Caja de rachas*/
+
+#rachaDeTarjetas{
+    height: 8em;
+    margin-left: 13em;
+    margin-right: 13em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+.tituloDeSeccion{
+    background-color: var(--color-acento-3);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: "Merriweather Sans";
+}
+
+#contenidoDeRacha{
+    background-color: var(--color-acento-1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px ;
+    height: 6em;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#logoRacha{
+    height: 5em;
+}
+
+#rachaActual{
+    text-align: center;
+    font-family: "Lato";
+    font-size: medium;
+}
+
+#rachaActual h4{
+    font-family: "Oswald";
+    color: gold;
+    font-size: large;
+}
+
+#calendarioDeRachas{
+    display: flex;
+    justify-content: space-around;
+    width: 20em;
+    font-family: "Lato";
+}
+
+.diaDeRacha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diaDeRacha img{
+    height: 1em;
+    margin-bottom: 0.5em;
+}
+
+/*progreso Y Actividad Reciente*/
+
+#progresoYActividadReciente{
+    height: 20em;
+    margin-left: 13em;
+    margin-right: 13em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedores_pYa{
+    background-color: var(--color-acento-1);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#pYa_left{
+    margin-right: 2em;
+}
+
+.tituloDeSeccion button{
+    display: flex;
+    height: 2em;
+    width: 8em;
+    padding: 0.4em;
+    color: var(--fondo-blanco);
+    background-color: var(--color-acento-1);
+    border: none;
+    border-radius: 5px;
+    font-family: "Lato";
+    font-size: small;
+    justify-content: space-between;
+}
+
+.tituloDeSeccion button:hover{
+    text-decoration: none;
+    background-color: #4f585e;
+}
+
+.contenido_pYa{
+    margin: 0.7em;
+    flex: 1;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.progresoTema{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.TemaYporcentaje{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.2em;
+    font-family: "Lato";
+}
+
+.barraDeProgreso{
+    background-color: var(--fondo-blanco);
+    border-radius: 15px;
+    width: 100%;
+    height: 1em;
+    display: flex;
+}
+
+.barraDeProgreso div{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #0A83CE;
+}
+
+#progresoActual1{
+    width: 68%;
+}
+
+#progresoActual2{
+    width: 27%;
+}
+#progresoActual3{
+    width: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+#progresoActual4{
+    width: 10%;
+}
+
+.cajaDeActividad{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #3A5D74;
+}
+
+.tituloDeActividad{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-family: "Lato";
+}
+
+#resumenGeneral{
+    margin-left: 13em;
+    margin-right: 13em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: white;
+}
+
+#contenidoDeResumenGeneral{
+    background-color: var(--color-acento-1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px ;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 1em;
+    column-gap: 5em;
+    grid-auto-flow: column;
+}
+
+.cajasDeTextoResumen{
+     display: flex;
+    flex: 1;
+    justify-content: space-between;
+    font-family: "Lato";
+    font-size: medium;
+}
+
+h4 img{
+    height: 1em;
+    padding-right: 0.2em;
+    width: auto;
+    vertical-align: middle;
+}
