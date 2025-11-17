@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Fractions Exercise</title>
+    <link rel="stylesheet" href="../css/estilos-general.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors */
+            --color-primary: #0dfd8d;
+            --color-primary-alpha: rgba(13, 253, 141, 0.2);
+            --color-dark: #243540;
+            --color-text: #1f2937;
+            --color-text-light: #6b7280;
+            --color-gray-100: #f3f4f6;
+            --color-gray-200: #e5e7eb;
+            --color-gray-600: #4b5563;
+            --color-gray-800: #111827;
+            --color-white: #ffffff;
+
+            /* Spacing */
+            --spacing-xs: 0.375rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 0.75rem;
+            --spacing-lg: 1rem;
+            --spacing-xl: 1.5rem;
+            --spacing-2xl: 2rem;
+            --spacing-3xl: 3rem;
+
+            /* Sizes */
+            --sidebar-width: 380px;
+            --header-height: 70px;
+            --hexagon-width: 320px;
+            --hexagon-height: 277.13px;
+
+            /* Border Radius */
+            --radius-sm: 0.375rem;
+            --radius-md: 0.5rem;
+            --radius-full: 9999px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease-in-out;
+            --transition-normal: 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-white);
+            color: var(--color-text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+
+        /* ==================== MAIN LAYOUT ==================== */
+        main {
+            flex: 1;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ==================== BREADCRUMB ==================== */
+        .header-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: var(--sidebar-width);
+            padding: var(--spacing-xl) var(--spacing-2xl);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--color-white);
+            border-bottom: 1px solid var(--color-gray-200);
+            z-index: 10;
+        }
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-md) var(--spacing-xl);
+            border: none;
+            background: transparent;
+            color: var(--color-text-light);
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-normal);
+        }
+
+        .back-btn:hover {
+            background-color: var(--color-gray-100);
+            color: var(--color-text);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--color-text);
+        }
+
+        .breadcrumb .current {
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .separator {
+            color: var(--color-gray-200);
+        }
+
+        /* ==================== MAIN CONTENT ==================== */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-2xl);
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 42rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-3xl);
+            color: var(--color-gray-800);
+            text-align: center;
+        }
+
+        .fraction {
+            font-family: 'Courier New', monospace;
+            font-size: 2rem;
+            vertical-align: middle;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+
+        /* ==================== HEXAGON ==================== */
+        .hexagon-container {
+            position: relative;
+            width: var(--hexagon-width);
+            height: var(--hexagon-height);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .hexagon-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .hexagon-part {
+            fill: transparent;
+            stroke: var(--color-gray-600);
+            stroke-width: 2;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .hexagon-part:hover:not(.colored) {
+            fill: var(--color-primary-alpha);
+        }
+
+        .hexagon-part.colored {
+            fill: var(--color-primary);
+            stroke: var(--color-primary);
+        }
+
+        /* ==================== BUTTONS ==================== */
+        .check-btn {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            font-weight: 700;
+            padding: var(--spacing-md) 4rem;
+            border-radius: var(--radius-full);
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-normal);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .check-btn:hover {
+            background-color: #1a2830;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .check-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ==================== SIDEBAR (AI ASSISTANT) ==================== */
+        .sidebar {
+            width: var(--sidebar-width);
+            flex-shrink: 0;
+            background-color: var(--color-white);
+            border-left: 1px solid var(--color-gray-200);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: var(--spacing-xl);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .sidebar-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .ai-icon-wrapper {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-primary-alpha);
+        }
+
+        .ai-icon {
+            color: var(--color-primary);
+            font-size: 1rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--color-dark);
+        }
+
+        .close-btn {
+            padding: var(--spacing-xs);
+            border: none;
+            background: transparent;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-btn:hover {
+            background-color: var(--color-gray-100);
+        }
+
+        .close-icon {
+            color: var(--color-text-light);
+        }
+
+        /* ==================== CHAT ==================== */
+        .chat-container {
+            flex: 1;
+            padding: var(--spacing-xl);
+            overflow-y: auto;
+        }
+
+        .messages {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .message {
+            display: flex;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.ai {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            max-width: 18rem;
+        }
+
+        .message.ai .message-bubble {
+            background-color: var(--color-gray-100);
+        }
+
+        .message.user .message-bubble {
+            background-color: var(--color-dark);
+        }
+
+        .message-text {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .message.ai .message-text {
+            color: var(--color-dark);
+        }
+
+        .message.user .message-text {
+            color: var(--color-white);
+        }
+
+        /* ==================== CHAT INPUT ==================== */
+        .chat-input-wrapper {
+            padding: var(--spacing-xl);
+            border-top: 1px solid var(--color-gray-200);
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .chat-input {
+            width: 100%;
+            padding: var(--spacing-md) 3rem var(--spacing-md) var(--spacing-lg);
+            border-radius: var(--radius-md);
+            background-color: var(--color-gray-100);
+            border: 1px solid transparent;
+            font-size: 0.875rem;
+            font-family: 'Inter', sans-serif;
+            outline: none;
+            transition: var(--transition-normal);
+        }
+
+        .chat-input:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px var(--color-primary-alpha);
+        }
+
+        .send-btn {
+            position: absolute;
+            right: var(--spacing-sm);
+            top: 50%;
+            transform: translateY(-50%);
+            padding: var(--spacing-sm);
+            border: none;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: var(--color-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-normal);
+        }
+
+        .send-btn:hover {
+            filter: brightness(0.9);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .send-icon {
+            font-size: 1.125rem;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+
+            .header-container {
+                right: 0;
+            }
+
+            .main-content {
+                padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 var(--spacing-lg);
+            }
+
+            #buscador {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .link {
+                display: none;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--spacing-md);
+            }
+
+            .breadcrumb {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --hexagon-width: 240px;
+                --hexagon-height: 207.85px;
+            }
+
+            .main-content {
+                padding: var(--spacing-xl) var(--spacing-lg);
+                padding-top: calc(var(--header-height) + var(--spacing-xl));
+            }
+
+            .title {
+                font-size: 1.25rem;
+                margin-bottom: var(--spacing-2xl);
+            }
+
+            .fraction {
+                font-size: 1.5rem;
+            }
+
+            .check-btn {
+                padding: var(--spacing-md) var(--spacing-3xl);
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
+        </div>
+
+        <div id="buscador">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
+                <img src="../img/search1.png" id="lupa" alt="lupa">
+            </div>
+        </div>
+
+        <div id="navegacion">
+            <img class="hamburger" src="./img/hamburger.png" alt="menú">
+            <a class="link" href="temas.html">Temas</a>
+            <a class="link" href="temas.html">Mis Temas</a>
+            <a class="link" href="misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="">Sobre Nosotros</a>
+            <a class="user" href=""><img class="imgUser" src="../img/imgUser.png" alt="usuario"></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="header-container">
+            <a href="../temas/matematica.html">
+                <button class="back-btn">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Volver a clases
+                </button>
+                <div class="breadcrumb">
+                    <a href="#">Unidad 1</a>
+                    <span class="separator">/</span>
+                    <a href="#">Lección 2</a>
+                    <span class="separator">/</span>
+                    <span class="current">Ejercicio</span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                <h1 class="title">Coloreá <span class="fraction">1/2</span> del hexagono.</h1>
+
+                <div class="hexagon-container">
+                    <svg class="hexagon-svg" viewBox="0 0 200 173.21">
+                        <defs>
+                            <clipPath id="hexagon-clip">
+                                <polygon points="150,0 200,86.605 150,173.21 50,173.21 0,86.605 50,0"></polygon>
+                            </clipPath>
+                        </defs>
+                        <g clip-path="url(#hexagon-clip)">
+                            <path class="hexagon-part" d="M100,86.605 L50,0 L150,0 Z" data-segment="1"></path>
+                            <path class="hexagon-part" d="M100,86.605 L150,0 L200,86.605 Z" data-segment="2"></path>
+                            <path class="hexagon-part" d="M100,86.605 L200,86.605 L150,173.21 Z" data-segment="3">
+                            </path>
+                            <path class="hexagon-part" d="M100,86.605 L150,173.21 L50,173.21 Z" data-segment="4"></path>
+                            <path class="hexagon-part" d="M100,86.605 L50,173.21 L0,86.605 Z" data-segment="5"></path>
+                            <path class="hexagon-part" d="M100,86.605 L0,86.605 L50,0 Z" data-segment="6"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                <button class="check-btn" id="checkBtn">Comprobar</button>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title-wrapper">
+                    <div class="ai-icon-wrapper">
+                        <span class="material-symbols-outlined ai-icon">smart_toy</span>
+                    </div>
+                    <h3 class="sidebar-title">Asistente IA</h3>
+                </div>
+                <button class="close-btn" id="closeSidebarBtn">
+                    <span class="material-symbols-outlined close-icon">close</span>
+                </button>
+            </div>
+
+            <div class="chat-container">
+                <div class="messages" id="messagesContainer">
+                    <div class="message ai">
+                        <div class="message-bubble">
+                            <p class="message-text">¡Hola! Estoy aquí para ayudarte.<br><br>Recuerda que 1/2 significa
+                                una parte de dos partes iguales. ¿Cuántos triángulos conforman la mitad del hexágono?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-wrapper">
+                <div class="input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Haz una pregunta...">
+                    <button class="send-btn" id="sendBtn">
+                        <span class="material-symbols-outlined send-icon">send</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        // ==================== STATE MANAGEMENT ====================
+        const state = {
+            coloredSegments: new Set(),
+            targetFraction: 1 / 2,
+            totalSegments: 6
+        };
+
+        // ==================== DOM ELEMENTS ====================
+        const elements = {
+            hexagonParts: document.querySelectorAll('.hexagon-part'),
+            checkBtn: document.getElementById('checkBtn'),
+            chatInput: document.getElementById('chatInput'),
+            sendBtn: document.getElementById('sendBtn'),
+            messagesContainer: document.getElementById('messagesContainer'),
+            closeSidebarBtn: document.getElementById('closeSidebarBtn'),
+            sidebar: document.querySelector('.sidebar')
+        };
+
+        // ==================== HEXAGON LOGIC ====================
+        function toggleSegment(segment) {
+            const segmentId = segment.dataset.segment;
+
+            if (state.coloredSegments.has(segmentId)) {
+                state.coloredSegments.delete(segmentId);
+                segment.classList.remove('colored');
+            } else {
+                state.coloredSegments.add(segmentId);
+                segment.classList.add('colored');
+            }
+        }
+
+        function checkAnswer() {
+            const coloredCount = state.coloredSegments.size;
+            const targetCount = Math.round(state.totalSegments * state.targetFraction);
+
+            if (coloredCount === targetCount) {
+                addMessage('¡Correcto! Has coloreado exactamente la mitad del hexágono. ¡Excelente trabajo!', 'ai');
+            } else if (coloredCount > targetCount) {
+                addMessage(`Casi... has coloreado ${coloredCount} triángulos, pero necesitas colorear solo ${targetCount} para representar 1/2.`, 'ai');
+            } else {
+                addMessage(`Necesitas colorear más. Has coloreado ${coloredCount} triángulos, pero necesitas ${targetCount} para completar 1/2.`, 'ai');
+            }
+        }
+
+        // ==================== CHAT LOGIC ====================
+        function addMessage(text, type = 'user') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+
+            const bubbleDiv = document.createElement('div');
+            bubbleDiv.className = 'message-bubble';
+
+            const textP = document.createElement('p');
+            textP.className = 'message-text';
+            textP.textContent = text;
+
+            bubbleDiv.appendChild(textP);
+            messageDiv.appendChild(bubbleDiv);
+            elements.messagesContainer.appendChild(messageDiv);
+
+            // Scroll to bottom
+            elements.messagesContainer.parentElement.scrollTop =
+                elements.messagesContainer.parentElement.scrollHeight;
+        }
+
+        function handleSendMessage() {
+            const message = elements.chatInput.value.trim();
+
+            if (message) {
+                addMessage(message, 'user');
+                elements.chatInput.value = '';
+
+                // Simulate AI response
+                setTimeout(() => {
+                    addMessage('Gracias por tu pregunta. ¿Necesitas alguna pista adicional sobre las fracciones?', 'ai');
+                }, 1000);
+            }
+        }
+
+        function toggleSidebar() {
+            if (elements.sidebar) {
+                elements.sidebar.style.display =
+                    elements.sidebar.style.display === 'none' ? 'flex' : 'none';
+            }
+        }
+
+        // ==================== EVENT LISTENERS ====================
+        function initEventListeners() {
+            // Hexagon segments
+            elements.hexagonParts.forEach(part => {
+                part.addEventListener('click', () => toggleSegment(part));
+            });
+
+            // Check button
+            if (elements.checkBtn) {
+                elements.checkBtn.addEventListener('click', checkAnswer);
+            }
+
+            // Send message
+            if (elements.sendBtn) {
+                elements.sendBtn.addEventListener('click', handleSendMessage);
+            }
+
+            // Chat input enter key
+            if (elements.chatInput) {
+                elements.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        handleSendMessage();
+                    }
+                });
+            }
+
+            // Close sidebar
+            if (elements.closeSidebarBtn) {
+                elements.closeSidebarBtn.addEventListener('click', toggleSidebar);
+            }
+        }
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', initEventListeners);
+    </script>
+</body>
+
+</html>

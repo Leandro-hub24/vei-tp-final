@@ -585,27 +585,29 @@
     </style>
 </head>
 <header>
-    <div id="logo">
-        <h1 id="logotipo">FormAr</h1>
-    </div>
-
-    <div id="buscador">
-        <div id="contenedor-buscar">
-            <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
-            <img src="../img/search1.png" id="lupa" alt="lupa">
+        <div id="logo">
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
         </div>
 
-    </div>
+        <div id="buscador">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
+                <img src="../img/search1.png" id="lupa" alt="lupa">
+            </div>
 
-    <div id="navegacion">
-        <img class="hamburger" src="./img/hamburger.png" alt="">
-        <a class="link" href="">Temas</a>
-        <a class="link" href="">Mis Temas</a>
-        <a class="link" href="">Mis Tarjetas</a>
-        <a class="link" href="">Sobre Nosotros</a>
-        <a class="user" href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
-    </div>
-</header>
+        </div>
+
+        <div id="navegacion">
+            <img class="hamburger" src="./img/hamburger.png" alt="">
+            <a class="link" href="/temas.html">Temas</a>
+            <a class="link" href="/temas.html">Mis Temas</a>
+            <a class="link" href="/misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="">Sobre Nosotros</a>
+            <a class="user" href=""><img class="imgUser" src="../img/imgUser.png" alt=""></a>
+        </div>
+    </header>
 <body>
     
     <div class="encabezado">
@@ -615,21 +617,23 @@
                     <span class="icono-clase">
                         <span class="material-symbols-outlined" style="font-size: 14px;">play_arrow</span>
                     </span>
-                    <p>Clase 2 de 12 - Curso de Fundamentos de Matemáticas</p>
+                    <p>Clase 2 de 3 - Curso de Fundamentos de Matemáticas</p>
                     <span class="separador">|</span>
                     <a href="../temas/matematica.html" class="enlace-volver">Volver a clases</a>
                 </div>
-                <h1 class="titulo-leccion">Lección 2.2: Encontrando el Común Denominador</h1>
+                <h1 class="titulo-leccion">Lección 2.2: Encontrando la Fracción</h1>
             </div>
             <div class="botones-encabezado">
                 <button class="boton boton-completar">
                     <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
                     Marcar como completado
                 </button>
-                <button class="boton boton-siguiente" disabled>
-                    Siguiente clase
+                <a href="/ejercicios/ejercicio2.2.html">
+                <button class="boton boton-completar">
+                    Continuar
                     <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
-                </button>
+                </a>
+                
             </div>
         </div>
     </div>
@@ -644,10 +648,6 @@
                 <button class="pestana pestana-inactiva">
                     <span class="material-symbols-outlined" style="font-size: 16px;">article</span>
                     Leer
-                </button>
-                <button class="pestana pestana-inactiva">
-                    <span class="material-symbols-outlined" style="font-size: 16px;">quiz</span>
-                    Interactuar
                 </button>
             </div>
 
@@ -671,9 +671,7 @@
 
             <div class="seccion-resumen">
                 <h2 class="titulo-resumen">Resumen</h2>
-                <p class="texto-resumen">
-                    La cuestión matemática sobre por qué cero dividido cero no puede ser igual a uno ha intrigado a muchas personas. Aunque parezca algo lógico, como cuando dividido quinientos también lo es, el caso de cero dividido por cero es diferente e implica una complejidad especial.
-                </p>
+                <p class="texto-resumen"><strong>Resumen de la lección:</strong> En esta clase aprendimos qué son las fracciones, cómo se leen y cómo se comparan. Vimos que el número de arriba (<em>numerador</em>) indica cuántas partes tomamos, y el de abajo (<em>denominador</em>) en cuántas partes iguales se divide el todo. También entendimos que para sumarlas o restarlas deben tener el mismo denominador, y usamos ejemplos visuales, como el de la pizza 🍕, para ver que las fracciones representan porciones de un mismo entero.</p>
             </div>
         </main>
 
@@ -696,7 +694,7 @@
                             <span class="icono-asistente">
                                 <span class="material-symbols-outlined" style="font-size: 18px;">auto_awesome</span>
                             </span>
-                            <h3 class="nombre-asistente">Asistente AI - Fede</h3>
+                            <h3 class="nombre-asistente">Asistente AI</h3>
                         </div>
                         <span class="material-symbols-outlined" style="transform: rotate(180deg);">expand_less</span>
                     </button>
@@ -705,12 +703,12 @@
                 <div class="area-chat">
                     <div class="mensaje-usuario">
                         <div class="burbuja-mensaje-usuario">
-                            <p>¿Puedes explicarme el mínimo común múltiplo de una manera más sencilla?</p>
+                            <p>No entendí el minuto 1:30 cuando explica que las fracciones tienen que tener el mismo denominador para poder sumarlas.</p>
                         </div>
                     </div>
                     <div class="mensaje-asistente">
                         <div class="burbuja-mensaje-asistente">
-                            <p>¡Claro! Imagina que tienes dos amigos que parpadean a diferentes velocidades. Uno parpadea cada 3 segundos y el otro cada 4 segundos. El "mínimo común múltiplo" es el primer momento en que ambos parpadearán ¡exactamente al mismo tiempo! En este caso, sería a los 12 segundos.</p>
+                            <p>Recordá el ejemplo de la pizza 🍕 del minuto 1<br> Para sumar fracciones, las porciones tienen que ser del mismo tamaño. <br> Eso significa que deben tener el <strong>mismo denominador</strong>. <br>Por ejemplo, 1/2 y 1/3 no se pueden sumar directamente porque las mitades y los tercios son cortes distintos. <br>Buscá el <em>mínimo común múltiplo</em> (6) y convertí: 1/2 = 3/6 y 1/3 = 2/6. Ahora sí podés sumarlas: 3/6 + 2/6 = <strong>5/6</strong></p>
                         </div>
                     </div>
                 </div>

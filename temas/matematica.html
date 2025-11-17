@@ -350,27 +350,29 @@
     </style>
 </head>
 <header>
-    <div id="logo">
-        <h1 id="logotipo">FormAr</h1>
-    </div>
-
-    <div id="buscador">
-        <div id="contenedor-buscar">
-            <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
-            <img src="../img/search1.png" id="lupa" alt="lupa">
+        <div id="logo">
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
         </div>
 
-    </div>
+        <div id="buscador">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
+                <img src="../img/search1.png" id="lupa" alt="lupa">
+            </div>
 
-    <div id="navegacion">
-        <img class="hamburger" src="./img/hamburger.png" alt="">
-        <a class="link" href="">Temas</a>
-        <a class="link" href="">Mis Temas</a>
-        <a class="link" href="">Mis Tarjetas</a>
-        <a class="link" href="">Sobre Nosotros</a>
-        <a class="user" href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
-    </div>
-</header>
+        </div>
+
+        <div id="navegacion">
+            <img class="hamburger" src="./img/hamburger.png" alt="">
+            <a class="link" href="/temas.html">Temas</a>
+            <a class="link" href="/temas.html">Mis Temas</a>
+            <a class="link" href="/misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="">Sobre Nosotros</a>
+            <a class="user" href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+        </div>
+    </header>
 
 <body>
     <div class="contenedor-principal">
@@ -436,6 +438,17 @@
                             </div>
                             <button class="boton-leccion boton-iniciar-leccion">Repasar Lección</button>
                         </div>
+                        <div class="tarjeta-leccion completada">
+                        <div class="contenido-leccion">
+                            <span class="material-symbols-outlined icono-estado">check_circle</span>
+                            <div class="info-leccion">
+                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Fracción</p>
+                                <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
+                                    fracciones.</p>
+                            </div>
+                        </div>
+                        <button class="boton-leccion boton-iniciar-leccion">Repasar Ejrcicio</button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -492,6 +505,17 @@
                             </a>
 
                         </div>
+                        <div class="tarjeta-leccion">
+                        <div class="contenido-leccion">
+                            <div class="circulo-pendiente"></div>
+                            <div class="info-leccion">
+                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Resolver Fracciones</p>
+                                <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
+                                    fracciones.</p>
+                            </div>
+                        </div>
+                        <button class="boton-leccion boton-completado-leccion">Hacer Ejercicio</button>
+                    </div>
                     </div>
                 </div>
             </div>
