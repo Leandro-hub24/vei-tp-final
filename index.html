@@ -21,21 +21,38 @@
         </div>
 
         <div id="buscador">
+            <img id="search" class="search" src="./img/search.png" id="lupa" alt="lupa">
             <div id="contenedor-buscar">
-                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
-                <img src="./img/search1.png" id="lupa" alt="lupa">
+                <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
+                <img class="lupa" src="./img/search1.png" id="lupa" alt="lupa">
             </div>
 
         </div>
 
         <div id="navegacion">
-            <img class="hamburger" src="./img/hamburger.png" alt="">
+            <img id="hamburger" class="hamburger" src="./img/hamburger.png" alt="">
             <a class="link" href="temas.html">Temas</a>
             <a class="link" href="temas.html">Mis Temas</a>
             <a class="link" href="misTarjetas.html">Mis Tarjetas</a>
             <a class="link" href="nuestrosProfesionales.html">Sobre Nosotros</a>
             <a class="user" href="perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
         </div>
+
+        <div id="desplegable1" class="">
+            <div id="contenedor-buscar1">
+                <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
+                <img class="lupa" src="./img/search1.png" id="lupa" alt="lupa">
+            </div>
+        </div>
+
+        <div id="desplegable2" class="">
+            <a class="link1" href="temas.html">Temas</a>
+            <a class="link1" href="">Mi Perfil</a>
+            <a class="link1" href="temas.html">Mis Temas</a>
+            <a class="link1" href="misTarjetas.html">Mis Tarjetas</a>
+            <a class="link1" href="nuestrosProfesionales.html">Sobre Nosotros</a>
+        </div>
+
     </header>
 
     <main>
@@ -45,8 +62,8 @@
                 <div class="contenedor-titulo">
                     <h1 class="titulo">¿Problemas estudiando?</h1>
                     <h3 class="subtitulo">FormAr te ayuda a organizar tus materias y te guía con metodologías efectivas 
-                        para mejorar tu rendimiento. No solo ves lo que debes estudiar, 
-                        también aprendes cómo hacerlo de forma estratégica y sin perder motivación. 
+                        para mejorar tu rendimiento.<!--  No solo ves lo que debes estudiar, 
+                        también aprendes cómo hacerlo de forma estratégica y sin perder motivación.  -->
                         Convierte el estudio en un hábito, no en un desafío.
                     </h3>
                    <a href="login.html" > <button class="btn" type="button">Comenzar</button></a>
@@ -75,7 +92,7 @@
                     <h2 class="subtitulo">Autoexplicación</h2>
                     <p class="texto">El usuario pone en palabras lo que aprendió explicándoselo a la IA, lo que estimula la reflexión
                          y la comprensión profunda.
-                         Al verbalizar sus ideas, identifica vacíos en su conocimiento y consolida conexiones entre los conceptos.
+                         <!-- Al verbalizar sus ideas, identifica vacíos en su conocimiento y consolida conexiones entre los conceptos. -->
                     </p>
                 </div>
 
@@ -85,8 +102,8 @@
                     </div>
                     <h2 class="subtitulo">Repetición espaciada</h2>
                     <p class="texto">Los conceptos se repasan automáticamente en intervalos de tiempo estratégicos,
-                         ajustados al rendimiento y progreso del usuario. Esta técnica aprovecha cómo funciona la memoria humana,
-                         reforzando el recuerdo justo antes de que la información sea olvidada
+                         ajustados al rendimiento y progreso del usuario. <!-- Esta técnica aprovecha cómo funciona la memoria humana,
+                         reforzando el recuerdo justo antes de que la información sea olvidada -->
                     </p>
                 </div>
 
@@ -95,8 +112,8 @@
                         <img class="imgInfo" src="./img/recuperacion.png" alt="">
                     </div>
                     <h2 class="subtitulo">Recuperación activa</h2>
-                    <p class="texto">Al final de cada tema, se realizará una evaluación interactiva en la que la se hará preguntas para que el usuario recuerde la información. La IA dará indicaciones y guiará al 
-                        usuario sobre cómo rellenar o responder correctamente, reforzando la memoria y la comprensión del contenido. 
+                    <p class="texto">Al final de cada tema, se realizará una evaluación interactiva en la que la se hará preguntas para que el usuario recuerde la información.<!--  La IA dará indicaciones y guiará al 
+                        usuario sobre cómo rellenar o responder correctamente, reforzando la memoria y la comprensión del contenido.  -->
                     </p>
                 </div>
             </div>
@@ -156,8 +173,8 @@
                         <div class="contenedor-texto">
                             <h3 class="subtitulo">Deja que la IA te ayude </h3>
                             <p class="texto texto-temas"><br> En cada clase, el chat con IA te acompaña para que descubras
-                                las respuestas por tu cuenta. En lugar de darte la solución directamente, 
-                                te ofrece pistas, ejemplos y preguntas guía que te ayudan a razonar y comprender mejor.</p>
+                                las respuestas por tu cuenta. <!-- En lugar de darte la solución directamente, 
+                                te ofrece pistas, ejemplos y preguntas guía que te ayudan a razonar y comprender mejor. --></p>
                         </div>
                         <div class="contenedor-temas-img">
                             <img src="./img/ai.png" class="img-temas" alt="">
@@ -169,7 +186,7 @@
                         <div class="contenedor-texto">
                             <h3 class="subtitulo">La consistencia es clave </h3>
                             <p class="texto texto-temas"><br> Aunque uses estas metodologías de estudio, la consistencia es la clave. 
-                                Los mejores resultados llegan cuando mantenés una rutina y dedicás tiempo regularmente al aprendizaje.</p>
+                                <!-- Los mejores resultados llegan cuando mantenés una rutina y dedicás tiempo regularmente al aprendizaje. --></p>
                         </div>
                         <div class="contenedor-temas-img">
                             <img src="./img/consistencia.png" class="img-temas" alt="">
@@ -234,6 +251,8 @@
         </div>
 
     </footer>
+
+    <script src="./js/header.js"></script>
 
 </body>
 
