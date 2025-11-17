@@ -1,161 +1,445 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mi página básica</title>
-  <link rel="stylesheet" href="./css/practica.css">
-  <link rel="stylesheet" href="./css/estilos-general.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos-general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Estudiar Tarjetas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0DFD8D;
+            --secondary-color: #243540;
+            --header-bg: #1D4E5B;
+            --bg-light: #f8f9fa;
+            --card-light: #ffffff;
+            --text-light: #111827;
+            --subtle-light: #6b7280;
+            --border-light: #e5e7eb;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
+        .material-icons {
+            vertical-align: middle;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--header-bg);
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .search-wrapper {
+            display: none;
+            flex: 1;
+            max-width: 36rem;
+            justify-content: center;
+            margin: 0 1.5rem;
+        }
+
+        .search-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-container .material-icons {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+        }
+
+        .search-container input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            color: white;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .search-container input::placeholder {
+            color: #d1d5db;
+        }
+
+        .search-container input:focus {
+            box-shadow: 0 0 0 2px var(--primary-color);
+        }
+
+        nav {
+            display: none;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        nav a.active {
+            font-weight: 600;
+            color: white;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.25rem;
+        }
+
+        .avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .avatar:hover {
+            border-color: var(--primary-color);
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 48rem;
+        }
+
+        .study-card {
+            background-color: var(--card-light);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(36, 53, 64, 0.2);
+            padding: 2rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 500px;
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+
+        .card-category {
+            font-size: 0.875rem;
+            color: var(--subtle-light);
+            margin-bottom: 1rem;
+        }
+
+        .card-question {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .options-container {
+            text-align: left;
+            max-width: 28rem;
+            margin: 0 auto;
+        }
+
+        .option-btn {
+            width: 100%;
+            text-align: left;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
+            border-radius: 0.5rem;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .option-btn:hover {
+            background-color: #f9fafb;
+        }
+
+        .option-btn span {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .card-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .show-answer-btn {
+            width: 100%;
+            max-width: 18rem;
+            margin: 0 auto;
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .show-answer-btn:hover {
+            opacity: 0.9;
+        }
+
+        .difficulty-container {
+            display: none;
+        }
+
+        .difficulty-container.active {
+            display: block;
+        }
+
+        .difficulty-text {
+            margin-bottom: 1rem;
+            color: var(--subtle-light);
+        }
+
+        .difficulty-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .difficulty-btn {
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .difficulty-btn.hard {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .difficulty-btn.hard:hover {
+            background-color: #fecaca;
+        }
+
+        .difficulty-btn.normal {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+
+        .difficulty-btn.normal:hover {
+            background-color: #bfdbfe;
+        }
+
+        .difficulty-btn.easy {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+
+        .difficulty-btn.easy:hover {
+            background-color: #bbf7d0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            padding: 1rem 0;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            text-align: center;
+            color: var(--subtle-light);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .search-wrapper {
+                display: flex;
+            }
+
+            nav {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: none;
+            }
+
+            .card-question {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .card-question {
+                font-size: 1.5rem;
+            }
+
+            .difficulty-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-    <body>
-
-  
-    <header>
+<body>
+<header>
         <div id="logo">
-            <h1 id="logotipo">FormAr</h1>
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
         </div>
 
         <div id="buscador">
             <div id="contenedor-buscar">
                 <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
-            <img src="./img/search1.png" id="lupa" alt="lupa">
+                <img src="./img/search1.png" id="lupa" alt="lupa">
             </div>
-            
+
         </div>
 
         <div id="navegacion">
             <img class="hamburger" src="./img/hamburger.png" alt="">
-            <a class="link" href="">Temas</a>
-            <a class="link" href="">Mis Temas</a>
-            <a class="link" href="">Mis Tarjetas</a>
+            <a class="link" href="temas.html">Temas</a>
+            <a class="link" href="temas.html">Mis Temas</a>
+            <a class="link" href="misTarjetas.html">Mis Tarjetas</a>
             <a class="link" href="">Sobre Nosotros</a>
-            <a class="user"  href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+            <a class="user" href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
         </div>
     </header>
- 
 
     <main>
-        <section class="card" id="inicio">
-        <a href="home.html"> <h4> Home </a> > <a href="misTarjetas.html"> Tarjeta 1</h4></a>
-        <h3>Geometria </h3>
-    </section>
-      
-        <div class=" repeticion" >
-            <h1> Tipos de ángulos</h1>
-            <div class="centro" id="pregunta">
-                <h2> Cuantos tipos de angulos hay y en que se diferencian?</h2> 
-                <a href="" class="boton" id="mostrarRespuesta">
-                    Mostrar respuesta
-                </a> 
-            </div>
-            <div class=" Respuesta oculto" id="respuesta" >
-           
-                <div class="centro" >
-                    <div class="card">
-                    <h1>4 tipos de ángulos</h1>
-                        <ul>
-                            <li><h2>Agudo: </h2><h3>menos de 90°. Ej: 45°</h3> </li>
-                            <li><h2>Recto:</h2><h3>exactamente 90°. Ej: esquina de un cuadrado</h3></li>
-                            <li><h2> Obtuso:</h2><h3> entre 90° y 180°.Ej: 120°</h3></li>
-                            <li> <h2>Llano:</h2><h3> exactamente 180°. Ej: una línea recta</h3></li>
-                        </ul>
+        <div class="card-container">
+            <div class="study-card">
+                <div class="card-content">
+                    <p class="card-category">Matemáticas - Fracciones</p>
+                    <h1 class="card-question">¿Cuál de las siguientes fracciones es equivalente a 2/3?</h1>
+                    
+                    <div class="options-container">
+                        <button class="option-btn">
+                            <span>A)</span> 3/4
+                        </button>
+                        <button class="option-btn">
+                            <span>B)</span> 4/6
+                        </button>
+                        <button class="option-btn">
+                            <span>C)</span> 5/7
+                        </button>
+                        <button class="option-btn">
+                            <span>D)</span> 2/5
+                        </button>
                     </div>
-            
                 </div>
-                <a href="misTarjetas.html" class="botones noDeco">
-                    <div class="boton verde">
-                        Facil
-                    </div> 
-                    <div class="boton verde">
-                        Bien
-                    </div> 
-                    <div class="boton amarillo">
-                        Dificil
-                    </div> 
-                    <div class="boton rojo">
-                        Muy dificil
-                    </div> 
 
-                </a>
+                <div class="card-footer">
+                    <div id="show-answer-container">
+                        <button class="show-answer-btn" onclick="showDifficulty()">Mostrar respuesta</button>
+                    </div>
+
+                    <div class="difficulty-container" id="difficulty-container">
+                        <p class="difficulty-text">¿Qué tan bien recordaste la respuesta?</p>
+                        <div class="difficulty-buttons">
+                            <button class="difficulty-btn hard">Difícil</button>
+                            <button class="difficulty-btn normal">Normal</button>
+                            <button class="difficulty-btn easy">Fácil</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-
-
-   
-        
-
-
     </main>
 
-        <footer>
-
-        <div class="footer">
-
-            <div class="contenedor-footer">
-                <h2 class="subtitulo-footer">FormAr</h2>
-                <p class="texto-footer">Nuestra misión es transformar el estudio en una experiencia activa,
-                    motivadora y accesible para todos.</p>
-            </div>
-
-            <div class="contenedor-footer">
-
-                <h4 class="subtitulo gris">Explorar</h4>
-                <a href="" class="link-footer">Temas</a>
-                <a href="" class="link-footer">Perfil</a>
-                <a href="" class="link-footer">Sobre Nosotros</a>
-
-            </div>
-
-            <div class="contenedor-footer">
-
-                <h4 class="subtitulo gris">Temas</h4>
-                <a href="" class="link-footer">Matemática</a>
-                <a href="" class="link-footer">Inglés</a>
-                <a href="" class="link-footer">Literatura</a>
-                <a href="" class="link-footer">Informática</a>
-                <a href="" class="link-footer">Ciencias Naturales</a>
-                <a href="" class="link-footer">Ciencias Sociales</a>
-
-            </div>
-
-            <div class="contenedor-footer">
-
-                <h4 class="subtitulo gris">Contáctanos</h4>
-                <a href="" class="link-footer">formarMision@formar.com.ar</a>
-
-            </div>
-
-
+    <footer>
+        <div class="footer-content">
+            © 2025 — FormAr Ejemplo
         </div>
-
     </footer>
 
-
-    </body>
     <script>
-    const boton = document.getElementById('mostrarRespuesta');
-    const pregunta = document.getElementById('pregunta');
-    const respuesta = document.getElementById('respuesta');
-
-    boton.addEventListener('click', (e) => {
-        e.preventDefault(); // evita que el <a> recargue la página
-
-        // Ocultar pregunta
-        pregunta.classList.remove('visible');
-        pregunta.classList.add('oculto');
-
-        // Mostrar respuesta con retardo para que se vea la transición
-        setTimeout(() => {
-        respuesta.classList.remove('oculto');
-        respuesta.classList.add('visible');
-        }, 300);
-    });
+        function showDifficulty() {
+            document.getElementById('show-answer-container').classList.add('hidden');
+            document.getElementById('difficulty-container').classList.add('active');
+        }
     </script>
+</body>
 </html>
