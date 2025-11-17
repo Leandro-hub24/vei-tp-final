@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="./css/estilos-general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
+        </div>
+        <div id="buscador">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" placeholder="¿Qué querés aprender?">
+                <img src="./img/search1.png" id="lupa" alt="lupa">
+            </div>
+        </div>
+        <div id="navegacion">
+            <img class="hamburger" src="./img/hamburger.png" alt="">
+            <a class="link" href="">Temas</a>
+            <a class="link" href="">Mis Temas</a>
+            <a class="link" href="misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="">Sobre Nosotros</a>
+            <a class="user" href=""><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <!--Datos de Perfil-->
+        <section id="profile_card">
+            <div id="marcoDeImg">
+                <img src="./img/imgUser.png" alt="Profile_Picture">
+            </div>
+            <div id="userData">
+                <div id="tituloDeUsuario">
+                    <h2>Usuario X</h2>
+                    <div><p>Nivel 15</p></div>
+                </div>
+                <h4>Buenos Aires, Argentina</h4>
+                <h4>Fecha de nacimiento: 12 de Diciembre de 1998</h4>
+                <div id="muestraLogros">
+                    <h3>LOGROS</h3>
+                    <div id="logroBox">
+                        <img src="./img/perfil/iconosDeLogros/logro1.svg" alt="logro1" class="logroIcon">
+                        <img src="./img/perfil/iconosDeLogros/logro2.svg" alt="logro2" class="logroIcon">
+                        <img src="./img/perfil/iconosDeLogros/logro3.svg" alt="logro3" class="logroIcon">
+                        <img src="./img/perfil/iconosDeLogros/logro4.svg" alt="logro4" class="logroIcon">
+                        <img src="./img/perfil/iconosDeLogros/logro5.svg" alt="logro5" class="logroIcon">
+                        <img src="./img/perfil/iconosDeLogros/logro6.svg" alt="logro6" class="logroIcon">
+                    </div>
+                    <div>
+                        <a href="#" id="botonDeLogros">
+                            <div>
+                                <h3>></h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="botonesLadoDerecho">
+                <div>
+                    <a href="#"><img src="./img/perfil/editar.svg" alt=""> Editar Perfil</a>
+                    <a href="#"><img src="./img/perfil/compartir.svg" alt=""> Compartir</a>
+                </div>
+                <div>
+                    <a href="#" id="botonAjustes"><img src="./img/perfil/ajustes.svg" alt=""> Ajustes</a>
+                </div>
+            </div>
+        </section>
+        <!--Racha de tarjetas-->
+        <section id="rachaDeTarjetas">
+            <div class="tituloDeSeccion">
+                <h3>Racha de tarjetas</h3>
+            </div>
+            <div id="contenidoDeRacha">
+                    <img src="img/perfil/carta_llama.svg" alt="Logo de Rachas" id="logoRacha">
+                    <div id="rachaActual">
+                        <h5>Tu racha actual:</h5>
+                        <h4>3 Días</h4>
+                    </div>
+                    <div id="calendarioDeRachas">
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaSinCompletar.svg" alt="Día sin completar">
+                            <h4>L</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaSinCompletar.svg" alt="Día sin completar">
+                            <h4>M</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaCompletado.svg" alt="Día completado">
+                            <h4>M</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaCompletado.svg" alt="Día completado">
+                            <h4>J</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaCompletado.svg" alt="Día completado">
+                            <h4>V</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaSinCompletar.svg" alt="Día sin completar">
+                            <h4>S</h4>
+                        </div>
+                        <div class="diaDeRacha">
+                            <img src="./img/perfil/RachaDiaSinCompletar.svg" alt="Día sin completar">
+                            <h4>D</h4>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!--Progreso y actividad Reciente-->
+        <section id="progresoYActividadReciente">
+            <!--Progreso-->
+            <div class="contenedores_pYa" id="pYa_left">
+                <div class="tituloDeSeccion">
+                    <h3>Progreso</h3>
+                    <button>Recientes <img src="./img/perfil/arrow_drop_down.svg" alt=""></button>
+                </div>
+                <div class="contenido_pYa" id="contenido_pYa_izquierda">
+                    <!--comienzo progreso de tema 1-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/matematica.png" alt="Logo de Matematicas"> Matemáticas</h4>
+                            <h4>68%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual1"></div>
+                        </div>
+                    </div>
+                    <!--comienzo progreso de tema 2-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/ingles.png" alt="Logo de Ingles"> Inglés</h4>
+                            <h4>27%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual2"></div>
+                        </div>
+                    </div>
+                    <!--comienzo progreso de tema 3-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/literatura.png" alt="Logo de Literatura"> Literatura</h4>
+                            <h4>100%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual3"></div>
+                        </div>
+                    </div>
+                    <!--comienzo progreso de tema 4-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/informatica.png" alt="Logo de Informatica"> Informática</h4>
+                            <h4>10%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Actividad Reciente-->
+            <div class="contenedores_pYa">
+                <div class="tituloDeSeccion">
+                    <h3>Actividad reciente</h3>
+                </div>
+                <div class="contenido_pYa">
+                    <!--comienzo actividad reciente 1-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/matematica.png" alt="Logo de Matematicas"> Matemáticas - Examen 3 aprobado</h4>
+                            <h4>+100XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 2-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/matematica.png" alt="Logo de Matematicas"> Matemáticas - Actividad 7 completa</h4>
+                            <h4>+40XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 3-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/ingles.png" alt="Logo de Ingles"> Inglés - Examen 1 aprobado</h4>
+                            <h4>+50XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 4-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/ingles.png" alt="Logo de Ingles"> Inglés - Actividad 3 completa</h4>
+                            <h4>+20XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 5-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/literatura.png" alt="Logo de Literatura"> Literatura - actividad 6 completa</h4>
+                            <h4>+30XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 6-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/literatura.png" alt="Logo de Literatura"> Literatura - Examen 2 aprobado</h4>
+                            <h4>+50XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 7-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/literatura.png" alt="Logo de Literatura"> Literatura - Actividad 5 completa</h4>
+                            <h4>+30XP</h4>
+                        </div>
+                    </div>
+                    <!--comienzo actividad reciente 8-->
+                    <div class="cajaDeActividad">
+                        <div class="tituloDeActividad">
+                            <h4><img src="./img/informatica.png" alt="Logo de Informatica"> Informática - Examen 1 aprobado</h4>
+                            <h4>+50XP</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Resumen general-->
+        <section id="resumenGeneral">
+            <div class="tituloDeSeccion">
+                <h3>Resumen general</h3>
+            </div>
+            <div id="contenidoDeResumenGeneral">
+                <div class="cajasDeTextoResumen">
+                    <h4>✔️ Clases terminadas</h4>
+                    <h4>12</h4>
+                </div>
+                <div class="cajasDeTextoResumen">
+                    <h4>🏆 Examenes aprobados</h4>
+                    <h4>9</h4>
+                </div>
+                <div class="cajasDeTextoResumen">
+                    <h4>🎓 Temas superados</h4>
+                    <h4>3</h4>
+                </div>
+                <div class="cajasDeTextoResumen">
+                    <h4>🃏 Tarjetas de Estudios obtenidas</h4>
+                    <h4>75</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer>
+        <div class="footer">
+            <div class="contenedor-footer">
+                <h2 class="subtitulo-footer">FormAr</h2>
+                <p class="texto-footer">Nuestra misión es transformar el estudio en una experiencia activa,
+                    motivadora y accesible para todos.</p>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Explorar</h4>
+                <a href="" class="link-footer">Temas</a>
+                <a href="" class="link-footer">Perfil</a>
+                <a href="" class="link-footer">Sobre Nosotros</a>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Temas</h4>
+                <a href="" class="link-footer">Matemática</a>
+                <a href="" class="link-footer">Inglés</a>
+                 <a href="" class="link-footer">Literatura</a>
+                 <a href="" class="link-footer">Informática</a>
+                <a href="" class="link-footer">Ciencias Naturales</a>
+                <a href="" class="link-footer">Ciencias Sociales</a>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Contáctanos</h4>
+                <a href="" class="link-footer">formarMision@formar.com.ar</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
