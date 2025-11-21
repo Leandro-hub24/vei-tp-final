@@ -4,7 +4,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:#183F8C ;
+    background-color: var(--color-acento-2); ;
 }
 
 main{
@@ -115,10 +115,11 @@ article{
     font-size: 1.2em;
     border: 1px solid grey;
     color: white;
-    background: #183F8C;
+    background: var(--color-acento-1);
     border-radius: 3em;
     font-family: "Merriweather Sans";
     padding: .7em;
+    cursor: pointer;
 }
 
 #section-div-div-enlaces{
@@ -140,5 +141,5 @@ article{
 }
 
 #button-register:active{
-    background-color: #183f8cd9;
+    background-color: var(--color-acento-1);
 }

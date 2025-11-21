@@ -67,16 +67,16 @@
 }
 
 .contenedor-info-arriba {
-   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-  color: white;
-  background-color: #1b403c;
-  border-radius: 15px;
-  border-bottom-left-radius: 0%;
-  border-bottom-right-radius: 0%;
+    color: white;
+    background-color: #1b403c;
+    border-radius: 15px;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
 }
 
 .contenedor-info-abajo {
@@ -109,8 +109,8 @@
     padding-left: 1em;
     padding-right: 1em;
     border-radius: 15px;
-   
-   
+
+
 }
 
 .contenedor-info-img {
@@ -142,15 +142,16 @@
 
 .contenedor-temas-arriba {
     display: flex;
+    flex-direction: column;
     gap: 3em;
 }
 
 .contenedor-temas-arriba-izq {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    width: 100%;
     gap: 3em;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
     /* background-color: #0DFD8D; */
     background-color: var(--color-acento-2);
     padding: 1em 2em;
@@ -159,25 +160,22 @@
     align-items: center;
 }
 
-.conLinea{
-   border-top: 2px solid white;
-   padding-top: 2em;
-}
+
 
 .texto-temas {
     flex: 1;
     margin: 0;
 }
 
-.contenedor-texto{
+.contenedor-texto {
     flex: 1;
 }
 
 .contenedor-temas-arriba-izq-abajo {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    
+    justify-content: space-between;
+
 }
 
 .contenedor-temas-img {
@@ -188,7 +186,7 @@
 }
 
 .img-temas {
-    width: 50%; 
+    width: 50%;
     height: auto;
     display: block;
 }
@@ -196,7 +194,8 @@
 .contenedor-temas-der {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: center;
+    width: 100%;
     gap: 1em;
     padding: 1em;
 }
@@ -212,10 +211,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2em;
-    width: 100%;
+    width: 50%;
     justify-items: center;
     padding: 1em;
-    
+
 }
 
 .contenedor-temas-arriba-der-info {
@@ -224,7 +223,7 @@
     align-items: center;
     width: 100%;
     gap: 1em;
-    
+
     border-radius: 12px;
     padding: 1em;
 }
@@ -408,6 +407,16 @@
 
     .contenedor-temas-der-abajo {
         width: 80%;
+    }
+
+    .conLinea {
+        border-top: 2px solid white;
+        padding-top: 2em;
+    }
+
+    .contenedor-temas-arriba-izq {
+        flex-direction: column;
+        align-items: center;
     }
 
 }
