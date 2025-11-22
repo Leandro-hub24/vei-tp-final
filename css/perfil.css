@@ -1,15 +1,26 @@
+#body{
+    background-color: var(--fondo-gris);
+}
+
+#contenidoDePagina{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
 #profile_card{
-    background-color: var(--color-acento-3);
-    border-radius: 15px;
+    background-color: var(--color-acento-2);
+    color: var(--fondo-blanco);
+    border-radius: 0.5rem;
     height: 10em;
-    margin-left: 9em;
-    margin-right: 9em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    width: 100%;
     padding: 1.5em;
     display: flex;
     align-items: center;
-    color: white;
+    justify-content: space-between;
 }
 
 #profile_card a:link, a:visited {
@@ -22,25 +33,19 @@
     text-decoration: none;
 }
 
-#marcoDeImg{
-    background-color: var(--fondo-blanco);
-    height: 8em;
+#imagenDePerfil{
     width: 8em;
     border-radius: 50%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-#marcoDeImg img{
-    height: 8em;
-    object-fit: contain;
-    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.2em;
+    background-color: var(--fondo-blanco);
 }
 
 #userData{
-    margin-left: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
 
 #tituloDeUsuario{
@@ -53,7 +58,7 @@
 }
 
 #tituloDeUsuario div{
-    background-color: gold;
+    background-color: var(--color-acento-4);
     border-radius: 7px;
     display: flex;
     flex-wrap: wrap;
@@ -74,48 +79,70 @@
 }
 
 #muestraLogros{
-    background-color: var(--color-acento-1);
+    background-color: var(--color-acento-3);
     border-radius: 10px;
-    height: 3em;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5em;
-    padding-left: 1em;
     font-family: "Lato";
     font-size: medium;
+    height: 3em;
+}
+
+#muestraLogros h3{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
 }
 
 #logroBox{
-    margin-left: 1em;
-    margin-right: 1em;
+    padding: 0.5em;
     align-items: center;
-    justify-content: center;
-}
-
-#logroBox img{
-    margin-left: 0.2em;
-    margin-right: 0.2em;
+    display: flex;
+    gap: 0.5em;
 }
 
 .logroIcon{
-    height: 1.80em;
+    height: 2.5em;
+    border-radius: 50%;
+    border-color: black;
+    border-style: solid;
+    border-width: 0.1em;
+}
+
+#ContenedorDeBotonLogro{
+    padding: 0 1em;
+}
+
+#botonDeLogros{
+    height: 100%;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    transition: all 0.3s ease;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 2px;
+    border-left-style: solid;
+    border-left-color: var(--color-acento-2);
 }
 
 #botonDeLogros div{
-    height: 3em;
-    width: 2em;
-    margin-right: 0%;
-    align-items: center;
-    justify-content: center;
+    color: var(--fondo-blanco);
+    padding: 0.5em;
+    margin-left: 0.2em;
+    font-size: large;
+    height: 100%;
     display: flex;
+    align-items: center;
 }
 
-#botonDeLogros:hover div{
-    background-color: #4f585e;
-    height: 3em;
-    width: 2em;
+#botonDeLogros:hover{
+    color: white;
+    text-decoration: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -123,7 +150,6 @@
 #botonesLadoDerecho{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
     justify-content: space-between;
     height: 8em;
     margin-top: 1em;
@@ -135,19 +161,19 @@
     height: 2em;
     width: 8em;
     padding: 0.4em;
-    background-color: var(--color-acento-1);
+    background-color: var(--color-acento-3);
     border-radius: 5px;
     font-family: "Lato";
     font-size: small;
     text-align: center;
     justify-content: center;
     margin-bottom: 0.5em;
+    transition: all 0.3s ease;
 }
 
 #botonesLadoDerecho a:hover{
     color: white;
     text-decoration: none;
-    background-color: #4f585e;
 }
 
 #botonesLadoDerecho a img {
@@ -158,32 +184,29 @@ margin-left: 0%;
 /*Caja de rachas*/
 
 #rachaDeTarjetas{
-    height: 8em;
-    margin-left: 13em;
-    margin-right: 13em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: white;
+    /*color: white;*/
+    background-color: var(--fondo-blanco);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .tituloDeSeccion{
-    background-color: var(--color-acento-3);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    height: 2em;
+    background-color: var(--fondo-blanco);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding: 0 10.5em;
+    padding-top: 1.5em;
     font-family: "Merriweather Sans";
 }
 
 #contenidoDeRacha{
-    background-color: var(--color-acento-1);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px ;
+   /* background-color: var(--color-acento-1);*/
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     height: 6em;
     padding: 1.5em;
     display: flex;
@@ -191,20 +214,11 @@ margin-left: 0%;
     justify-content: space-evenly;
 }
 
-#logoRacha{
-    height: 5em;
-}
-
 #rachaActual{
     text-align: center;
     font-family: "Lato";
     font-size: medium;
-}
-
-#rachaActual h4{
-    font-family: "Oswald";
-    color: gold;
-    font-size: large;
+    /*color: var(--fondo-blanco);*/
 }
 
 #calendarioDeRachas{
@@ -221,73 +235,96 @@ margin-left: 0%;
 }
 
 .diaDeRacha img{
-    height: 1em;
+    height: 1.8em;
     margin-bottom: 0.5em;
+}
+
+.diaDeRacha h4{
+    text-align: center;
+    font-size: large;
+}
+
+#diasDeRacha{
+    font-family: "Oswald";
+    color: orangered;
+    font-size: larger;
 }
 
 /*progreso Y Actividad Reciente*/
 
 #progresoYActividadReciente{
-    height: 20em;
-    margin-left: 13em;
-    margin-right: 13em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: white;
+    /*color: white;*/
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 1em;
 }
 
 .contenedores_pYa{
-    background-color: var(--color-acento-1);
+    background-color: var(--fondo-blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     height: 100%;
     width: 100%;
-    border-radius: 15px;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
 }
 
-#pYa_left{
-    margin-right: 2em;
-}
-
-.tituloDeSeccion button{
+#selectorFiltro{
     display: flex;
     height: 2em;
     width: 8em;
-    padding: 0.4em;
+    padding: 0 1em;
     color: var(--fondo-blanco);
-    background-color: var(--color-acento-1);
+    background-color: var(--color-acento-3);
     border: none;
     border-radius: 5px;
     font-family: "Lato";
     font-size: small;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
-.tituloDeSeccion button:hover{
+#selectorFiltro:hover{
     text-decoration: none;
-    background-color: #4f585e;
 }
 
 .contenido_pYa{
-    margin: 0.7em;
-    flex: 1;
+    margin-top: 0.7em;
+    padding: 0 18em;
+    padding-bottom: 1.5em;
     box-sizing: border-box;
-    overflow-y: auto;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido_pYa a{
+    margin-left: auto;
+    text-decoration: none;
+    height: 2em;
+    padding: 0.4em;
+    color: #5e6774;
+    border-radius: 5px;
+    font-family: "Lato";
+    font-size: small;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    transition: all 0.3s ease;
+    font-size: medium;
+}
+
+.contenido_pYa a:hover{
+    color: black;
 }
 
 .progresoTema{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    padding: 0.3em 0;
+    margin: 0.2em 0;
 }
 
 .TemaYporcentaje{
@@ -299,7 +336,7 @@ margin-left: 0%;
 }
 
 .barraDeProgreso{
-    background-color: var(--fondo-blanco);
+    background-color: var(--color-acento-1);
     border-radius: 15px;
     width: 100%;
     height: 1em;
@@ -309,7 +346,7 @@ margin-left: 0%;
 .barraDeProgreso div{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    background-color: #0A83CE;
+    background-color: var(--color-acento-4);
 }
 
 #progresoActual1{
@@ -328,41 +365,46 @@ margin-left: 0%;
     width: 10%;
 }
 
+#progresoActual5{
+    width: 32%;
+}
+
+#progresoActual6{
+    width: 67%;
+}
+
 .cajaDeActividad{
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
     margin-bottom: 0.5em;
-    background-color: #3A5D74;
+    background-color: var(--fondo-gris);
 }
 
 .tituloDeActividad{
     display: flex;
-    flex: 1;
     justify-content: space-between;
     font-family: "Lato";
 }
 
+/*Resumen General*/
+
 #resumenGeneral{
-    margin-left: 13em;
-    margin-right: 13em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: white;
+    border-radius: 0.5rem;
+    background-color: var(--fondo-blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 #contenidoDeResumenGeneral{
-    background-color: var(--color-acento-1);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px ;
-    padding: 1.5em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    row-gap: 1em;
-    column-gap: 5em;
-    grid-auto-flow: column;
+    
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1.5em 18em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 0;
 }
 
 .cajasDeTextoResumen{

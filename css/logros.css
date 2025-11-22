@@ -1,0 +1,98 @@
+#fondo{
+    background-color: var(--fondo-gris);
+}
+
+#logrosDesbloqueados{
+    margin-left: 13em;
+    margin-right: 13em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.tituloDeSeccion{
+    background-color: var(--color-acento-1);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-family: "Merriweather Sans";
+}
+
+#recuentoDeLogros{
+    display: flex;
+    padding-top: 0.7em;
+}
+
+#barraDeProgreso{
+    background-color: #3A5D74;
+    border-radius: 15px;
+    width: 20em;
+    height: 1em;
+    display: flex;
+    margin-left: 1em;
+}
+
+#barraDeProgreso div{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: var(--color-acento-4);
+    width: 29.63%;
+}
+
+/*Lista de logros obtenidos*/
+#ListaDeLogrosObtenidos{
+    background-color: var(--fondo-blanco);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px ;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LugarDelogroObtenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5em;
+    font-family: "Lato";
+    color: black;
+    background-color: var(--fondo-gris);
+    margin-bottom: 0.2em;
+}
+
+.parteIzquierda{
+    display: flex;
+    align-items: center;
+}
+
+.descripcionDeLogro{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.descripcionDeLogro h4{
+    font-family: "Merriweather Sans";
+    margin-bottom: 0.2em;
+}
+
+.LugarDelogroObtenido img{
+    height: 4.5em;
+    margin-right: 1em;
+    padding: 0.2em;
+    padding-left: 0.5em;
+}
+
+.fechaDeObtencion{
+    margin-left: 5em;
+    padding: 0.2em;
+    padding-right: 0.5em;
+}

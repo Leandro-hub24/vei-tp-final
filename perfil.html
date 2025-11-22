@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/perfil.css">
 </head>
-<body>
+<body id="body">
     <!--Header-->
     <header>
         <div id="logo">
@@ -52,37 +52,31 @@
         </div>
 
     </header>
-    <main>
+    <main id="contenidoDePagina">
         <!--Datos de Perfil-->
         <section id="profile_card">
-            <div id="marcoDeImg">
-                <img src="./img/imgUser.png" alt="Profile_Picture">
-            </div>
             <div id="userData">
-                <div id="tituloDeUsuario">
-                    <h2>Usuario X</h2>
-                    <div><p>Nivel 15</p></div>
+                <img src="./img/imgUser.png" alt="Profile_Picture" id="imagenDePerfil">
+                <div id="datosDePerfil">
+                    <div id="tituloDeUsuario">
+                        <h2>Usuario X</h2>
+                        <div><p>Nivel 15</p></div>
+                    </div>
+                    <h4>Buenos Aires, Argentina</h4>
+                    <h4>Fecha de nacimiento: 12 de Diciembre de 1998</h4>
                 </div>
-                <h4>Buenos Aires, Argentina</h4>
-                <h4>Fecha de nacimiento: 12 de Diciembre de 1998</h4>
-                <div id="muestraLogros">
+            </div>
+            <div id="muestraLogros">
                     <h3>LOGROS</h3>
-                    <div id="logroBox">
-                        <img src="./img/perfil/iconosDeLogros/logro1.svg" alt="logro1" class="logroIcon">
-                        <img src="./img/perfil/iconosDeLogros/logro2.svg" alt="logro2" class="logroIcon">
-                        <img src="./img/perfil/iconosDeLogros/logro3.svg" alt="logro3" class="logroIcon">
-                        <img src="./img/perfil/iconosDeLogros/logro4.svg" alt="logro4" class="logroIcon">
-                        <img src="./img/perfil/iconosDeLogros/logro5.svg" alt="logro5" class="logroIcon">
-                        <img src="./img/perfil/iconosDeLogros/logro6.svg" alt="logro6" class="logroIcon">
-                    </div>
-                    <div>
-                        <a href="#" id="botonDeLogros">
-                            <div>
-                                <h3>></h3>
-                            </div>
-                        </a>
-                    </div>
+                <div id="logroBox">
+                    <img src="./img/perfil/iconosDeLogros/logro1.svg" alt="logro1" class="logroIcon">
+                    <img src="./img/perfil/iconosDeLogros/logro2.svg" alt="logro2" class="logroIcon">
+                    <img src="./img/perfil/iconosDeLogros/logro3.svg" alt="logro3" class="logroIcon">
+                    <img src="./img/perfil/iconosDeLogros/logro4.svg" alt="logro4" class="logroIcon">
+                    <img src="./img/perfil/iconosDeLogros/logro5.svg" alt="logro5" class="logroIcon">
+                    <img src="./img/perfil/iconosDeLogros/logro6.svg" alt="logro6" class="logroIcon">
                 </div>
+                <a href="./logros.html" id="botonDeLogros"><div><h4>></h4></div></a>
             </div>
             <div id="botonesLadoDerecho">
                 <div>
@@ -100,10 +94,9 @@
                 <h3>Racha de tarjetas</h3>
             </div>
             <div id="contenidoDeRacha">
-                    <img src="img/perfil/carta_llama.svg" alt="Logo de Rachas" id="logoRacha">
                     <div id="rachaActual">
-                        <h5>Tu racha actual:</h5>
-                        <h4>3 Días</h4>
+                        <h4>Tu racha actual:</h4>
+                        <h3 id="diasDeRacha">3 Días</h3>
                     </div>
                     <div id="calendarioDeRachas">
                         <div class="diaDeRacha">
@@ -140,10 +133,14 @@
         <!--Progreso y actividad Reciente-->
         <section id="progresoYActividadReciente">
             <!--Progreso-->
-            <div class="contenedores_pYa" id="pYa_left">
+            <div class="contenedores_pYa">
                 <div class="tituloDeSeccion">
                     <h3>Progreso</h3>
-                    <button>Recientes <img src="./img/perfil/arrow_drop_down.svg" alt=""></button>
+                    <select id="selectorFiltro">
+                        <option>Recientes</option>
+                        <option>Mayor progreso</option>
+                        <option>Menor progreso</option>
+                    </select>
                 </div>
                 <div class="contenido_pYa" id="contenido_pYa_izquierda">
                     <!--comienzo progreso de tema 1-->
@@ -184,6 +181,26 @@
                         </div>
                         <div class="barraDeProgreso">
                             <div id="progresoActual4"></div>
+                        </div>
+                    </div>
+                    <!--comienzo progreso de tema 5-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/sociales.png" alt="Logo de Sociales"> Sociales</h4>
+                            <h4>32%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual5"></div>
+                        </div>
+                    </div>
+                    <!--comienzo progreso de tema 6-->
+                    <div class="progresoTema">
+                        <div class="TemaYporcentaje">
+                            <h4><img src="./img/naturales.png" alt="Logo de Naturales"> Naturales</h4>
+                            <h4>67%</h4>
+                        </div>
+                        <div class="barraDeProgreso">
+                            <div id="progresoActual6"></div>
                         </div>
                     </div>
                 </div>
@@ -250,6 +267,7 @@
                             <h4>+50XP</h4>
                         </div>
                     </div>
+                    <a href="#">Ver historial completo ></a>
                 </div>
             </div>
         </section>
