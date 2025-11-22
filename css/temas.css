@@ -1,0 +1,337 @@
+/* Reset básico - elimina márgenes y padding por defecto del navegador */
+* {
+    margin: 0;
+    /* Quita todos los márgenes */
+    padding: 0;
+    /* Quita todos los espacios internos */
+    box-sizing: border-box;
+    /* Hace que padding y border se incluyan en el ancho total */
+}
+
+/* Estilos del body - la página completa */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Tipografía de Google Fonts */
+    background-color: #f8f9fa;
+    /* Fondo gris muy claro */
+    color: #1f2937;
+    /* Color del texto gris oscuro */
+    line-height: 1.6;
+    /* Espaciado entre líneas (1.6 veces el tamaño de la fuente) */
+}
+
+/* Contenedor principal de la página */
+.contenido-principal {
+    max-width: 1280px;
+    /* Ancho máximo de 1280 píxeles */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente (0 arriba/abajo, auto izq/der) */
+    padding: 2rem 1.5rem;
+    /* Espacio interno: 2rem arriba/abajo, 1.5rem izq/der */
+}
+
+/* Banner de bienvenida - la caja gris oscura */
+.bienvenida {
+    background-color: #374151;
+    /* Fondo gris oscuro */
+    color: white;
+    /* Texto blanco */
+    border-radius: 0.5rem;
+    /* Esquinas redondeadas (8px) */
+    padding: 1.5rem;
+    /* Espacio interno de 1.5rem (24px) en todos los lados */
+    margin-bottom: 2rem;
+    /* Espacio de 2rem (32px) hacia abajo */
+    display: flex;
+    /* Activa flexbox para organizar elementos en fila */
+    justify-content: space-between;
+    /* Separa elementos al máximo (título izq, selector der) */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Sombra suave: 0 horizontal, 1px vertical, 3px difuminado, color negro 10% opacidad */
+}
+
+/* Título "Bienvenido Usuario" */
+.titulo-bienvenida {
+    font-size: 1.5rem;
+    /* Tamaño de fuente 1.5rem (24px) */
+    font-weight: 400;
+    /* Peso normal (no negrita) */
+}
+
+/* El nombre "Usuario" en color turquesa */
+.nombre-usuario {
+    font-weight: 600;
+    /* Peso semi-negrita */
+    color: #5eead4;
+    /* Color turquesa/cyan */
+}
+
+/* Contenedor del selector */
+.selector-container {
+    position: relative;
+    /* Permite posicionar elementos hijos de forma absoluta */
+}
+
+/* El selector de año escolar */
+.selector-anio {
+    appearance: none;
+    /* Elimina el estilo por defecto del navegador */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo blanco con 20% de opacidad (semi-transparente) */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    border-radius: 0.375rem;
+    /* Esquinas redondeadas (6px) */
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    /* Espacio interno: 0.5rem arriba/abajo, 2.5rem derecha (para la flecha), 1rem izquierda */
+    font-family: inherit;
+    /* Usa la misma fuente que el padre (Poppins) */
+    font-size: 0.875rem;
+    /* Tamaño de fuente 0.875rem (14px) */
+    cursor: pointer;
+    /* Cambia el cursor a manita al pasar sobre él */
+    outline: none;
+    /* Elimina el borde azul al hacer clic */
+    transition: all 0.3s ease;
+    /* Transición suave de 0.3 segundos para todos los cambios */
+}
+
+/* Selector cuando está enfocado (al hacer clic) */
+.selector-anio:focus {
+    box-shadow: 0 0 0 2px #5eead4;
+    /* Anillo turquesa de 2px alrededor */
+}
+
+/* Opciones dentro del selector */
+.selector-anio option {
+    background-color: #374151;
+    /* Fondo gris oscuro */
+    color: white;
+    /* Texto blanco */
+}
+
+.icono-flecha {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+}
+
+/*-------------------------------------------- */
+
+.grid-materias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.tarjeta-materia {
+    flex: 1 1 300px;
+}
+
+/* Tarjeta de materia - la caja blanca de cada materia */
+.tarjeta-materia {
+    background-color: #ffffff;
+    /* Fondo blanco */
+    border-radius: 0.5rem;
+    /* Esquinas redondeadas (8px) */
+    padding: 1.5rem;
+    /* Espacio interno de 1.5rem (24px) en todos los lados */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: box-shadow 0.3s ease;
+
+    position: relative;
+    overflow: visible; /* para que la lista pueda salir hacia abajo */
+}
+
+/* Tarjeta cuando pasas el mouse por encima */
+.tarjeta-materia:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra más grande y elevada */
+}
+
+/* Encabezado de la materia - contiene el título y el botón expandir */
+.encabezado-materia {
+    display: flex;
+    /* Activa flexbox */
+    justify-content: space-between;
+    /* Separa título a la izquierda y botón a la derecha */
+    align-items: center;
+    /* Centra verticalmente */
+    margin-bottom: 1rem;
+    /* Espacio de 1rem (16px) hacia abajo */
+}
+
+/* Contenedor del título - agrupa el ícono y el texto */
+.titulo-materia-wrapper {
+    display: flex;
+    /* Activa flexbox */
+    align-items: center;
+    /* Centra verticalmente el ícono y el texto */
+    gap: 0.75rem;
+    /* Espacio de 0.75rem (12px) entre ícono y texto */
+}
+
+/* Ícono de la materia (calculadora, libro, etc) */
+.icono-materia {
+    font-size: 1.25rem;
+    display: inline-block;
+ /* flecha apuntando hacia abajo */
+}
+
+
+/* Colores específicos para cada ícono de materia */
+.icono-matematicas {
+    color: #ef4444;
+    /* Rojo para Matemáticas */
+}
+
+.icono-sociales {
+    color: #3b82f6;
+    /* Azul para Ciencias Sociales */
+}
+
+.icono-lengua {
+    color: #a855f7;
+    /* Morado para Lengua y Literatura */
+}
+
+.icono-naturales {
+    color: #22c55e;
+    /* Verde para Ciencias Naturales */
+}
+
+.icono-informatica {
+    color: #6b7280;
+    /* Gris para Informática */
+}
+
+.icono-ingles {
+    color: #f97316;
+    /* Naranja para Inglés */
+}
+
+a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: inherit;
+    /* Mantiene el color original del texto */
+}
+
+/* Título de la materia (ej: "Matemáticas") */
+.titulo-materia {
+    font-size: 1.3rem;
+    /* Tamaño de fuente 1.125rem (18px) */
+    font-weight: 600;
+    /* Peso semi-negrita */
+    color: #1f2937;
+    /* Color gris oscuro */
+}
+.titulo-materia:hover {
+    cursor: pointer;
+    color: #ef4444;
+}
+
+/* Botón de expandir/contraer (flecha) */
+.boton-expandir {
+    color: #6b7280;
+    /* Color gris */
+    cursor: pointer;
+    /* Cursor de manita */
+    transition: color 0.3s ease;
+    display: inline-block;
+    transition: transform 0.25s ease;
+    transform: rotate(180deg); /* apunta hacia abajo */
+
+
+
+}
+
+.tarjeta-materia:hover .boton-expandir {
+    transform: rotate(0deg); /* apunta hacia arriba */
+}
+
+/* Botón cuando pasas el mouse por encima */
+.boton-expandir:hover {
+    color: #374151;
+    /* Color gris más oscuro */
+}
+
+
+.lista-temas {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border-radius: 5px;
+    position: absolute;
+    padding-left: 1em;
+    
+    
+    left: 1px;
+    width: 100%;
+    top: 100%; /* aparece justo debajo del encabezado de la tarjeta */
+    background: white;
+    
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+}
+
+
+
+
+
+/* Cada tema individual en la lista */
+.item-tema {
+    display: flex;
+    /* Activa flexbox */
+    align-items: flex-start;
+    /* Alinea elementos al inicio (arriba) */
+    font-size: 1rem;
+    /* Tamaño de fuente 0.875rem (14px) */
+    color: #6b7280;
+    /* Color gris */
+    margin-bottom: 0.5rem;
+    /* Espacio de 0.5rem (8px) hacia abajo */
+}
+
+/* Último tema no tiene margen abajo */
+.item-tema:last-child {
+    margin-bottom: 0;
+    /* Sin espacio abajo en el último elemento */
+}
+
+/* Punto decorativo turquesa al inicio de cada tema */
+.punto-tema {
+    width: 0.375rem;
+    /* Ancho de 0.375rem (6px) */
+    height: 0.375rem;
+    /* Alto de 0.375rem (6px) */
+    background-color: #5eead4;
+    /* Color turquesa */
+    border-radius: 50%;
+    /* Lo hace circular (50% = círculo perfecto) */
+    margin-right: 0.8rem;
+    /* Espacio de 0.75rem (12px) a la derecha */
+    margin-top: 0.6rem;
+    /* Espacio de 0.375rem (6px) arriba (para alinearlo con el texto) */
+    flex-shrink: 0;
+    /* Evita que el punto se achique si falta espacio */
+}
+
+@media (min-width: 990px) {
+    .grid-materias {
+        grid-template-columns: 1fr 1fr;
+    }
+}

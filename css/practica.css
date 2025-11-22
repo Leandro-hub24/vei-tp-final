@@ -314,6 +314,20 @@ main {
     color: white;
 }
 
+
+
+.option-btn.seleccionado {
+    border: 2px solid black;     
+}
+
+.incorrecto.mostrar{
+    background-color: red;
+}
+
+.correcto.mostrar{
+    background-color: #0DFD8D;
+}
+
 /* Footer */
 footer {
     background-color: white;

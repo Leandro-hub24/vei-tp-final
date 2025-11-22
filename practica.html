@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/estilos-general.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/practica.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <title>Estudiar Tarjetas</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -61,16 +62,16 @@
                     <h1 class="card-question">¿Cuál de las siguientes fracciones es equivalente a 2/3?</h1>
                     
                     <div class="options-container">
-                        <button class="option-btn">
+                        <button class="option-btn incorrecto" onclick="marcar(this)">
                             <span>A)</span> 3/4
                         </button>
-                        <button class="option-btn">
+                        <button class="option-btn correcto" onclick="marcar(this)">
                             <span>B)</span> 4/6
                         </button>
-                        <button class="option-btn">
+                        <button class="option-btn incorrecto" onclick="marcar(this)">
                             <span>C)</span> 5/7
                         </button>
-                        <button class="option-btn">
+                        <button class="option-btn incorrecto" onclick="marcar(this)">
                             <span>D)</span> 2/5
                         </button>
                     </div>
@@ -78,7 +79,7 @@
 
                 <div class="card-footer">
                     <div id="show-answer-container">
-                        <button class="show-answer-btn" onclick="showDifficulty()">Mostrar respuesta</button>
+                        <button class="show-answer-btn" onclick="showDifficulty()" >Mostrar respuesta</button>
                     </div>
 
                     <div class="difficulty-container" id="difficulty-container">
@@ -95,15 +96,72 @@
     </main>
 
     <footer>
-        <div class="footer-content">
-            © 2025 — FormAr Ejemplo
+
+        <div class="footer">
+
+            <div class="contenedor-footer">
+                <h2 class="subtitulo-footer">FormAr</h2>
+                <p class="texto-footer">Nuestra misión es transformar el estudio en una experiencia activa,
+                    motivadora y accesible para todos.</p>
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Explorar</h4>
+                <a href="temas.html" class="link-footer">Temas</a>
+                <a href="perfil.html" class="link-footer">Perfil</a>
+                <a href="nuestrosProfesionales.html" class="link-footer">Sobre Nosotros</a>
+
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Temas</h4>
+                <a href="../temas/matematica.html" class="link-footer">Matemáticas</a>
+                <a href="" class="link-footer">Inglés</a>
+                <a href="" class="link-footer">Literatura</a>
+                <a href="" class="link-footer">Informática</a>
+                <a href="" class="link-footer">Ciencias Naturales</a>
+                <a href="" class="link-footer">Ciencias Sociales</a>
+
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Contáctanos</h4>
+                <a href="" class="link-footer">formarMision@formar.com.ar</a>
+
+            </div>
+
+
         </div>
+
     </footer>
 
     <script>
         function showDifficulty() {
             document.getElementById('show-answer-container').classList.add('hidden');
             document.getElementById('difficulty-container').classList.add('active');
+           
+            document.querySelectorAll(".correcto").forEach(div => {
+                div.classList.add("mostrar");
+            });
+
+          
+            document.querySelectorAll(".incorrecto").forEach(div => {
+                div.classList.add("mostrar");
+            });
+        }
+         
+   
+        function marcar(btn) {
+            
+            document.querySelectorAll(".option-btn").forEach(boton => {
+                boton.classList.remove("seleccionado");
+            });
+
+            
+            btn.classList.add("seleccionado");
         }
     </script>
     <script src="./js/header.js"></script>
