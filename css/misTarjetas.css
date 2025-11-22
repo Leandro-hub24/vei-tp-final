@@ -1,80 +1,183 @@
-body{
-    background-color: #243540;
-    padding-left: 10em;
-    padding-right: 10em;
-    color: antiquewhite;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-.tarjetas{
-    background-color: #1B403C;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: repeat(2, 1fr);    
-    gap: 16px;                             
-    padding: 20px;
-}
-
-.tarjeta{
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+    color: #243540;
+    min-height: 100vh;
     display: flex;
-    height: 7em;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
-    border: 2px solid #05A65B;               /* 🔹 borde blanco */
-    border-radius: 10px;
-    padding: 16px;
-    color: white;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+/* Header *
+/* Main Content */
+main {
+    flex-grow: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.search-section {
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 32rem;
+}
+
+.search-container .material-icons {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.search-container input {
+    width: 100%;
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-container input:focus {
+    box-shadow: 0 0 0 2px #1A3A3A;
+    border-color: #1A3A3A;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.card-stats {
+    color: #6b7280;
+}
+
+.card-stats p {
+    margin-top: 0.25rem;
+}
+
+.stat-blue {
+    font-weight: 600;
+    color: #3b82f6;
+}
+
+.stat-green {
+    font-weight: 600;
+    color: #10b981;
+}
+
+.stat-gray {
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.2s, background 0.2s;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
 }
 
-.tarjeta:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.2);
+.btn-primary {
+    background-color: #0DFD8D;
+    color: #1A3A3A;
 }
 
-.tema1{
-    background-color: #401b1b;
-}
-.tema2{
-    background-color: #1b3e40;
-}
-.tema3{
-    background-color: #401b3f;
-}
-.tema4{
-    background-color: #403f1b;
-}
-.spaceBetween {
-  display: flex;
-  justify-content: space-between; /* reparte a los extremos */
-  align-items: center;
-  width: 100%; /* ocupa todo el ancho disponible */
+.btn-primary:hover {
+    opacity: 0.8;
 }
 
-/* 🔹 Títulos */
-h1, h2, h3, .titulo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* bold */
+.btn-secondary {
+    background-color: #e5e7eb;
+    color: #243540;
 }
 
-/* 🔹 Subtítulos */
-h4, h5, h6, .subtitulo {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700; /* bold */
+.btn-secondary:hover {
+    background-color: #d1d5db;
+    color: #0DFD8D;
 }
 
-/* 🔹 Cuerpo del texto */
-p, span, div, body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400; /* regular */
-}
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
 
-a{
-    color: antiquewhite;
+    .menu-btn {
+        display: block;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }
