@@ -1,20 +1,10 @@
-/* ========================================================== */
-/* ========= ESTILOS PARA NUESTROSPROFESIONALES.HTML ======== */
-/* ========================================================== */
-
-/* ================== CONTENIDO PRINCIPAL ================== */
-/*
- * Le damos al 'main' un fondo gris (de tu estilos-general.css)
- * para que las tarjetas blancas resalten.
-*/
 .profesionales-main {
     width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--fondo-gris);
-    padding: 2em 0; /* Espaciado superior e inferior */
+    padding: 2em 0; 
     
-    /* Usamos 'Lato' como fuente base para esta sección */
     font-family: 'Lato', 'Arial', sans-serif;
 }
 
@@ -24,11 +14,10 @@
     text-align: center;
 }
 
-/* Título principal de la sección (usa fuente 'Oswald') */
 #profesionales-section h2 {
     font-family: 'Oswald', 'Impact', sans-serif;
     font-size: 2.8em;
-    color: var(--color-acento-1); /* Color de texto oscuro */
+    color: var(--color-acento-1); 
     margin-bottom: 0.2em;
 }
 
@@ -40,21 +29,14 @@
     font-family: 'Lato', sans-serif;
 }
 
-/* ================== CUADRÍCULA DE PROFESIONALES ================== */
 .profesionales-grid {
     display: grid;
-    /* * Cuadrícula responsiva:
-      * Intenta crear columnas de 300px.
-      * Si no caben, se ajustan (1fr).
-      * 'auto-fit' crea tantas columnas como quepan.
-    */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2em; /* Espacio entre tarjetas */
+    gap: 2em; 
 }
 
-/* ================== TARJETA DE PROFESIONAL (CARD) ================== */
 .prof-card {
-    background-color: var(--fondo-blanco); /* Tarjeta blanca */
+    background-color: var(--fondo-blanco); 
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     overflow: hidden; 
@@ -67,7 +49,6 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* --- Imagen de la Tarjeta --- */
 .prof-card-img {
     padding-top: 1.5em;
 }
@@ -75,37 +56,84 @@
 .prof-card-img img {
     width: 160px;
     height: 160px;
-    border-radius: 50%; /* Imagen redonda */
-    object-fit: cover; /* Evita que la imagen se estire */
-    /* Borde con tu color azul principal */
+    border-radius: 50%; 
+    object-fit: cover; 
     border: 5px solid var(--color-acento-5); 
 }
 
-/* --- Información de la Tarjeta --- */
 .prof-card-info {
     padding: 1em 1.5em 1.5em;
 }
 
 .prof-card-info h3 {
-    font-family: 'Oswald', 'Impact', sans-serif; /* Fuente del título */
+    font-family: 'Oswald', 'Impact', sans-serif; 
     font-size: 1.7em;
-    color: var(--color-acento-5); /* Color azul principal */
+    color: var(--color-acento-5);
     margin: 0.5em 0;
 }
 
 .prof-especialidad {
-    font-family: 'Lato', sans-serif; /* Fuente 'Lato' */
+    font-family: 'Lato', sans-serif; 
     font-size: 1em;
     font-weight: bold;
-    color: var(--color-acento-2); /* Color verde oscuro */
+    color: var(--color-acento-2);
     margin: 0 0 1em 0;
 }
 
 .prof-bio {
-    /* Usamos 'Merriweather' para la biografía, se lee muy bien */
     font-family: 'Merriweather', serif;
     font-size: 0.9em;
     color: var(--color-texto);
     opacity: 0.9;
     line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    #profesionales-section h2 {
+        font-size: 2.2em; 
+    }
+    
+    .profesionales-grid {
+        gap: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .profesionales-main {
+        padding: 1em 0; 
+    }
+
+    #profesionales-section {
+        width: 95%;
+    }
+
+    #profesionales-section h2 {
+        font-size: 1.8em;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 1em;
+        margin-bottom: 1.5em; 
+        padding: 0 10px; 
+    }
+
+    .profesionales-grid {
+        grid-template-columns: 1fr; 
+        gap: 1.5em;
+    }
+
+    .prof-card:hover {
+        transform: none; 
+    }
+
+    .prof-card-img img {
+        width: 140px; 
+        height: 140px;
+    }
+
+    .prof-card-info h3 {
+        font-size: 1.5em; 
+    }
 }

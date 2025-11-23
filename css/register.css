@@ -57,40 +57,36 @@ article{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 0.5em 1em; /* Reducido el padding vertical */
+    padding: 0.5em 1em; 
 }
 
-/* Reglas base para todos los inputs dentro de la sección */
 #section-div-inputs input{
     font-family: "Merriweather Sans";
-    font-size: 1.1em; /* Ligeramente más pequeño para que quepa */
+    font-size: 1.1em; 
     border: none;
     border-bottom: 1px solid #183F8C;
-    padding:.6em; /* Padding reducido */
+    padding:.6em; 
     padding-left: 1em;
     background: none;
-    box-sizing: border-box; /* Importante para que el padding no afecte el width */
+    box-sizing: border-box;
 }
 
-/* NUEVO: Contenedor para la fila de inputs */
 .input-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
-    margin: .4em 0; /* Espaciado vertical para la fila */
+    margin: .4em 0; 
 }
 
-/* NUEVO: Inputs dentro de una fila (ancho medio) */
 .input-row input {
-    width: 48%; /* Menos del 50% para dejar un hueco */
+    width: 48%;
     margin: 0;
 }
 
-/* NUEVO: Inputs que son hijos directos (ancho completo) */
 #section-div-inputs > input {
     width: 90%;
-    margin: .4em 0; /* Espaciado vertical para inputs completos */
+    margin: .4em 0; 
 }
 
 
@@ -100,7 +96,7 @@ article{
     justify-content: space-around;
     width: 90%;
     align-self: center;
-    padding: 0.5em 1em; /* Reducido el padding vertical */
+    padding: 0.5em 1em; 
 }
 
 #section-div-div-login{
@@ -108,7 +104,7 @@ article{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: .5em 0 ; /* Margen reducido */
+    margin: .5em 0 ; 
 }
 #section-div-div-login button{
     width: 100%;
@@ -127,13 +123,13 @@ article{
     flex-direction: column;
 }
 #section-div-div-enlaces div {
-    margin: .5em 0; /* Margen reducido */
+    margin: .5em 0;
 }
 
 
 #section-div-div-gotoLogin a{
     text-decoration: none;
-    margin: .5em 0 ; /* Margen reducido */
+    margin: .5em 0 ;
     font-family: "Lato";
     font-weight: 600;
     color: #1B403C;
@@ -142,4 +138,77 @@ article{
 
 #button-register:active{
     background-color: var(--color-acento-1);
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 90vw; 
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    body {
+        height: auto; 
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    main {
+        width: 90vw;
+        height: auto; 
+        min-height: 60vh;
+        border-radius: 10px; 
+        flex-direction: column; 
+    }
+
+    article {
+        width: 100%;
+    }
+    #article-background {
+        display: none; 
+    }
+    
+
+    #section-icon-formar {
+        height: 120px; 
+        background-repeat: no-repeat;
+        margin-top: 1em;
+    }
+
+    #section-icon-login {
+        height: auto; 
+        padding-bottom: 2em;
+    }
+
+    #section-div-iniciarSesion h1 {
+        padding-left: 0;
+        text-align: center; 
+        font-size: 1.8em;
+    }
+
+    .input-row {
+        flex-direction: column; 
+        width: 90%;
+        margin: 0;
+    }
+
+    .input-row input {
+        width: 100%; 
+        margin-bottom: 1em; 
+    }
+
+    #section-div-inputs > input {
+        width: 90%;
+        margin-bottom: 0.5em;
+    }
+
+    #section-div-actions {
+        margin-top: 1em;
+    }
+    
+    #section-div-div-login button {
+        padding: 1em; 
+    }
 }
