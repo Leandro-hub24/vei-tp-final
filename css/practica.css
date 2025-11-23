@@ -96,28 +96,9 @@ header {
     box-shadow: 0 0 0 2px var(--primary-color);
 }
 
-nav {
-    display: none;
-    align-items: center;
-    gap: 1.5rem;
-}
 
-nav a {
-    color: #d1d5db;
-    text-decoration: none;
-    transition: color 0.3s;
-}
 
-nav a:hover {
-    color: white;
-}
 
-nav a.active {
-    font-weight: 600;
-    color: white;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.25rem;
-}
 
 .avatar {
     width: 2.5rem;
@@ -321,7 +302,7 @@ main {
 }
 
 .incorrecto.mostrar{
-    background-color: red;
+    background-color: #fee2e2;
 }
 
 .correcto.mostrar{

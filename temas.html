@@ -305,9 +305,11 @@
             </div>
         </div>
 
-        <footer>
 
-        <div class="footer">
+    </main>
+    <footer>
+
+        <div class="footer " >
 
             <div class="contenedor-footer">
                 <h2 class="subtitulo-footer">FormAr</h2>
@@ -347,18 +349,34 @@
         </div>
 
     </footer>
-    </main>
     <script>
     document.querySelectorAll(".tarjeta-materia").forEach(tarjeta => {
         const lista = tarjeta.querySelector(".lista-temas");
 
-        tarjeta.addEventListener("mouseenter", () => {
-            lista.style.maxHeight = lista.scrollHeight + "px";
-        });
+        tarjeta.addEventListener("click", () => {
+            tarjeta.classList.toggle("abierta");
 
-        tarjeta.addEventListener("mouseleave", () => {
-            lista.style.maxHeight = "0";
+            if (tarjeta.classList.contains("abierta")) {
+                lista.style.maxHeight = lista.scrollHeight + "px"; // abrir
+            } else {
+                lista.style.maxHeight = "0"; // cerrar
+            }
         });
+    });
+    document.querySelectorAll(".tarjeta-materia").forEach(tarjeta => {
+    const boton = tarjeta.querySelector(".boton-expandir");
+    const lista = tarjeta.querySelector(".lista-temas");
+
+    boton.addEventListener("click", (e) => {
+        e.stopPropagation(); // evita que otros clicks interfieran
+        tarjeta.classList.toggle("abierta");
+
+        if (tarjeta.classList.contains("abierta")) {
+            lista.style.maxHeight = lista.scrollHeight + "px"; // abrir lista
+        } else {
+            lista.style.maxHeight = "0"; // cerrar lista
+        }
+    });
     });
     </script>
     
