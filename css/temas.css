@@ -128,7 +128,7 @@ body {
 .grid-materias {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 5rem;
     justify-content: space-between;
 }
 .tarjeta-materia {
@@ -248,20 +248,20 @@ a {
     transition: color 0.3s ease;
     display: inline-block;
     transition: transform 0.25s ease;
-    transform: rotate(180deg); /* apunta hacia abajo */
+    transform: rotate(180deg); 
 
 
 
-}
-
-.tarjeta-materia:hover .boton-expandir {
-    transform: rotate(0deg); /* apunta hacia arriba */
 }
 
 /* Botón cuando pasas el mouse por encima */
 .boton-expandir:hover {
     color: #374151;
     /* Color gris más oscuro */
+}
+
+.tarjeta-materia.abierta .boton-expandir {
+    transform: rotate(0deg); /* apunta hacia arriba */
 }
 
 
