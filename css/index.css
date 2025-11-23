@@ -424,6 +424,18 @@
 
 @media only screen and (max-width: 800px) {
 
+
+    .contenedor-banner {
+        height: auto;
+        padding: 3em 1em;
+    }
+
+    .contenedor-info {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1em;
+    }
+
     .contenedor-banner-izq {
         width: 90%;
     }
@@ -438,7 +450,7 @@
     }
 
     .contenedor-temas-der-abajo {
-        width: 90%;
+        width: 100%;
     }
 
 
