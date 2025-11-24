@@ -1,7 +1,7 @@
 footer {
     display: flex;
     width: 100%;
-    background-color: var(--color-acento-2);
+    background-color: var(--color-acento-1);
     height: auto;
     padding: 0 10em;
 }

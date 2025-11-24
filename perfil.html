@@ -331,5 +331,38 @@
         </div>
     </footer>
     <script src="./js/header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const selector = document.getElementById("selectorFiltro");
+            const contenedor = document.getElementById("contenido_pYa_izquierda");
+            const originalOrder = Array.from(contenedor.children);
+
+            selector.addEventListener("change", () => {
+                const opcion = selector.value;
+                const items = Array.from(contenedor.children);
+
+                if (opcion === "Recientes") {
+                    // Restaurar orden original
+                    contenedor.innerHTML = "";
+                    originalOrder.forEach(el => contenedor.appendChild(el));
+                    return;
+                }
+
+                items.sort((a, b) => {
+                    const porcA = parseInt(a.querySelector(".TemaYporcentaje h4:last-child").textContent);
+                    const porcB = parseInt(b.querySelector(".TemaYporcentaje h4:last-child").textContent);
+
+                    if (opcion === "Mayor progreso") {
+                        return porcB - porcA;
+                    } else if (opcion === "Menor progreso") {
+                        return porcA - porcB;
+                    }
+                });
+
+                contenedor.innerHTML = "";
+                items.forEach(el => contenedor.appendChild(el));
+            });
+        });
+    </script>
 </body>
 </html>
