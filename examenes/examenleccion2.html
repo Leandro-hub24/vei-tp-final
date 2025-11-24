@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos-general.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/examenleccion2.css">
-    <title>Examen</title>
+    
+    <title>Examen - FormAr</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
+
 </head>
 <body>
-<header>
+    <header>
         <div id="logo">
             <a href="index.html">
                 <h1 id="logotipo">FormAr</h1>
@@ -20,17 +24,15 @@
         </div>
 
         <div id="buscador">
-            <img id="search" class="search" src="../img/search.png" id="lupa" alt="lupa">
+            <img id="search" class="search" src="../img/search.png" alt="lupa">
             <div id="contenedor-buscar">
                 <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
+                <img class="lupa" src="../img/search1.png" alt="lupa">
             </div>
-
         </div>
 
         <div id="navegacion">
             <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
-            <!-- <a class="link" href="temas.html">Temas</a> -->
             <a class="link" href="../temas.html">Mis Temas</a>
             <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
             <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
@@ -40,23 +42,25 @@
         <div id="desplegable1" class="">
             <div id="contenedor-buscar1">
                 <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
+                <img class="lupa" src="../img/search1.png" alt="lupa">
             </div>
         </div>
 
         <div id="desplegable2" class="">
-            <!-- <a class="link1" href="temas.html">Temas</a> -->
             <a class="link1" href="../perfil">Mi Perfil</a>
             <a class="link1" href="../temas.html">Mis Temas</a>
             <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
             <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
         </div>
-
     </header>
 
     <main>
         <div class="main-content">
             <div class="content-wrapper">
+                <div class="course-context">
+                    Curso Matemática 1° Año <span>|</span> Fracciones
+                </div>
+
                 <div class="top-bar">
                     <div class="breadcrumb">
                         <a href="#">Matemáticas</a>
@@ -78,7 +82,7 @@
                                 <p class="progress-title">Pregunta 3 de 10</p>
                             </div>
                             <div class="progress-bar-container">
-                                <div class="progress-bar"></div>
+                                <div class="progress-bar" style="width: 30%;"></div>
                             </div>
                         </div>
 
@@ -113,78 +117,146 @@
                         <button class="btn btn-finish" disabled>Finalizar Examen</button>
                     </div>
                 </div>
-            </div>
+                
+                </div>
         </div>
 
-        <aside class="sidebar">
-            <div class="sidebar-header">
+        <aside class="sidebar" id="aiSidebar">
+            <div class="sidebar-header" id="toggleAiBtn">
                 <div class="sidebar-title-wrapper">
                     <div class="ai-icon-wrapper">
                         <span class="material-symbols-outlined ai-icon">smart_toy</span>
                     </div>
                     <h3 class="sidebar-title">Asistente IA</h3>
                 </div>
-                <button class="close-btn">
-                    <span class="material-symbols-outlined close-icon">close</span>
-                </button>
+                <span class="material-symbols-outlined toggle-icon">expand_more</span>
             </div>
 
-            <div class="chat-container">
-                <div class="messages">
-                    <div class="message ai">
-                        <div class="message-bubble">
-                            <p class="message-text">Hola! Soy tu asistente de IA. ¿Necesitas ayuda con esta pregunta?</p>
+            <div class="chat-collapsible-content">
+                <div class="chat-container">
+                    <div class="messages">
+                        <div class="message ai">
+                            <div class="message-bubble">
+                                <p class="message-text">Hola! Soy tu asistente de IA. ¿Necesitas ayuda con esta pregunta?</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="message user">
-                        <div class="message-bubble">
-                            <p class="message-text">¿Puedes darme una pista?</p>
+                        <div class="message user">
+                            <div class="message-bubble">
+                                <p class="message-text">¿Puedes darme una pista?</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="message ai">
-                        <div class="message-bubble">
-                            <p class="message-text">¡Claro! Recuerda que para encontrar una fracción equivalente, puedes multiplicar o dividir tanto el numerador como el denominador por el mismo número.</p>
+                        <div class="message ai">
+                            <div class="message-bubble">
+                                <p class="message-text">¡Claro! Recuerda que para encontrar una fracción equivalente, puedes multiplicar o dividir tanto el numerador como el denominador por el mismo número.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="chat-input-wrapper">
-                <div class="input-container">
-                    <input type="text" class="chat-input" placeholder="Haz una pregunta...">
-                    <button class="send-btn">
-                        <span class="material-symbols-outlined send-icon">send</span>
-                    </button>
+                <div class="chat-input-wrapper">
+                    <div class="input-container">
+                        <input type="text" class="chat-input" placeholder="Haz una pregunta...">
+                        <button class="send-btn">
+                            <span class="material-symbols-outlined send-icon">send</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </aside>
     </main>
+     <footer>
+
+        <div class="footer">
+
+            <div class="contenedor-footer">
+                <h2 class="subtitulo-footer">FormAr</h2>
+                <p class="texto-footer">Nuestra misión es transformar el estudio en una experiencia activa,
+                    motivadora y accesible para todos.</p>
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Explorar</h4>
+                <a href="../temas.html" class="link-footer">Temas</a>
+                <a href="../perfil.html" class="link-footer">Perfil</a>
+                <a href="../nuestrosProfesionales.html" class="link-footer">Sobre Nosotros</a>
+
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Temas</h4>
+                <a href="../temas/matematica.html" class="link-footer">Matemáticas</a>
+                <a href="" class="link-footer">Inglés</a>
+                <a href="" class="link-footer">Literatura</a>
+                <a href="" class="link-footer">Informática</a>
+                <a href="" class="link-footer">Ciencias Naturales</a>
+                <a href="" class="link-footer">Ciencias Sociales</a>
+
+            </div>
+
+            <div class="contenedor-footer">
+
+                <h4 class="subtitulo gris">Contáctanos</h4>
+                <a href="" class="link-footer">formarMision@formar.com.ar</a>
+
+            </div>
+
+
+        </div>
+
+    </footer>
     <script src="../js/header.js"></script>
     <script>
-        let tiempoRestante = 14 * 60 + 32; // 14:32 en segundos
-
+        // --- LOGICA DEL TIMER ---
+        let tiempoRestante = 14 * 60 + 32;
         const timerText = document.querySelector('.timer-text');
 
         function actualizarTimer() {
             let minutos = Math.floor(tiempoRestante / 60);
             let segundos = tiempoRestante % 60;
+            timerText.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+            if (tiempoRestante > 0) tiempoRestante--;
+            else clearInterval(intervalo);
+        }
+        const intervalo = setInterval(actualizarTimer, 1000);
+        actualizarTimer();
 
-            // Formato 00:00
-            timerText.textContent = 
-                `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+        // --- LOGICA DEL DESPLEGABLE DE IA ---
+        const aiSidebar = document.getElementById('aiSidebar');
+        const toggleBtn = document.getElementById('toggleAiBtn');
 
-            if (tiempoRestante > 0) {
-                tiempoRestante--;
+        // Función para alternar
+        toggleBtn.addEventListener('click', () => {
+            const isMobile = window.innerWidth <= 900;
+            if (isMobile) {
+                aiSidebar.classList.toggle('expanded');
             } else {
-                clearInterval(intervalo);
+                aiSidebar.classList.toggle('collapsed');
+            }
+        });
+
+        // Configuración inicial y en resize
+        function checkLayout() {
+            const isMobile = window.innerWidth <= 900;
+            const icon = toggleBtn.querySelector('.toggle-icon');
+            
+            if (isMobile) {
+                // En móvil: empezamos cerrado (sin clase expanded)
+                // Quitamos clases de desktop para evitar conflictos
+                aiSidebar.classList.remove('collapsed');
+                icon.textContent = "expand_more"; // Icono indicando que se puede abrir hacia abajo
+            } else {
+                // En desktop: quitamos expanded
+                aiSidebar.classList.remove('expanded');
+                // Si no tiene collapsed, está abierto
+                icon.textContent = aiSidebar.classList.contains('collapsed') ? "expand_more" : "expand_less";
             }
         }
 
-        const intervalo = setInterval(actualizarTimer, 1000);
-
-        // Llamar una vez para que no espere 1 sec en mostrar la hora correcta
-        actualizarTimer();
+        window.addEventListener('resize', checkLayout);
+        // Ejecutar al inicio
+        document.addEventListener('DOMContentLoaded', checkLayout);
     </script>
 </body>
-
 </html>

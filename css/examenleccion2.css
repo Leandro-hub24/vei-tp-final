@@ -440,3 +440,242 @@ main {
         justify-content: space-between;
     }
 }
+
+        /* Variables para mantener consistencia */
+        :root {
+            --color-primary: #0dfd8d;
+            --color-primary-alpha: rgba(13, 253, 141, 0.2);
+            --color-dark: #243540;
+            --color-text: #1f2937;
+            --color-gray-200: #e5e7eb;
+            --transition-speed: 0.3s;
+        }
+
+        /* 1. ESTILO DEL NUEVO TÍTULO DE CURSO */
+        .course-context {
+            font-family: 'Lexend', sans-serif;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .course-context span {
+            color: var(--color-primary);
+            margin: 0 5px;
+        }
+
+        /* 2. RESTRUCTURACIÓN DEL LAYOUT PRINCIPAL */
+        main {
+            display: flex;
+            position: relative;
+            min-height: calc(100vh - 80px);
+            background-color: #f9fafb;
+            align-items: flex-start; /* Alineación superior */
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Asegura ancho completo */
+        }
+
+        .content-wrapper {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* 3. ESTILOS DE LA BARRA LATERAL (IA) */
+        .sidebar {
+            width: 360px;
+            background-color: white;
+            border-left: 1px solid var(--color-gray-200);
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 80px);
+            z-index: 50;
+            transition: all var(--transition-speed) ease;
+            flex-shrink: 0; /* Evita que se encoja */
+        }
+
+        .sidebar-header {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--color-gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .sidebar-header:hover {
+            background-color: #f9fafb;
+        }
+
+        .sidebar-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ai-icon-wrapper {
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--color-primary-alpha);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ai-icon {
+            color: #0bc970;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-dark);
+            margin: 0;
+        }
+
+        .toggle-icon {
+            transition: transform var(--transition-speed);
+            color: #6b7280;
+        }
+
+        /* Contenido colapsable */
+        .chat-collapsible-content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            overflow: hidden;
+            transition: max-height var(--transition-speed) ease, opacity var(--transition-speed) ease;
+            max-height: 1000px;
+            opacity: 1;
+        }
+
+        .chat-container {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            background-color: #f9fafb;
+            min-height: 300px; /* Altura mínima para que se vea bien el chat */
+        }
+
+        .chat-input-wrapper {
+            padding: 1rem;
+            border-top: 1px solid var(--color-gray-200);
+            background-color: white;
+        }
+
+        /* ESTADO COLAPSADO (DESKTOP) */
+        .sidebar.collapsed .chat-collapsible-content {
+            max-height: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .sidebar.collapsed .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        /* 4. RESPONSIVE / MÓVIL MODIFICADO */
+        @media (max-width: 900px) {
+            main {
+                flex-direction: column; /* Coloca elementos uno debajo del otro */
+                padding-bottom: 2rem;
+            }
+
+            .main-content {
+                padding: 1.5rem 1rem 0 1rem; /* Padding ajustado */
+            }
+
+            .content-wrapper {
+                max-width: 100%;
+            }
+
+            .sidebar {
+                /* CAMBIO CLAVE: Ya no es fixed, fluye con el documento */
+                position: relative; 
+                width: 100%; /* Ocupa el ancho del contenedor padre (main) */
+                max-width: 800px; /* Opcional: para que no sea gigante en tablets */
+                margin: 2rem auto 0 auto; /* Centrado y con margen arriba */
+                height: auto;
+                border-left: none;
+                border: 1px solid var(--color-gray-200); /* Borde completo */
+                border-radius: 12px; /* Bordes redondeados completos */
+                z-index: 1;
+                /* Eliminamos top, left, bottom */
+                top: auto;
+                left: auto;
+                bottom: auto;
+            }
+
+            /* Estilo del header en móvil para que parezca una sección separada */
+            .sidebar-header {
+                border-radius: 12px; /* Si está cerrado, redondeado completo */
+            }
+            
+            /* Si está abierto, solo redondeado arriba */
+            .sidebar.expanded .sidebar-header {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            /* En móvil, por defecto colapsado */
+            .sidebar:not(.expanded) .chat-collapsible-content {
+                max-height: 0;
+                opacity: 0;
+                min-height: 0; /* Importante para colapsar totalmente */
+            }
+
+            .sidebar:not(.expanded) .chat-container {
+                min-height: 0;
+                padding: 0;
+            }
+
+            /* En móvil, expandido */
+            .sidebar.expanded .chat-collapsible-content {
+                max-height: 500px; /* Altura fija o auto */
+                opacity: 1;
+                pointer-events: auto;
+            }
+            
+            .sidebar.expanded .toggle-icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        /* Estilos de mensajes */
+        .messages { display: flex; flex-direction: column; gap: 1rem; }
+        .message { display: flex; }
+        .message.ai { justify-content: flex-start; }
+        .message.user { justify-content: flex-end; }
+        .message-bubble { 
+            padding: 0.75rem 1rem; 
+            border-radius: 12px; 
+            max-width: 85%; 
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+        .message.ai .message-bubble { background-color: white; border: 1px solid var(--color-gray-200); border-bottom-left-radius: 0; }
+        .message.user .message-bubble { background-color: var(--color-dark); color: white; border-bottom-right-radius: 0; }
+        
+        .input-container { position: relative; display: flex; }
+        .chat-input { 
+            width: 100%; padding: 10px 40px 10px 15px; border-radius: 20px; 
+            border: 1px solid var(--color-gray-200); outline: none; background: #f3f4f6;
+        }
+        .send-btn { 
+            position: absolute; right: 5px; top: 50%; transform: translateY(-50%); 
+            background: none; border: none; cursor: pointer; color: var(--color-dark);
+        }

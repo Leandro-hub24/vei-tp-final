@@ -19,11 +19,13 @@ body {
     /* Espaciado entre líneas (1.6 veces el tamaño de la fuente) */
 }
 
+
 /* Contenedor principal de la página */
 .contenido-principal {
     margin: 0 0;
     /* Centra el contenedor horizontalmente (0 arriba/abajo, auto izq/der) */
-    padding: 2rem 10rem;
+    padding: 1rem 1.5rem;
+    padding-bottom: 10em;
     /* Espacio interno: 2rem arriba/abajo, 1.5rem izq/der */
 }
 
@@ -165,9 +167,11 @@ body {
 .grid-materias {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    row-gap: 5rem;
+    column-gap: 15rem;  
     justify-content: space-between;
 }
+
 .tarjeta-materia {
     flex: 1 1 300px;
 }
@@ -324,6 +328,8 @@ a {
     transition: max-height 0.3s ease;
 
 }
+
+
 
 
 

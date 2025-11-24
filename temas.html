@@ -373,9 +373,11 @@
     boton.addEventListener("click", (e) => {
         e.stopPropagation(); // evita que otros clicks interfieran
         tarjeta.classList.toggle("abierta");
+  
 
         if (tarjeta.classList.contains("abierta")) {
             lista.style.maxHeight = lista.scrollHeight + "px"; // abrir lista
+            
         } else {
             lista.style.maxHeight = "0"; // cerrar lista
         }
