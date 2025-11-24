@@ -42,7 +42,7 @@
 }
 
 .tituloDeSeccion{
-    background-color: var(--color-acento-1);
+    background-color: var(--color-acento-2);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     display: flex;
