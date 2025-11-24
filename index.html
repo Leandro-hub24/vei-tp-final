@@ -131,9 +131,9 @@
 
                     <div class="contenedor-temas-der-abajo">
 
-                        <div class="contenedor-temas-arriba-der-info">
+                        <div id="div-matematicas" class="contenedor-temas-arriba-der-info">
                             <img src="./img/matematica.png" class="img-temas-der" alt="">
-                            <a class="link-temas subtitulo" href="">Matemáticas</a>
+                            <a class="link-temas subtitulo" href="./temas/matematicas.html">Matemáticas</a>
                         </div>
 
                         <div class="contenedor-temas-arriba-der-info">
@@ -230,7 +230,7 @@
             <div class="contenedor-footer">
 
                 <h4 class="subtitulo gris">Temas</h4>
-                <a href="../temas/matematica.html" class="link-footer">Matemáticas</a>
+                <a href="/temas/matematicas.html" class="link-footer">Matemáticas</a>
                 <a href="" class="link-footer">Inglés</a>
                 <a href="" class="link-footer">Literatura</a>
                 <a href="" class="link-footer">Informática</a>
@@ -251,7 +251,16 @@
 
     </footer>
 
-    <script src="./js/header.js"></script>
+    <script src="./js/header.js"></script>  
+    <script>
+        const divMatematicas = document.getElementById("div-matematicas");
+
+        divMatematicas.style.cursor = "pointer";
+
+        divMatematicas.addEventListener("click", () => {
+            window.location.href = "./temas/matematicas.html";
+        });
+    </script>
 
 </body>
 
