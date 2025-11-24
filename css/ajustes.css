@@ -1,0 +1,219 @@
+#fondo{
+    background-color: var(--fondo-gris);
+}
+
+#contenido{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+#linkAPerfil{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    font-family: "Merriweather Sans";
+}
+
+#linkAPerfil a{
+    height: 2em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.4em;
+    background-color: var(--color-acento-3);
+    border-radius: 5px;
+    font-family: "Lato";
+    font-size: small;
+}
+
+#linkAPerfil a:link, a:visited{
+    text-decoration: none;
+    color: var(--fondo-blanco);
+}
+
+.ajustes{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.tituloDeSeccion{
+    background-color: var(--color-acento-1);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-family: "Merriweather Sans";
+}
+
+.subTitulo{
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--fondo-blanco);
+    font-family: "Lato";
+    color: black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: margin 0.3s, border-radius 0.3s;
+}
+
+.subTitulo.abierto {
+    margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.contenedorParaOcultar{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/*opciones de edicion de perfil*/
+.contenidoDeSeccion{
+    background-color: var(--fondo-blanco);
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 1.5em;
+    justify-content: center;
+    display: flex;
+}
+
+#imagenDePerfil{
+    background-color: var(--fondo-blanco);
+    height: 15em;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: var(--color-acento-1);
+}
+
+#cambiarOBorrarImagen{
+    margin-top: 0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+#cambiarOBorrarImagen a {
+    display: flex;
+    height: 2em;
+    width: 10em;
+    padding: 0.4em;
+    background-color: var(--color-acento-3);
+    border-radius: 5px;
+    font-family: "Lato";
+    font-size: small;
+    text-align: center;
+}
+
+#cambiarOBorrarImagen a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.editarDatos{
+    color: black;
+    margin-left: 5em;
+    padding: 1.5em;
+}
+
+.editarDatos2{
+    color: black;
+    padding: 1.5em;
+    display: flex;
+}
+
+.divDeForm{
+    font-family: 'Lato';
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.EstiloDeInput{
+    background-color: var(--fondo-gris);
+    height: 2em;
+    padding: 0.4em;
+    font-family: "Lato";
+    font-size: small;
+}
+
+#fecha_nac{
+    cursor: pointer;
+}
+
+.BotonGuardarCambios{
+    color: var(--fondo-blanco);
+    display: flex;
+    padding: 0.4em;
+    background-color: var(--color-acento-3);
+    border-radius: 5px;
+    font-family: "Merriweather Sans";
+    font-size: medium;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    cursor: pointer
+}
+
+.boxDeGuardar{
+    display: flex;
+    justify-content:end;
+}
+
+/*Autenticación y Seguridad*/
+
+.CampoObligatorio{
+    color: red;
+    margin-left: 1em;
+}
+
+#wrappCampoObligatorio1{
+    margin-top: 8em;
+}
+
+#divDeTextBox{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato';
+    gap: 0.2em;
+}
+
+#BotonDesactivarCuenta{
+    color: var(--fondo-blanco);
+    display: flex;
+    padding: 0.4em;
+    background-color: red;
+    border-radius: 5px;
+    font-family: "Merriweather Sans";
+    font-size: medium;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    cursor: pointer
+}
+
+#boxDeDesactivar{
+    display: flex;
+    justify-content:end;
+}
+
+#wrappCampoObligatorio2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.1em;
+    gap: 3em;
+}

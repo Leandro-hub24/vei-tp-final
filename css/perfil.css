@@ -12,7 +12,7 @@
 }
 
 #profile_card{
-    background-color: var(--color-acento-2);
+    background-color: var(--color-acento-1);
     color: var(--fondo-blanco);
     border-radius: 0.5rem;
     height: 10em;
@@ -70,6 +70,14 @@
     margin-left: 0.5em;
     padding-left: 0.3em;
     padding-right: 0.3em;
+}
+
+#ubicacionDeUsuario{
+    display: flex;
+}
+
+#paisDeUsuario{
+    margin-left: 0.3em;
 }
 
 #userData h4 {
@@ -150,7 +158,7 @@
 #botonesLadoDerecho{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     height: 8em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -167,7 +175,7 @@
     font-size: small;
     text-align: center;
     justify-content: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     transition: all 0.3s ease;
 }
 
