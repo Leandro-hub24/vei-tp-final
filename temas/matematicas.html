@@ -155,7 +155,7 @@
                             <p class="texto-progreso">45% Completado</p>
                         </div>
                         <button class="boton-clase boton-continuar">Continuar Clase</button>
-                        <div class="icono-desplegable">
+                        <div class="icono-desplegable abierta">
                             <span class="material-symbols-outlined">expand_more</span>
                         </div>
                     </div>
@@ -315,7 +315,10 @@
     <script>
         function toggleLecciones(elemento) {
             const seccionLecciones = elemento.nextElementSibling;
+            const icono = elemento.querySelector('.icono-desplegable');
             seccionLecciones.classList.toggle('visible');
+                
+            icono.classList.toggle('abierta');
         }
     </script>
     <script src="../js/header.js"></script>

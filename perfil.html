@@ -30,10 +30,11 @@
         <div id="navegacion">
             <img id="hamburger" class="hamburger" src="./img/hamburger.png" alt="">
             <!-- <a class="link" href="temas.html">Temas</a> -->
-            <a class="link" href="temas.html">Mis Temas</a>
-            <a class="link" href="misTarjetas.html">Mis Tarjetas</a>
-            <a class="link" href="nuestrosProfesionales.html">Sobre Nosotros</a>
-            <a class="user" href="perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+            <a class="link" href="./temas.html">Mis Temas</a>
+            <a class="link" href="./misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="./nuestrosProfesionales.html">Sobre Nosotros</a>
+            <a class="link" href="#">Cerrar Sesión</a>
+            <a class="user" href="./perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
         </div>
 
         <div id="desplegable1" class="">
@@ -45,10 +46,11 @@
 
         <div id="desplegable2" class="">
             <!-- <a class="link1" href="temas.html">Temas</a> -->
-            <a class="link1" href="">Mi Perfil</a>
-            <a class="link1" href="temas.html">Mis Temas</a>
-            <a class="link1" href="misTarjetas.html">Mis Tarjetas</a>
-            <a class="link1" href="nuestrosProfesionales.html">Sobre Nosotros</a>
+            <a class="link1" href="./perfil">Mi Perfil</a>
+            <a class="link1" href="./temas.html">Mis Temas</a>
+            <a class="link1" href="./misTarjetas.html">Mis Tarjetas</a>
+            <a class="link1" href="./nuestrosProfesionales.html">Sobre Nosotros</a>
+            <a class="link1" href="#">Cerrar Sesión</a>
         </div>
 
     </header>
@@ -59,13 +61,18 @@
                 <img src="./img/imgUser.png" alt="Profile_Picture" id="imagenDePerfil">
                 <div id="datosDePerfil">
                     <div id="tituloDeUsuario">
-                        <h2>Usuario X</h2>
-                        <div><p>Nivel 15</p></div>
+                        <h2 id="nombreDeUsuario">Usuario X</h2>
+                        <div><p id="NivelDeUsuario">Nivel 15</p></div>
                     </div>
-                    <h4>Buenos Aires, Argentina</h4>
+                    <div id="ubicacionDeUsuario">
+                        <h4 id="provinciaDeUsuario">Buenos Aires</h4>
+                        <h4>, </h4> 
+                        <h4 id="paisDeUsuario">Argentina</h4>
+                    </div>
                     <h4>Fecha de nacimiento: 12 de Diciembre de 1998</h4>
                 </div>
             </div>
+            <!--Logros-->
             <div id="muestraLogros">
                     <h3>LOGROS</h3>
                 <div id="logroBox">
@@ -78,13 +85,11 @@
                 </div>
                 <a href="./logros.html" id="botonDeLogros"><div><h4>></h4></div></a>
             </div>
+            <!--Botones Compartir y Ajustes-->
             <div id="botonesLadoDerecho">
                 <div>
-                    <a href="#"><img src="./img/perfil/editar.svg" alt=""> Editar Perfil</a>
                     <a href="#"><img src="./img/perfil/compartir.svg" alt=""> Compartir</a>
-                </div>
-                <div>
-                    <a href="#" id="botonAjustes"><img src="./img/perfil/ajustes.svg" alt=""> Ajustes</a>
+                    <a href="./ajustes.html" id="botonAjustes"><img src="./img/perfil/ajustes.svg" alt=""> Ajustes</a>
                 </div>
             </div>
         </section>

@@ -52,13 +52,28 @@
             <a class="link1" href="nuestrosProfesionales.html">Sobre Nosotros</a>
         </div>
 
-    </header>
+</header>
 
     <main>
         <div class="card-container">
             <div class="study-card">
-                <div class="card-content">
-                    <p class="card-category">Matemáticas - Fracciones</p>
+                <div >
+                    <div id="cerrar" class="derecha">
+                        <button id="cerrar" onclick="location.href='mistarjetas.html'">
+                                
+                        <span class="material-icons" style="font-size: 20px; color: white;">close</span>
+                        </button>
+
+                    </div>
+                    <h2 class="card-content ">
+                        <span class="enlace-volver" onclick="location.href='./temas/matematicas.html'">Matematicas</span> / 
+                        <span class="enlace-volver" onclick="location.href='./temas/matematicas.html'">Unidad 1</span> / 
+                        <span class="enlace-volver" onclick="location.href='./lecciones/mate2.2.html'">Fracciones</span>
+                    </h2>
+                    <h3 class="card-category  ">
+                        Tarjeta 5/15
+
+                    </h3>
                     <h1 class="card-question">¿Cuál de las siguientes fracciones es equivalente a 2/3?</h1>
                     
                     <div class="options-container">
@@ -78,8 +93,11 @@
                 </div>
 
                 <div class="card-footer">
+
                     <div id="show-answer-container">
+                        <button class="opcionFlecha" onclick="location.href='mistarjetas.html'"> < </button>
                         <button class="show-answer-btn" onclick="showDifficulty()" >Mostrar respuesta</button>
+                        <button class="opcionFlecha" onclick="location.href='mistarjetas.html'" > > </button>
                     </div>
 
                     <div class="difficulty-container" id="difficulty-container">

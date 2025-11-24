@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="./css/estilos-general.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/ajustes.css">
+</head>
+<body id="fondo">
+    <!--Header-->
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <h1 id="logotipo">FormAr</h1>
+            </a>
+        </div>
+
+        <div id="buscador">
+            <img id="search" class="search" src="./img/search.png" id="lupa" alt="lupa">
+            <div id="contenedor-buscar">
+                <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
+                <img class="lupa" src="./img/search1.png" id="lupa" alt="lupa">
+            </div>
+
+        </div>
+
+        <div id="navegacion">
+            <img id="hamburger" class="hamburger" src="./img/hamburger.png" alt="">
+            <!-- <a class="link" href="temas.html">Temas</a> -->
+            <a class="link" href="./temas.html">Mis Temas</a>
+            <a class="link" href="./misTarjetas.html">Mis Tarjetas</a>
+            <a class="link" href="./nuestrosProfesionales.html">Sobre Nosotros</a>
+            <a class="link" href="#">Cerrar Sesión</a>
+            <a class="user" href="./perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+        </div>
+
+        <div id="desplegable1" class="">
+            <div id="contenedor-buscar1">
+                <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
+                <img class="lupa" src="./img/search1.png" id="lupa" alt="lupa">
+            </div>
+        </div>
+
+        <div id="desplegable2" class="">
+            <!-- <a class="link1" href="temas.html">Temas</a> -->
+            <a class="link1" href="./perfil">Mi Perfil</a>
+            <a class="link1" href="./temas.html">Mis Temas</a>
+            <a class="link1" href="./misTarjetas.html">Mis Tarjetas</a>
+            <a class="link1" href="./nuestrosProfesionales.html">Sobre Nosotros</a>
+            <a class="link1" href="#">Cerrar Sesión</a>
+        </div>
+
+    </header>
+    <main id="contenido">
+        <!--Volver Atras-->
+        <section id="volverAtras">
+            <div id="linkAPerfil">
+                <a href="./perfil.html">
+                    <img src="./img/perfil/iconosDeLogros/arrow_go_back.svg" alt="Volver a Perfil">
+                    <h3>Volver a Perfil</h3>
+                </a>
+            </div>
+        </section>
+        <!--Editar Perfil-->
+        <section class="ajustes">
+            <div class="tituloDeSeccion">
+                <h2>Ajustes</h2>
+            </div>
+            <div class="subTitulo">
+                    <h3>Editar perfil</h3>
+                    <img src="./img/perfil/menuArrowDown.svg" alt="Expandir Sección" class="flechaDeMenu">
+            </div>
+            <div class="contenedorParaOcultar">
+                <div class="contenidoDeSeccion">
+                    <div id="editarImagen">
+                        <img src="./img/imgUser.png" alt="Imagen de Perfil" id="imagenDePerfil">
+                        <div id="cambiarOBorrarImagen">
+                            <a href="./editarPerfil.html"><img src="./img/perfil/cambiarImagen.svg" alt="">Cambiar imagen</a>
+                            <a href="#"><img src="./img/perfil/borrarImagen.svg" alt="">Borrar Imagen</a>
+                        </div>
+                    </div>
+                    <div class="editarDatos">
+                        <form action="#" method="post">
+                            <div class="divDeForm">
+                                <label for="usuario">Nombre de usuario:</label>
+                                <input type="text" id="usuario" name="usuario" class="EstiloDeInput" placeholder="Usuario X"> 
+                            </div>
+                                <br><br>
+                            <div class="divDeForm">
+                                <label for="pais">País:</label>
+                                <input type="text" id="pais" name="pais" class="EstiloDeInput" placeholder="Argentina">
+                            </div>
+                                <br><br>
+                            <div class="divDeForm">
+                                <label for="provincia">Provincia:</label>
+                                <input type="text" id="provincia" name="provincia" class="EstiloDeInput" placeholder="Buenos Aires">
+                            </div>
+                                <br><br>
+                            <div class="divDeForm">
+                                <label for="fecha_nac">Fecha de nacimiento:</label>
+                                <input type="date" id="fecha_nac" name="fecha_nac" class="EstiloDeInput">
+                            </div>
+                                <br><br>
+                            <div class="boxDeGuardar">
+                                <button type="button" class="BotonGuardarCambios"> <img src="./img/perfil/guardar.svg" alt=""><h3>Guardar cambios</h3></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Autenticación y Seguridad-->
+        <section class="ajustes">
+            <div class="subTitulo">
+                <h3>Modificar correo / contraseña</h3>
+                <img src="./img/perfil/menuArrowDown.svg" alt="Expandir Sección" class="flechaDeMenu">
+            </div>
+            <div class="contenedorParaOcultar">
+                <div class="contenidoDeSeccion">
+                    <div class="editarDatos2">
+                        <form action="#" method="post">
+                            <div class="divDeForm">
+                                <label for="nuevo_mail">Nuevo correo:</label>
+                                <input type="email" id="nuevoMail" name="nuevo_mail" class="EstiloDeInput" placeholder="usuariox@gmail.com"> 
+                            </div>
+                                <br><br>
+                            <div class="divDeForm">
+                                <label for="nueva_contrasenia">Nueva contraseña:</label>
+                                <input type="password" id="NewPassword" name="nueva_contrasenia" class="EstiloDeInput" placeholder="Nueva contraseña">
+                            </div>
+                                <br><br>
+                            <div class="divDeForm">
+                                <label for="contrasenia_actual">Contraseña actual:</label>
+                                <input type="password" id="passwordActual" name="contrasenia_actual" class="EstiloDeInput" required placeholder="**********">
+                            </div>
+                                <br><br>
+                            <div class="boxDeGuardar">
+                                <button type="submit" class="BotonGuardarCambios"> <img src="./img/perfil/guardar.svg" alt=""><h3>Guardar cambios</h3></button>
+                            </div>
+                        </form>
+                        <div id="wrappCampoObligatorio1">
+                            <p class="CampoObligatorio">* Obligatorio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Desactivar Cuenta-->
+        <section class="ajustes">
+            <div class="subTitulo">
+                <h3>Desactivación de cuenta</h3>
+                <img src="./img/perfil/menuArrowDown.svg" alt="Expandir Sección" class="flechaDeMenu">
+            </div>
+            <div class="contenedorParaOcultar">
+                <div class="contenidoDeSeccion">
+                    <div class="editarDatos2">
+                        <form action="#" method="post">
+                            <div class="divDeForm">
+                                <label for="contrasenia_Deact">Contraseña:</label>
+                                <input type="password" id="usuario" name="contrasenia_Deact" class="EstiloDeInput" placeholder="**********" required> 
+                                <!--<p class="CampoObligatorio">* Obligatorio</p>*-->
+                            </div>
+                                <br><br>
+                            <div id="divDeTextBox">
+                                <label for="pais">Por qué razón desea desactivar su cuenta?</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder=" Escribe tu mensaje" required></textarea>
+                            </div>
+                                <br><br>
+                            <div id="boxDeDesactivar">
+                                <button type="submit" id="BotonDesactivarCuenta"><h3>Desactivar Cuenta</h3></button>
+                            </div>
+                        </form>
+                        <div id="wrappCampoObligatorio2">
+                            <p class="CampoObligatorio">* Obligatorio</p>
+                            <p class="CampoObligatorio">* Obligatorio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Footer-->
+    <footer>
+        <div class="footer">
+            <div class="contenedor-footer">
+                <h2 class="subtitulo-footer">FormAr</h2>
+                <p class="texto-footer">Nuestra misión es transformar el estudio en una experiencia activa,
+                    motivadora y accesible para todos.</p>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Explorar</h4>
+                <a href="" class="link-footer">Temas</a>
+                <a href="" class="link-footer">Perfil</a>
+                <a href="" class="link-footer">Sobre Nosotros</a>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Temas</h4>
+                <a href="" class="link-footer">Matemática</a>
+                <a href="" class="link-footer">Inglés</a>
+                 <a href="" class="link-footer">Literatura</a>
+                 <a href="" class="link-footer">Informática</a>
+                <a href="" class="link-footer">Ciencias Naturales</a>
+                <a href="" class="link-footer">Ciencias Sociales</a>
+            </div>
+            <div class="contenedor-footer">
+                <h4 class="subtitulo gris">Contáctanos</h4>
+                <a href="" class="link-footer">formarMision@formar.com.ar</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const secciones = document.querySelectorAll("section.ajustes");
+
+        secciones.forEach(section => {
+            const titulo = section.querySelector(".subTitulo");
+            const contenedor = section.querySelector(".contenedorParaOcultar");
+            const flecha = section.querySelector(".flechaDeMenu");
+
+            // Ocultar por defecto
+            contenedor.style.maxHeight = "0";
+            contenedor.style.overflow = "hidden";
+            contenedor.style.transition = "max-height 0.4s ease";
+
+            titulo.addEventListener("click", () => {
+                const estaCerrado =
+                    contenedor.style.maxHeight === "0px" ||
+                    contenedor.style.maxHeight === "0";
+
+                if (estaCerrado) {
+                    // ABRIR
+                    contenedor.style.maxHeight = contenedor.scrollHeight + "px";
+                    if (flecha) flecha.src = "./img/perfil/menuArrowUp.svg";
+                    titulo.classList.add("abierto");   // ← NUEVO
+                } else {
+                    // CERRAR
+                    contenedor.style.maxHeight = "0";
+                    if (flecha) flecha.src = "./img/perfil/menuArrowDown.svg";
+                    titulo.classList.remove("abierto"); // ← NUEVO
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

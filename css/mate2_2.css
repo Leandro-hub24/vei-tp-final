@@ -62,10 +62,12 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    cursor:pointer;
 }
 
 .enlace-volver:hover {
     color: #0DFD8D;
+    
 }
 
 .titulo-leccion {

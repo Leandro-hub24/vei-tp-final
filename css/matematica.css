@@ -109,6 +109,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     transition: box-shadow 0.3s;
+    
 }
 
 .tarjeta-clase:hover {
@@ -221,12 +222,19 @@ body {
 .seccion-lecciones {
     background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
-    padding: 24px;
-    display: none;
+    padding-left: 24px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .seccion-lecciones.visible {
-    display: block;
+    max-height: 1000px; /* altura grande */
+    opacity: 1;
 }
 
 .titulo-lecciones {
@@ -318,7 +326,22 @@ body {
     cursor: not-allowed;
 }
 
-@media (max-width: 1000px) {
+.icono-desplegable {
+    
+ transition: transform 0.3s ease;
+     width: 24px;       /* Tamaño fijo */
+    height: 24px;     
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+}
+
+.abierta{
+    transform: rotate(180deg); /* apunta hacia arriba */
+}
+
+
+@media (max-width: 768px) {
     .contenido-clase {
         flex-direction: column;
     }
@@ -357,7 +380,7 @@ body {
     }
 
     .icono-desplegable {
-        position: absolute;
+        
         margin-top: 10px;
         color: black;
     }

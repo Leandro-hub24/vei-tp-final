@@ -148,6 +148,14 @@ header {
     -webkit-clip-path: circle(150% at 100% 0) !important;
 }
 
+@media only screen and (max-width: 1800px) {
+
+    header {
+        grid-template-columns: 0.5fr 1fr 1.3fr;
+    }
+
+}
+
 @media only screen and (max-width: 1700px) {
 
     header {
@@ -156,10 +164,28 @@ header {
 
 }
 
+@media only screen and (max-width: 1600px) {
+
+    header {
+        grid-template-columns: 0.5fr 1fr 1.5fr;
+        padding: 0 6em;
+    }
+
+}
+
 @media only screen and (max-width: 1500px) {
 
     header {
         grid-template-columns: 0.5fr 1fr 1.5fr;
+        padding: 0 6em;
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+
+    header {
+        grid-template-columns: 0.5fr 0.8fr 1.5fr;;
         padding: 0 6em;
     }
 

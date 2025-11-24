@@ -140,3 +140,77 @@ article{
 #button-login:hover {
     cursor: pointer;
 }
+
+@media (max-width: 1024px) {
+    main {
+        width: 90vw; 
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        height: auto; 
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    main {
+        width: 90vw; 
+        height: auto; 
+        min-height: 60vh;
+        flex-direction: column; 
+        border-radius: 10px; 
+    }
+
+    article {
+        width: 100%; 
+    }
+
+    #article-background {
+        display: none;
+    }
+
+    #section-icon-formar {
+        height: 120px; 
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: 1.5em;
+    }
+
+    #section-icon-login {
+        height: auto; 
+        padding-bottom: 2em;
+    }
+
+    #section-div-iniciarSesion h1 {
+        padding-left: 0; 
+        text-align: center;
+        font-size: 1.8em; 
+        margin-bottom: 0.5em;
+    }
+
+    #section-div-inputs {
+        padding: 0.5em;
+    }
+    
+    #section-div-inputs input {
+        margin: 0.8em 0; 
+    }
+
+    #section-div-actions {
+        padding: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    #section-div-div-login button {
+        padding: 1em; 
+        margin-top: 1em;
+    }
+
+    #section-div-div-enlaces div {
+        margin: 1em 0;
+        text-align: center;
+    }
+}
