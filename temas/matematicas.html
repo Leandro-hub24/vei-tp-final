@@ -11,49 +11,49 @@
     <title>Matematicas</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    
+
 </head>
 <header>
-        <div id="logo">
-            <a href="index.html">
-                <h1 id="logotipo">FormAr</h1>
-            </a>
+    <div id="logo">
+        <a href="index.html">
+            <h1 id="logotipo">FormAr</h1>
+        </a>
+    </div>
+
+    <div id="buscador">
+        <img id="search" class="search" src="../img/search.png" id="lupa" alt="lupa">
+        <div id="contenedor-buscar">
+            <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
+            <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
         </div>
 
-        <div id="buscador">
-            <img id="search" class="search" src="../img/search.png" id="lupa" alt="lupa">
-            <div id="contenedor-buscar">
-                <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
-            </div>
+    </div>
 
+    <div id="navegacion">
+        <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
+        <!-- <a class="link" href="temas.html">Temas</a> -->
+        <a class="link" href="../temas.html">Mis Temas</a>
+        <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
+        <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
+        <a class="user" href="../perfil.html"><img class="imgUser" src="../img/imgUser.png" alt=""></a>
+    </div>
+
+    <div id="desplegable1" class="">
+        <div id="contenedor-buscar1">
+            <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
+            <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
         </div>
+    </div>
 
-        <div id="navegacion">
-            <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
-            <!-- <a class="link" href="temas.html">Temas</a> -->
-            <a class="link" href="../temas.html">Mis Temas</a>
-            <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-            <a class="user" href="../perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
-        </div>
+    <div id="desplegable2" class="">
+        <!-- <a class="link1" href="temas.html">Temas</a> -->
+        <a class="link1" href="../perfil">Mi Perfil</a>
+        <a class="link1" href="../temas.html">Mis Temas</a>
+        <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
+        <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
+    </div>
 
-        <div id="desplegable1" class="">
-            <div id="contenedor-buscar1">
-                <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
-            </div>
-        </div>
-
-        <div id="desplegable2" class="">
-            <!-- <a class="link1" href="temas.html">Temas</a> -->
-            <a class="link1" href="../perfil">Mi Perfil</a>
-            <a class="link1" href="../temas.html">Mis Temas</a>
-            <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-        </div>
-
-    </header>
+</header>
 
 <body>
     <div class="contenedor-principal">
@@ -79,7 +79,11 @@
                 <div class="contenido-clase" onclick="toggleLecciones(this)">
                     <div class="informacion-clase">
                         <div class="detalles-clase">
-                            <h3 class="titulo-clase">Clase 1: ¿Qué es una fracción?</h3>
+                            <h3 id="h4">Clase Terminada</h3>
+                            <div class="estado">
+                                <h3 class="titulo-clase">Clase 1: ¿Qué es una fracción?</h3>
+                            </div>
+
                             <p class="descripcion-clase">
                                 Aprende los conceptos básicos de las fracciones, qué representan y cómo identificar el
                                 numerador y el denominador.
@@ -101,7 +105,7 @@
                             <div class="contenido-leccion">
                                 <span class="material-symbols-outlined icono-estado">check_circle</span>
                                 <div class="info-leccion">
-                                    <p class="titulo-leccion">Lección 1.1: Introducción a las Fracciones</p>
+                                    <p class="titulo-leccion">Lección 1.1: Introducción a las Fracciones:</p>
                                     <p class="descripcion-leccion">Conceptos básicos de qué es una fracción y sus
                                         partes.</p>
                                 </div>
@@ -112,7 +116,7 @@
                             <div class="contenido-leccion">
                                 <span class="material-symbols-outlined icono-estado">check_circle</span>
                                 <div class="info-leccion">
-                                    <p class="titulo-leccion">Lección 1.2: Fracciones en la Vida Real</p>
+                                    <p class="titulo-leccion">Lección 1.2: Fracciones en la Vida Real:</p>
                                     <p class="descripcion-leccion">Ejemplos prácticos de cómo se usan las fracciones.
                                     </p>
                                 </div>
@@ -120,16 +124,16 @@
                             <button class="boton-leccion boton-iniciar-leccion">Repasar Lección</button>
                         </div>
                         <div class="tarjeta-leccion completada">
-                        <div class="contenido-leccion">
-                            <span class="material-symbols-outlined icono-estado">check_circle</span>
-                            <div class="info-leccion">
-                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Fracción</p>
-                                <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
-                                    fracciones.</p>
+                            <div class="contenido-leccion">
+                                <span class="material-symbols-outlined icono-estado">check_circle</span>
+                                <div class="info-leccion">
+                                    <p class="titulo-leccion">Lección 3.3: Ejercicios de Fracción:</p>
+                                    <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
+                                        fracciones.</p>
+                                </div>
                             </div>
+                            <button class="boton-leccion boton-iniciar-leccion">Repasar Ejercicio</button>
                         </div>
-                        <button class="boton-leccion boton-iniciar-leccion">Repasar Ejrcicio</button>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -139,6 +143,7 @@
                 <div class="contenido-clase" onclick="toggleLecciones(this)">
                     <div class="informacion-clase">
                         <div class="detalles-clase">
+                            <h3 id="h4">Clase En Curso</h3>
                             <h3 class="titulo-clase">Clase 2: Fracciones Equivalentes</h3>
                             <p class="descripcion-clase">
                                 Descubre cómo diferentes fracciones pueden representar la misma cantidad y aprende a
@@ -154,8 +159,7 @@
                             <span class="material-symbols-outlined">expand_more</span>
                         </div>
                     </div>
-                    <div class="imagen-clase"
-                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuWxDzUwRKticFAeRKRZC3MjwdLgdiAkQZSXiRNoPDgXSsy8WoKRBPLaVC3x6aSX6HHv2ucO3UDkJBT6NfpcS8EbHjWG9dVoCMEP2u17J2vDGf77R8sE7l5r-C4E_0Jyd_bcYDtP-Zls4FBW4cOXiBPBpawSdphzUrmbEiZtRXjG7NI1TrD2icgrIl5QP6tU0is4oN14Ql8tmx4wHYNk2ULkh-cfz2JVy8tfjykjDoyjgQ-dskwRmFwiRpWcIKZbQr6GRZwExNAuo');">
+                    <div class="imagen-clase" style="background-image: url('/img/equivalente.png');">
                     </div>
                 </div>
                 <div class="seccion-lecciones visible">
@@ -165,7 +169,7 @@
                             <div class="contenido-leccion">
                                 <span class="material-symbols-outlined icono-estado">check_circle</span>
                                 <div class="info-leccion">
-                                    <p class="titulo-leccion">Lección 2.1: Simplificando Fracciones</p>
+                                    <p class="titulo-leccion">Lección 2.1: Simplificando Fracciones:</p>
                                     <p class="descripcion-leccion">Aprende a reducir fracciones a su forma más simple.
                                     </p>
                                 </div>
@@ -176,7 +180,7 @@
                             <div class="contenido-leccion">
                                 <div class="circulo-pendiente"></div>
                                 <div class="info-leccion">
-                                    <p class="titulo-leccion">Lección 2.2: Encontrando la fracción</p>
+                                    <p class="titulo-leccion">Lección 2.2: Encontrando la fracción:</p>
                                     <p class="descripcion-leccion">Técnicas para comparar y operar con fracciones
                                         diferentes.</p>
                                 </div>
@@ -187,16 +191,16 @@
 
                         </div>
                         <div class="tarjeta-leccion">
-                        <div class="contenido-leccion">
-                            <div class="circulo-pendiente"></div>
-                            <div class="info-leccion">
-                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Resolver Fracciones</p>
-                                <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
-                                    fracciones.</p>
+                            <div class="contenido-leccion">
+                                <div class="circulo-pendiente"></div>
+                                <div class="info-leccion">
+                                    <p class="titulo-leccion">Lección 3.3: Ejercicios de Resolver Fracciones:</p>
+                                    <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
+                                        fracciones.</p>
+                                </div>
                             </div>
+                            <button class="boton-leccion boton-completado-leccion">Hacer Ejercicio</button>
                         </div>
-                        <button class="boton-leccion boton-completado-leccion">Hacer Ejercicio</button>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -219,8 +223,7 @@
                             <span class="material-symbols-outlined">expand_more</span>
                         </div>
                     </div>
-                    <div class="imagen-clase"
-                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMcw3MNo6zpfwZiocoJqSve1nopVPvjLbgu3PjsRclEo3Wh4rOhs6Ggb29ndL9msn6MW27BfIqHrroFu1ud1abkHW6e9u8PW0OWV9njELv4BNzEzux2bMKKk2xY9Iw0GMiCrG9KG1CQdhfxxDqbiRCqFUjlL2s4m2uCtvmsnPx_lribwIk-U4mNcIN7kCpuVVxZSGUZJz1l7sV5vLyrytwTZe6QcZRQwalPfGoY-QP83uzXK-tHnrDebubVNJDcqJDr5nV8kp2mVg');">
+                    <div class="imagen-clase" style="background-image: url('/img/comparando.png');">
                     </div>
                 </div>
                 <div class="seccion-lecciones">
@@ -230,7 +233,7 @@
                             <div class="contenido-leccion">
                                 <div class="circulo-pendiente"></div>
                                 <div class="info-leccion">
-                                    <p class="titulo-leccion">Lección 3.1: Comparación con Denominador Común</p>
+                                    <p class="titulo-leccion">Lección 3.1: Comparación con Denominador Común:</p>
                                     <p class="descripcion-leccion">Técnicas para comparar fracciones con el mismo
                                         denominador.</p>
                                 </div>
@@ -242,7 +245,7 @@
                         <div class="contenido-leccion">
                             <div class="circulo-pendiente"></div>
                             <div class="info-leccion">
-                                <p class="titulo-leccion">Lección 3.2: Comparación con Denominador Diferente</p>
+                                <p class="titulo-leccion">Lección 3.2: Comparación con Denominador Diferente:</p>
                                 <p class="descripcion-leccion">Estrategias para comparar fracciones con distintos
                                     denominadores.</p>
                             </div>
@@ -253,7 +256,7 @@
                         <div class="contenido-leccion">
                             <div class="circulo-pendiente"></div>
                             <div class="info-leccion">
-                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Comparación</p>
+                                <p class="titulo-leccion">Lección 3.3: Ejercicios de Comparación:</p>
                                 <p class="descripcion-leccion">Practica la comparación de diferentes tipos de
                                     fracciones.</p>
                             </div>
@@ -266,7 +269,7 @@
     </div>
     </div>
 
-        <footer>
+    <footer>
 
         <div class="footer">
 
@@ -323,4 +326,3 @@
 
 
 </html>
-

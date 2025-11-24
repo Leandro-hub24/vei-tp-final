@@ -7,7 +7,6 @@
     box-sizing: border-box;
     /* Hace que padding y border se incluyan en el ancho total */
 }
-
 /* Estilos del body - la página completa */
 body {
     font-family: 'Poppins', sans-serif;
@@ -22,17 +21,32 @@ body {
 
 /* Contenedor principal de la página */
 .contenido-principal {
-    max-width: 1280px;
-    /* Ancho máximo de 1280 píxeles */
-    margin: 0 auto;
+    margin: 0 0;
     /* Centra el contenedor horizontalmente (0 arriba/abajo, auto izq/der) */
-    padding: 2rem 1.5rem;
+    padding: 2rem 10rem;
     /* Espacio interno: 2rem arriba/abajo, 1.5rem izq/der */
+}
+
+@media (max-width: 1500px) {
+    .contenido-principal {
+    margin: 0 0;
+    /* Centra el contenedor horizontalmente (0 arriba/abajo, auto izq/der) */
+    padding: 2rem 6rem;
+    /* Espacio interno: 2rem arriba/abajo, 1.5rem izq/der */
+}
+}
+@media (max-width: 1000px) {
+    .contenido-principal {
+    margin: 0 0;
+    /* Centra el contenedor horizontalmente (0 arriba/abajo, auto izq/der) */
+    padding: 2rem 3rem;
+    /* Espacio interno: 2rem arriba/abajo, 1.5rem izq/der */
+}
 }
 
 /* Banner de bienvenida - la caja gris oscura */
 .bienvenida {
-    background-color: #374151;
+    background-color: #243540;
     /* Fondo gris oscuro */
     color: white;
     /* Texto blanco */
@@ -64,7 +78,7 @@ body {
 .nombre-usuario {
     font-weight: 600;
     /* Peso semi-negrita */
-    color: #5eead4;
+    color: #4ef1a5;
     /* Color turquesa/cyan */
 }
 
@@ -122,13 +136,36 @@ body {
     color: white;
     pointer-events: none;
 }
+@media (max-width: 450px) {
+    .bienvenida {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        gap: 1rem; /* Espacio entre título y selector */
+    }
+    
+    .titulo-bienvenida {
+        text-align: center; /* Centra el texto */
+    }
+    
+    .selector-container {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 250px; /* Ancho máximo opcional */
+    }
+    
+    .selector-anio {
+        width: 100%; /* El selector ocupa todo el ancho del contenedor */
+    }
+}
 
 /*-------------------------------------------- */
-
+/* ABAJO DE BIENVENIDAA  */
 .grid-materias {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 2rem;
     justify-content: space-between;
 }
 .tarjeta-materia {
@@ -248,20 +285,20 @@ a {
     transition: color 0.3s ease;
     display: inline-block;
     transition: transform 0.25s ease;
-    transform: rotate(180deg); 
+    transform: rotate(180deg); /* apunta hacia abajo */
 
 
 
+}
+
+.tarjeta-materia:hover .boton-expandir {
+    transform: rotate(0deg); /* apunta hacia arriba */
 }
 
 /* Botón cuando pasas el mouse por encima */
 .boton-expandir:hover {
     color: #374151;
     /* Color gris más oscuro */
-}
-
-.tarjeta-materia.abierta .boton-expandir {
-    transform: rotate(0deg); /* apunta hacia arriba */
 }
 
 

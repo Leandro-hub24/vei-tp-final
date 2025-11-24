@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Fractions Exercise</title>
+    <title>Ejercicio de Fracciones - FormAr</title>
     <link rel="stylesheet" href="../css/estilos-general.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/ejercicio2_2.css">
@@ -14,69 +14,39 @@
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <a href="index.html">
-                <h1 id="logotipo">FormAr</h1>
-            </a>
-        </div>
-
-        <div id="buscador">
-            <img id="search" class="search" src="../img/search.png" id="lupa" alt="lupa">
-            <div id="contenedor-buscar">
-                <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
+    <header style="border-bottom: 1px solid #e5e7eb;">
+        <div style="padding: 15px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <div id="logo">
+                <a href="index.html" style="text-decoration: none; color: #243540;">
+                    <h1 style="font-size: 1.5rem;">FormAr</h1>
+                </a>
             </div>
-
+            <div class="user" style="width: 40px; height: 40px; background: #eee; border-radius: 50%;"></div>
         </div>
-
-        <div id="navegacion">
-            <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
-            <!-- <a class="link" href="temas.html">Temas</a> -->
-            <a class="link" href="../temas.html">Mis Temas</a>
-            <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-            <a class="user" href="../perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
-        </div>
-
-        <div id="desplegable1" class="">
-            <div id="contenedor-buscar1">
-                <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
-            </div>
-        </div>
-
-        <div id="desplegable2" class="">
-            <!-- <a class="link1" href="temas.html">Temas</a> -->
-            <a class="link1" href="../perfil">Mi Perfil</a>
-            <a class="link1" href="../temas.html">Mis Temas</a>
-            <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-        </div>
-
     </header>
 
     <main>
         <div class="header-container">
-            <a href="../temas/matematica.html">
-                <button class="back-btn">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                    Volver a clases
-                </button>
-                <div class="breadcrumb">
-                    <a href="#">Unidad 1</a>
-                    <span class="separator">/</span>
-                    <a href="#">Lección 2</a>
-                    <span class="separator">/</span>
-                    <span class="current">Ejercicio</span>
-                </div>
+            <a href="../temas/matematica.html" class="back-btn">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Volver a clases
             </a>
-
+            <div class="breadcrumb">
+                <a href="#">Unidad 1</a>
+                <span class="separator">/</span>
+                <a href="#">Lección 2</a>
+                <span class="separator">/</span>
+                <span class="current">Ejercicio</span>
+            </div>
         </div>
 
         <div class="main-content">
             <div class="content-wrapper">
-                <h1 class="title">Coloreá <span class="fraction">1/2</span> del hexagono.</h1>
+                <div class="course-context">
+                    Curso Matemática 1° Año <span>|</span> Fracciones
+                </div>
+
+                <h1 class="title">Coloreá <span class="fraction">1/2</span> del hexágono.</h1>
 
                 <div class="hexagon-container">
                     <svg class="hexagon-svg" viewBox="0 0 200 173.21">
@@ -88,8 +58,7 @@
                         <g clip-path="url(#hexagon-clip)">
                             <path class="hexagon-part" d="M100,86.605 L50,0 L150,0 Z" data-segment="1"></path>
                             <path class="hexagon-part" d="M100,86.605 L150,0 L200,86.605 Z" data-segment="2"></path>
-                            <path class="hexagon-part" d="M100,86.605 L200,86.605 L150,173.21 Z" data-segment="3">
-                            </path>
+                            <path class="hexagon-part" d="M100,86.605 L200,86.605 L150,173.21 Z" data-segment="3"></path>
                             <path class="hexagon-part" d="M100,86.605 L150,173.21 L50,173.21 Z" data-segment="4"></path>
                             <path class="hexagon-part" d="M100,86.605 L50,173.21 L0,86.605 Z" data-segment="5"></path>
                             <path class="hexagon-part" d="M100,86.605 L0,86.605 L50,0 Z" data-segment="6"></path>
@@ -97,28 +66,31 @@
                     </svg>
                 </div>
 
-                <button class="check-btn" id="checkBtn">Comprobar</button>
+                <button class="check-btn" id="checkBtn">
+                    Comprobar
+                    <span class="material-symbols-outlined">check_circle</span>
+                </button>
             </div>
         </div>
 
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="sidebar-title-wrapper">
-                    <div class="ai-icon-wrapper">
-                        <span class="material-symbols-outlined ai-icon">smart_toy</span>
+                <button class="sidebar-header-button collapsed" id="toggleAiBtn">
+                    <div class="sidebar-title-wrapper">
+                        <div class="ai-icon-wrapper">
+                            <span class="material-symbols-outlined ai-icon">auto_awesome</span>
+                        </div>
+                        <h3 class="sidebar-title">Asistente IA</h3>
                     </div>
-                    <h3 class="sidebar-title">Asistente IA</h3>
-                </div>
-                <button class="close-btn" id="closeSidebarBtn">
-                    <span class="material-symbols-outlined close-icon">close</span>
+                    <span class="material-symbols-outlined collapse-icon" style="transform: rotate(180deg);">expand_less</span>
                 </button>
             </div>
 
-            <div class="chat-container">
+            <div class="chat-container" id="chatContainer">
                 <div class="messages" id="messagesContainer">
                     <div class="message ai">
                         <div class="message-bubble">
-                            <p class="message-text">¡Hola! Estoy aquí para ayudarte.<br><br>Recuerda que 1/2 significa
+                            <p class="message-text">¡Hola! Estoy aquí para ayudarte. 👋<br><br>Recuerda que 1/2 significa
                                 una parte de dos partes iguales. ¿Cuántos triángulos conforman la mitad del hexágono?
                             </p>
                         </div>
@@ -126,23 +98,39 @@
                 </div>
             </div>
 
-            <div class="chat-input-wrapper">
+            <div class="chat-input-wrapper" id="chatInputWrapper">
                 <div class="input-container">
-                    <input type="text" class="chat-input" id="chatInput" placeholder="Haz una pregunta...">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Pregúntale al asistente...">
                     <button class="send-btn" id="sendBtn">
-                        <span class="material-symbols-outlined send-icon">send</span>
+                        <span class="material-symbols-outlined send-icon" style="font-size: 18px;">send</span>
                     </button>
                 </div>
             </div>
         </aside>
+
     </main>
+
+    <footer>
+        </footer>
+
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon-container">
+                <span class="material-symbols-outlined modal-icon">emoji_events</span>
+            </div>
+            <h2 class="modal-title">¡Felicidades! 🎉</h2>
+            <p class="modal-text">Completaste el ejercicio correctamente. Has dominado la representación de 1/2 en hexágonos.</p>
+            <button class="modal-btn" id="modalContinueBtn">Continuar</button>
+        </div>
+    </div>
 
     <script>
         // ==================== STATE MANAGEMENT ====================
         const state = {
             coloredSegments: new Set(),
             targetFraction: 1 / 2,
-            totalSegments: 6
+            totalSegments: 6,
+            attempts: 0
         };
 
         // ==================== DOM ELEMENTS ====================
@@ -152,8 +140,27 @@
             chatInput: document.getElementById('chatInput'),
             sendBtn: document.getElementById('sendBtn'),
             messagesContainer: document.getElementById('messagesContainer'),
-            closeSidebarBtn: document.getElementById('closeSidebarBtn'),
-            sidebar: document.querySelector('.sidebar')
+            toggleAiBtn: document.getElementById('toggleAiBtn'),
+            chatContainer: document.getElementById('chatContainer'),
+            chatInputWrapper: document.getElementById('chatInputWrapper'),
+            // Modal Elements
+            successModal: document.getElementById('successModal'),
+            modalContinueBtn: document.getElementById('modalContinueBtn')
+        };
+
+        // ==================== AI RESPONSES ====================
+        const aiResponses = {
+            tooMany: (colored, target) => `Mmm... has coloreado ${colored} triángulos, pero eso es demasiado. 🤔<br><br>Para representar 1/2 del hexágono, solo necesitas colorear ${target} triángulos.<br><br>💡 <strong>Pista:</strong> La mitad es cuando divides algo en 2 partes iguales. ¿Cuántos triángulos serían la mitad de 6?`,
+
+            tooFew: (colored, target) => `Bien, has coloreado ${colored} triángulo${colored > 1 ? 's' : ''}, pero necesitas más. 🎯<br><br>Recuerda que el hexágono tiene 6 triángulos en total. Para colorear 1/2, necesitas ${target} triángulos.<br><br>💡 <strong>Pregúntate:</strong> ¿Cuánto es 6 ÷ 2?`,
+
+            // Hint: El mensaje correcto ahora se maneja vía Modal, no chat.
+            
+            hint1: 'Claro, te ayudo. 😊<br><br>El hexágono está dividido en 6 triángulos iguales. Si queremos colorear 1/2, debemos pensar: ¿cuánto es la mitad de 6?<br><br>1/2 = 6 ÷ 2 = ?',
+
+            hint2: 'El número de abajo de la fracción (denominador) te dice en cuántas partes se divide el total. En este caso, 2 partes.<br><br>El número de arriba (numerador) te dice cuántas de esas partes debes tomar. En este caso, 1 parte.<br><br>Entonces: 6 triángulos ÷ 2 = 3 triángulos 🔢',
+
+            encouragement: '¡No te desanimes! Las fracciones pueden ser confusas al principio, pero lo estás haciendo bien. 💪<br><br>Intenta de nuevo: necesitas colorear exactamente 3 triángulos para representar 1/2 del hexágono.'
         };
 
         // ==================== HEXAGON LOGIC ====================
@@ -172,14 +179,56 @@
         function checkAnswer() {
             const coloredCount = state.coloredSegments.size;
             const targetCount = Math.round(state.totalSegments * state.targetFraction);
+            state.attempts++;
 
-            if (coloredCount === targetCount) {
-                addMessage('¡Correcto! Has coloreado exactamente la mitad del hexágono. ¡Excelente trabajo!', 'ai');
+            let response = '';
+
+            if (coloredCount === 0) {
+                response = '¿No has coloreado ningún triángulo todavía? 🎨<br><br>Intenta hacer clic en los triángulos para colorearlos y luego presiona "Comprobar" nuevamente.';
+                addMessage(response, 'ai');
+            } else if (coloredCount === targetCount) {
+                // EXITO: Mostrar Modal en lugar de chat
+                showSuccessModal();
             } else if (coloredCount > targetCount) {
-                addMessage(`Casi... has coloreado ${coloredCount} triángulos, pero necesitas colorear solo ${targetCount} para representar 1/2.`, 'ai');
+                response = aiResponses.tooMany(coloredCount, targetCount);
+                addMessage(response, 'ai');
+
+                if (state.attempts >= 2) {
+                    setTimeout(() => {
+                        addMessage(aiResponses.encouragement, 'ai');
+                    }, 2000);
+                }
             } else {
-                addMessage(`Necesitas colorear más. Has coloreado ${coloredCount} triángulos, pero necesitas ${targetCount} para completar 1/2.`, 'ai');
+                response = aiResponses.tooFew(coloredCount, targetCount);
+                addMessage(response, 'ai');
+
+                if (state.attempts >= 2) {
+                    setTimeout(() => {
+                        addMessage(aiResponses.hint1, 'ai');
+                    }, 2000);
+                }
             }
+        }
+
+        // ==================== MODAL LOGIC ====================
+        function showSuccessModal() {
+            elements.successModal.classList.add('active');
+            
+            // Efecto de confeti simple (opcional)
+            confettiEffect();
+        }
+
+        function confettiEffect() {
+            // Aquí podrías agregar una librería de confeti si lo deseas.
+            // Por ahora es solo un placeholder visual.
+            console.log("¡Confeti! 🎉");
+        }
+
+        function closeModalAndContinue() {
+            elements.successModal.classList.remove('active');
+            // Aquí iría la lógica para pasar al siguiente nivel
+            // Por ejemplo: window.location.href = 'leccion-3.html';
+            alert("Redirigiendo a la siguiente lección...");
         }
 
         // ==================== CHAT LOGIC ====================
@@ -192,15 +241,19 @@
 
             const textP = document.createElement('p');
             textP.className = 'message-text';
-            textP.textContent = text;
+            textP.innerHTML = text;
 
             bubbleDiv.appendChild(textP);
             messageDiv.appendChild(bubbleDiv);
             elements.messagesContainer.appendChild(messageDiv);
 
             // Scroll to bottom
-            elements.messagesContainer.parentElement.scrollTop =
-                elements.messagesContainer.parentElement.scrollHeight;
+            elements.chatContainer.scrollTop = elements.chatContainer.scrollHeight;
+            
+            // Si el chat está cerrado y es un mensaje de la IA, abrirlo un poco o notificar (opcional)
+            // if(type === 'ai' && !elements.chatContainer.classList.contains('expanded')) {
+            //     toggleAI();
+            // }
         }
 
         function handleSendMessage() {
@@ -210,17 +263,41 @@
                 addMessage(message, 'user');
                 elements.chatInput.value = '';
 
-                // Simulate AI response
+                // Detectar palabras clave para respuestas inteligentes
+                const lowerMessage = message.toLowerCase();
+                let response = '';
+
+                if (lowerMessage.includes('ayuda') || lowerMessage.includes('pista') || lowerMessage.includes('no entiendo')) {
+                    response = aiResponses.hint1;
+                    setTimeout(() => {
+                        addMessage(aiResponses.hint2, 'ai');
+                    }, 1500);
+                } else if (lowerMessage.includes('cuántos') || lowerMessage.includes('cuantos')) {
+                    response = 'Necesitas colorear exactamente 3 triángulos para representar 1/2 del hexágono. 😊<br><br>Esto es porque 6 ÷ 2 = 3.';
+                } else if (lowerMessage.includes('fracción') || lowerMessage.includes('fraccion')) {
+                    response = 'Una fracción tiene dos partes:<br><br>🔢 <strong>Numerador</strong> (arriba): cuántas partes tomas<br>🔢 <strong>Denominador</strong> (abajo): en cuántas partes divides el total<br><br>En 1/2, tomas 1 de cada 2 partes.';
+                } else {
+                    response = 'Interesante pregunta. 🤔<br><br>Si necesitas ayuda con el ejercicio, pregúntame sobre las fracciones o pídeme una pista.';
+                }
+
                 setTimeout(() => {
-                    addMessage('Gracias por tu pregunta. ¿Necesitas alguna pista adicional sobre las fracciones?', 'ai');
-                }, 1000);
+                    addMessage(response, 'ai');
+                }, 800);
             }
         }
 
-        function toggleSidebar() {
-            if (elements.sidebar) {
-                elements.sidebar.style.display =
-                    elements.sidebar.style.display === 'none' ? 'flex' : 'none';
+        // ==================== AI TOGGLE ====================
+        function toggleAI() {
+            elements.chatContainer.classList.toggle('expanded');
+            elements.chatInputWrapper.classList.toggle('expanded');
+            elements.toggleAiBtn.classList.toggle('collapsed');
+            
+            // Rotar icono flecha
+            const icon = elements.toggleAiBtn.querySelector('.collapse-icon');
+            if (elements.toggleAiBtn.classList.contains('collapsed')) {
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.style.transform = 'rotate(180deg)';
             }
         }
 
@@ -250,17 +327,32 @@
                 });
             }
 
-            // Close sidebar
-            if (elements.closeSidebarBtn) {
-                elements.closeSidebarBtn.addEventListener('click', toggleSidebar);
+            // Toggle AI
+            if (elements.toggleAiBtn) {
+                elements.toggleAiBtn.addEventListener('click', toggleAI);
+            }
+
+            // Modal Button
+            if (elements.modalContinueBtn) {
+                elements.modalContinueBtn.addEventListener('click', closeModalAndContinue);
             }
         }
 
         // ==================== INITIALIZATION ====================
-        document.addEventListener('DOMContentLoaded', initEventListeners);
-    </script>
-    <script src="../js/header.js"></script>
-</body>
+        document.addEventListener('DOMContentLoaded', () => {
+            initEventListeners();
 
+            // Configuración inicial del chat (Desktop: Abierto, Móvil: Cerrado)
+            if (window.innerWidth > 1024) {
+                elements.chatContainer.classList.add('expanded');
+                elements.chatInputWrapper.classList.add('expanded');
+            } else {
+                elements.toggleAiBtn.classList.add('collapsed');
+                const icon = elements.toggleAiBtn.querySelector('.collapse-icon');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
+</body>
 
 </html>

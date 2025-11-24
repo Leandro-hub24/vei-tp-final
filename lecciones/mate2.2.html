@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,6 @@
     <title>Leccion</title>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
 </head>
 <header>
         <div id="logo">
@@ -19,43 +19,38 @@
             </a>
         </div>
 
-        <div id="buscador">
-            <img id="search" class="search" src="../img/search.png" id="lupa" alt="lupa">
-            <div id="contenedor-buscar">
-                <input type="text" id="buscar" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
-            </div>
+    </div>
 
-        </div>
+    <div id="navegacion">
+        <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
+        <!-- <a class="link" href="temas.html">Temas</a> -->
+        <a class="link" href="../temas.html">Mis Temas</a>
+        <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
+        <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
+        <a class="user" href="../perfil.html"><img class="imgUser" src="../img/imgUser.png" alt=""></a>
+    </div>
 
-        <div id="navegacion">
-            <img id="hamburger" class="hamburger" src="../img/hamburger.png" alt="">
-            <!-- <a class="link" href="temas.html">Temas</a> -->
-            <a class="link" href="../temas.html">Mis Temas</a>
-            <a class="link" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-            <a class="user" href="../perfil.html"><img class="imgUser" src="./img/imgUser.png" alt=""></a>
+    <div id="desplegable1" class="">
+        <div id="contenedor-buscar1">
+            <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
+            <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
         </div>
+    </div>
 
-        <div id="desplegable1" class="">
-            <div id="contenedor-buscar1">
-                <input type="text" id="buscar1" class="buscar" placeholder="¿Qué querés aprender?">
-                <img class="lupa" src="../img/search1.png" id="lupa" alt="lupa">
-            </div>
-        </div>
+    <div id="desplegable2" class="">
+        <!-- <a class="link1" href="temas.html">Temas</a> -->
+        <a class="link1" href="../perfil">Mi Perfil</a>
+        <a class="link1" href="../temas.html">Mis Temas</a>
+        <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
+        <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
+    </div>
 
-        <div id="desplegable2" class="">
-            <!-- <a class="link1" href="temas.html">Temas</a> -->
-            <a class="link1" href="../perfil">Mi Perfil</a>
-            <a class="link1" href="../temas.html">Mis Temas</a>
-            <a class="link1" href="../misTarjetas.html">Mis Tarjetas</a>
-            <a class="link1" href="../nuestrosProfesionales.html">Sobre Nosotros</a>
-        </div>
+</header>
 
 </header>
 
 <body>
-    
+
     <div class="encabezado">
         <div class="encabezado-contenido">
             <div class="encabezado-izquierda">
@@ -63,61 +58,123 @@
                     <span class="icono-clase">
                         <span class="material-symbols-outlined" style="font-size: 14px;">play_arrow</span>
                     </span>
-                    <p>Clase 2 de 3 - Curso de Fundamentos de Matemáticas</p>
-                    <span class="separador">|</span>
-                    <a href="../temas/matematica.html" class="enlace-volver">Volver a clases</a>
+                    <p>Clase 2 de 3 - Curso De Matemáticas Primer Año</p>
                 </div>
-                <h1 class="titulo-leccion">Lección 2.2: Encontrando la Fracción</h1>
-            </div>
-            <div class="botones-encabezado">
-                <button class="boton boton-completar">
-                    <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
-                    Marcar como completado
-                </button>
-                <a href="/ejercicios/ejercicio2.2.html">
-                <button class="boton boton-completar">
-                    Continuar
-                    <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
-                </a>
-                
             </div>
         </div>
     </div>
 
     <div class="contenedor-principal">
         <main class="area-contenido">
+            <h1 class="titulo-leccion">Lección 2.2: Encontrando la Fracción</h1>
             <div class="pestanas">
-                <button class="pestana pestana-activa">
+                <button class="pestana pestana-activa" data-tab="video">
                     <span class="material-symbols-outlined" style="font-size: 16px;">play_circle</span>
                     Video
                 </button>
-                <button class="pestana pestana-inactiva">
+                <button class="pestana pestana-inactiva" data-tab="leer">
                     <span class="material-symbols-outlined" style="font-size: 16px;">article</span>
                     Leer
                 </button>
             </div>
 
-            <div class="reproductor-video">
-                <button class="boton-play">
-                    <span class="material-symbols-outlined" style="font-size: 36px;">play_arrow</span>
-                </button>
-                <div class="controles-video">
-                    <div class="barra-progreso-contenedor">
-                        <p class="tiempo-video">0:37</p>
-                        <div class="barra-progreso-wrapper">
-                            <div class="barra-progreso">
-                                <div class="barra-progreso-relleno"></div>
+            <!-- Contenido del Video -->
+            <div class="contenido-tab contenido-video activo">
+                <div class="reproductor-video">
+                    <button class="boton-play">
+                        <span class="material-symbols-outlined" style="font-size: 36px;">play_arrow</span>
+                    </button>
+                    <div class="controles-video">
+                        <div class="barra-progreso-contenedor">
+                            <p class="tiempo-video">0:37</p>
+                            <div class="barra-progreso-wrapper">
+                                <div class="barra-progreso">
+                                    <div class="barra-progreso-relleno"></div>
+                                </div>
+                                <div class="indicador-progreso"></div>
                             </div>
-                            <div class="indicador-progreso"></div>
+                            <p class="tiempo-video">2:23</p>
                         </div>
-                        <p class="tiempo-video">2:23</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contenido de Leer -->
+            <div class="contenido-tab contenido-leer">
+                <div class="articulo-leccion">
+                    <h2 class="titulo-articulo">¿Qué son las fracciones?</h2>
+
+                    <p class="parrafo-articulo">
+                        Una <strong>fracción</strong> es una forma de representar partes de un todo. Imagina que tienes
+                        una pizza 🍕
+                        y la divides en partes iguales. Cada pedazo que tomas es una fracción de la pizza completa.
+                    </p>
+
+                    <h3 class="subtitulo-articulo">Partes de una fracción</h3>
+
+                    <p class="parrafo-articulo">
+                        Toda fracción tiene dos números separados por una línea:
+                    </p>
+
+                    <div class="ejemplo-visual">
+                        <div class="fraccion-ejemplo">
+                            <span class="numerador">3</span>
+                            <span class="linea-fraccion">—</span>
+                            <span class="denominador">4</span>
+                        </div>
+                    </div>
+
+                    <ul class="lista-articulo">
+                        <li><strong>Numerador</strong> (el número de arriba): indica cuántas partes tomamos. En este
+                            caso, 3 pedazos.</li>
+                        <li><strong>Denominador</strong> (el número de abajo): indica en cuántas partes iguales
+                            dividimos el todo. En este caso, 4 partes.</li>
+                    </ul>
+
+                    <h3 class="subtitulo-articulo">Comparando fracciones</h3>
+
+                    <p class="parrafo-articulo">
+                        Para comparar fracciones, es importante que tengan el mismo denominador. Si dos fracciones
+                        tienen diferentes
+                        denominadores, estamos comparando pedazos de tamaños distintos, ¡como comparar manzanas con
+                        naranjas! 🍎🍊
+                    </p>
+
+                    <h3 class="subtitulo-articulo">Sumando fracciones</h3>
+
+                    <p class="parrafo-articulo">
+                        Para sumar fracciones, necesitamos que tengan el <strong>mismo denominador</strong>. Por
+                        ejemplo:
+                    </p>
+
+                    <div class="ejemplo-operacion">
+                        <p>1/2 y 1/3 no se pueden sumar directamente</p>
+                        <p>Primero convertimos: 1/2 = 3/6 y 1/3 = 2/6</p>
+                        <p>Ahora sí: 3/6 + 2/6 = <strong>5/6</strong></p>
+                    </div>
+
+                    <p class="parrafo-articulo">
+                        El truco está en encontrar el <em>mínimo común múltiplo</em> de los denominadores.
+                        En este caso, el múltiplo común de 2 y 3 es 6.
+                    </p>
+
+                    <div class="nota-importante">
+                        <span class="material-symbols-outlined">lightbulb</span>
+                        <p><strong>Recuerda:</strong> Las fracciones representan porciones de un mismo entero.
+                            Siempre que trabajes con ellas, imagina que estás dividiendo algo en partes iguales.</p>
                     </div>
                 </div>
             </div>
 
             <div class="seccion-resumen">
                 <h2 class="titulo-resumen">Resumen</h2>
-                <p class="texto-resumen"><strong>Resumen de la lección:</strong> En esta clase aprendimos qué son las fracciones, cómo se leen y cómo se comparan. Vimos que el número de arriba (<em>numerador</em>) indica cuántas partes tomamos, y el de abajo (<em>denominador</em>) en cuántas partes iguales se divide el todo. También entendimos que para sumarlas o restarlas deben tener el mismo denominador, y usamos ejemplos visuales, como el de la pizza 🍕, para ver que las fracciones representan porciones de un mismo entero.</p>
+                <p class="texto-resumen"><strong>Resumen de la lección:</strong> En esta clase aprendimos qué son las
+                    fracciones, cómo se leen y cómo se comparan. Vimos que el número de arriba (<em>numerador</em>)
+                    indica cuántas partes tomamos, y el de abajo (<em>denominador</em>) en cuántas partes iguales se
+                    divide el todo. También entendimos que para sumarlas o restarlas deben tener el mismo denominador, y
+                    usamos ejemplos visuales, como el de la pizza 🍕, para ver que las fracciones representan porciones
+                    de un mismo entero.</p>
             </div>
         </main>
 
@@ -149,12 +206,18 @@
                 <div class="area-chat">
                     <div class="mensaje-usuario">
                         <div class="burbuja-mensaje-usuario">
-                            <p>No entendí el minuto 1:30 cuando explica que las fracciones tienen que tener el mismo denominador para poder sumarlas.</p>
+                            <p>No entendí el minuto 1:30 cuando explica que las fracciones tienen que tener el mismo
+                                denominador para poder sumarlas.</p>
                         </div>
                     </div>
                     <div class="mensaje-asistente">
                         <div class="burbuja-mensaje-asistente">
-                            <p>Recordá el ejemplo de la pizza 🍕 del minuto 1<br> Para sumar fracciones, las porciones tienen que ser del mismo tamaño. <br> Eso significa que deben tener el <strong>mismo denominador</strong>. <br>Por ejemplo, 1/2 y 1/3 no se pueden sumar directamente porque las mitades y los tercios son cortes distintos. <br>Buscá el <em>mínimo común múltiplo</em> (6) y convertí: 1/2 = 3/6 y 1/3 = 2/6. Ahora sí podés sumarlas: 3/6 + 2/6 = <strong>5/6</strong></p>
+                            <p>Recordá el ejemplo de la pizza 🍕 del minuto 1<br> Para sumar fracciones, las porciones
+                                tienen que ser del mismo tamaño. <br> Eso significa que deben tener el <strong>mismo
+                                    denominador</strong>. <br>Por ejemplo, 1/2 y 1/3 no se pueden sumar directamente
+                                porque las mitades y los tercios son cortes distintos. <br>Buscá el <em>mínimo común
+                                    múltiplo</em> (6) y convertí: 1/2 = 3/6 y 1/3 = 2/6. Ahora sí podés sumarlas: 3/6 +
+                                2/6 = <strong>5/6</strong></p>
                         </div>
                     </div>
                 </div>
@@ -168,10 +231,23 @@
                     </div>
                 </div>
             </div>
+            <div class="botones-fijos">
+                <button class="boton boton-completar">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
+                    Marcar como completado
+                </button>
+                <a href="/ejercicios/ejercicio2.2.html" id="morado">
+                    <button class="boton boton-siguiente">
+                        Continuar
+                        <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+                    </button>
+                </a>
+            </div>
         </aside>
+
     </div>
 
-        <footer>
+    <footer>
 
         <div class="footer">
 
@@ -213,7 +289,81 @@
         </div>
 
     </footer>
-    <script src="../js/header.js"></script>
-</body>
-</html>
+    <script>
+        // Funcionalidad para hacer la IA desplegable
+        document.addEventListener('DOMContentLoaded', function () {
+            const botonAsistente = document.querySelector('.boton-encabezado-asistente');
+            const areaChat = document.querySelector('.area-chat');
+            const inputChatContenedor = document.querySelector('.input-chat-contenedor');
 
+            botonAsistente.addEventListener('click', function () {
+                // Toggle clase expandido
+                areaChat.classList.toggle('expandido');
+                inputChatContenedor.classList.toggle('expandido');
+                botonAsistente.classList.toggle('colapsado');
+            });
+
+            // Iniciar expandido por defecto
+            areaChat.classList.add('expandido');
+            inputChatContenedor.classList.add('expandido');
+
+            // Funcionalidad para marcar como completado y desbloquear continuar
+            const botonCompletar = document.querySelector('.boton-completar');
+            const botonContinuar = document.querySelector('.boton-siguiente');
+            const enlaceContinuar = botonContinuar.parentElement;
+
+            botonCompletar.addEventListener('click', function () {
+                // Marcar como completado
+                this.classList.toggle('completado');
+
+                if (this.classList.contains('completado')) {
+                    // Cambiar texto y icono
+                    this.innerHTML = '<span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span> Completado';
+
+                    // Activar botón continuar
+                    botonContinuar.classList.add('activo');
+                    botonContinuar.disabled = false;
+                    enlaceContinuar.style.pointerEvents = 'auto';
+                } else {
+                    // Volver al estado original
+                    this.innerHTML = '<span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span> Marcar como completado';
+
+                    // Desactivar botón continuar
+                    botonContinuar.classList.remove('activo');
+                    botonContinuar.disabled = true;
+                    enlaceContinuar.style.pointerEvents = 'none';
+                }
+            });
+
+            // Inicializar botón continuar como deshabilitado
+            botonContinuar.disabled = true;
+            enlaceContinuar.style.pointerEvents = 'none';
+        });
+        // Funcionalidad para cambiar entre pestañas Video/Leer
+        const pestanas = document.querySelectorAll('.pestana');
+        const contenidoTabs = document.querySelectorAll('.contenido-tab');
+
+        pestanas.forEach(pestana => {
+            pestana.addEventListener('click', function () {
+                const tabId = this.getAttribute('data-tab');
+
+                // Remover clases activas
+                pestanas.forEach(p => {
+                    p.classList.remove('pestana-activa');
+                    p.classList.add('pestana-inactiva');
+                });
+
+                contenidoTabs.forEach(contenido => {
+                    contenido.classList.remove('activo');
+                });
+
+                // Activar pestaña y contenido seleccionado
+                this.classList.add('pestana-activa');
+                this.classList.remove('pestana-inactiva');
+                document.querySelector(`.contenido-${tabId}`).classList.add('activo');
+            });
+        });
+    </script>
+</body>
+
+</html>
