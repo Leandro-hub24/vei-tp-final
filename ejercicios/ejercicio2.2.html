@@ -19,10 +19,13 @@
             box-sizing: border-box;
         }
         .encima{
-            z-index: 100;
-            padding-top: 6em;
+            z-index: 101;
+            padding-top: 7em;
             padding-left: 2em;
             position: absolute;
+        }
+        .mostrar{
+            display: none;
         }
 
         .enlace-volver {
@@ -359,6 +362,8 @@
 
         /* ==================== CHAT ==================== */
         .chat-container {
+            position: relative;
+            z-index: 10;
             flex: 1;
             padding: 0;
             overflow-y: auto;
@@ -573,6 +578,12 @@
                 /* Espacio extra abajo para que el sidebar flotante no tape contenido */
                 padding-bottom: 90px; 
             }
+            .mostrar{
+                display: block;
+            }
+            .encima{
+                display: none;
+            }
 
             .header-container {
                 right: 0;
@@ -698,6 +709,9 @@
             </div>
         </div>
         <div class="encima course-context">
+             Curso Matemática 1° Año / Fracciones
+        </div>
+        <div class="mostrar course-context">
              Curso Matemática 1° Año / Fracciones
         </div>
 
