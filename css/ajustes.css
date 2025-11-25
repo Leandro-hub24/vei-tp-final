@@ -1,3 +1,24 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#wrapperIMportante{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    flex: 0 0 auto;
+}
+
+footer {
+  margin-top: auto;
+}
+
 #fondo{
     background-color: var(--fondo-gris);
 }
@@ -6,6 +27,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    width: 100%;
 }
 
 #linkAPerfil{
@@ -216,4 +238,147 @@
     flex-direction: column;
     margin-top: 0.1em;
     gap: 3em;
+}
+
+/*RESPONSIVE*/
+
+/*RESOLUCIÓN MÍNIMA*/
+    @media (max-width: 480px) {
+        #contenido {
+            padding: 0 0.7rem;
+        }
+        .subTitulo h3 {
+            font-size: 1rem;
+        }
+        #imagenDePerfil {
+            height: 10em;
+        }
+        .contenidoDeSeccion {
+            padding: 0.8em;
+        }
+        .divDeForm label {
+            font-size: 0.9rem;
+        }
+        .EstiloDeInput {
+            height: 2.2em;
+            font-size: 0.9rem;
+        }
+        .BotonGuardarCambios h3,
+        #BotonDesactivarCuenta h3 {
+            font-size: 0.9rem;
+        }
+        #divDeTextBox textarea {
+            font-size: 0.9rem;
+        }
+        #linkAPerfil a h3 {
+            font-size: 0.9rem;
+        }
+}
+
+/*CELUS*/
+@media (max-width: 768px) {
+    .subTitulo {
+        padding: 1em;
+        font-size: 0.95rem;
+    }
+    .contenidoDeSeccion {
+        padding: 1em;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5em;
+    }
+    #editarImagen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #cambiarOBorrarImagen {
+        width: 100%;
+    }
+    #cambiarOBorrarImagen a {
+        width: 100%;
+        max-width: 14em;
+        justify-content: center;
+    }
+    .editarDatos,
+    .editarDatos2 {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .editarDatos{
+        padding: 0 5em;
+    }
+
+    .divDeForm {
+        width: 100%;
+    }
+    .EstiloDeInput {
+        width: 100%;
+    }
+    .boxDeGuardar,
+    #boxDeDesactivar {
+        justify-content: center;
+        width: 100%;
+    }
+    .BotonGuardarCambios,
+    #BotonDesactivarCuenta {
+        width: 100%;
+        max-width: 14em;
+    }
+    #wrappCampoObligatorio1,
+    #wrappCampoObligatorio2 {
+        gap: 0.5em;
+        text-align: center;
+    }
+
+    #wrappCampoObligatorio1{
+        margin-top: 13em;
+    }
+
+    #wrappCampoObligatorio2{
+        margin-top: 2em;
+        gap: 3em;
+    }
+
+    #divDeTextBox textarea {
+        width: 100%;
+    }
+
+    /*TABLETS*/
+@media (max-width: 1024px) {
+    #contenido {
+        padding: 0 1rem;
+    }
+    .contenidoDeSeccion {
+        gap: 2em;
+    }
+    .editarDatos {
+        display: flex;
+        margin-left: 0;
+        padding: 0;
+    }
+    .editarDatos2 {
+        display: flex;
+        padding: 0;
+    }
+    .divDeForm {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+        width: 100%;
+    }
+    .EstiloDeInput {
+        width: 100%;
+    }
+    #imagenDePerfil {
+        height: 12em;
+    }
+
+    #wrappCampoObligatorio2 {
+        margin-top: 2em;
+    }
+}
 }

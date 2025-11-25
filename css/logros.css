@@ -130,3 +130,80 @@
     padding: 0.2em;
     padding-right: 0.5em;
 }
+
+/*RESPONSIVE*/
+/*TABLESTS*/
+@media (max-width: 1024px) {
+    #Contenido {
+        padding: 0 1rem;
+    }
+    #barraDeProgreso {
+        width: 12em;
+    }
+    .LugarDelogroObtenido {
+        height: auto;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .descripcionDeLogro{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: baseline;
+    }
+
+    .fechaDeObtencion {
+        margin-left: 0;
+    }
+    .descripcionDeLogro h4 {
+        width: auto;
+    }
+}
+
+/*CELULARES*/
+@media (max-width: 768px) {
+    .tituloDeSeccion {
+        text-align: center;
+        align-items: center;
+    }
+    #recuentoDeLogros {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+    #barraDeProgreso {
+        width: 100%;
+        max-width: 20em;
+    }
+    #ListaDeLogrosObtenidos {
+        padding: 1em;
+    }
+    .LugarDelogroObtenido {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        text-align: center;
+    }
+    .parteIzquierda {
+        flex-direction: column;
+    }
+    .LugarDelogroObtenido img {
+        height: 3.5em;
+        margin: 0 0 0.5em 0;
+    }
+    .descripcionDeLogro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.3em;
+    }
+    .descripcionDeLogro h4 {
+        width: auto;
+    }
+    .fechaDeObtencion {
+        text-align: center;
+        margin: 0;
+    }
+}

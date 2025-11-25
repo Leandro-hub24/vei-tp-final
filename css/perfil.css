@@ -1,5 +1,22 @@
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
 #body{
     background-color: var(--fondo-gris);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+div {
+    min-width: 0;
+    height: auto;
 }
 
 #contenidoDePagina{
@@ -15,7 +32,7 @@
     background-color: var(--color-acento-2);
     color: var(--fondo-blanco);
     border-radius: 0.5rem;
-    height: 10em;
+    height: auto;
     width: 100%;
     padding: 1.5em;
     display: flex;
@@ -94,12 +111,13 @@
     align-items: center;
     font-family: "Lato";
     font-size: medium;
-    height: 3em;
+    height: auto;
+    max-width: 100%;
 }
 
 #muestraLogros h3{
     display: flex;
-    width: 100%;
+    width: auto;
     align-items: center;
     justify-content: center;
     padding: 0.5em;
@@ -108,12 +126,15 @@
 #logroBox{
     padding: 0.5em;
     align-items: center;
+    flex-wrap: nowrap;
     display: flex;
     gap: 0.5em;
+    overflow-x: auto;
 }
 
 .logroIcon{
     height: 2.5em;
+    width: auto;
     border-radius: 50%;
     border-color: black;
     border-style: solid;
@@ -212,7 +233,6 @@ margin-left: 0%;
 }
 
 #contenidoDeRacha{
-   /* background-color: var(--color-acento-1);*/
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     height: 6em;
@@ -331,8 +351,10 @@ margin-left: 0%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
     padding: 0.3em 0;
     margin: 0.2em 0;
+    max-width: 100%
 }
 
 .TemaYporcentaje{
@@ -388,6 +410,7 @@ margin-left: 0%;
     padding-right: 0.5em;
     margin-bottom: 0.5em;
     background-color: var(--fondo-gris);
+    max-width: 100%;
 }
 
 .tituloDeActividad{
@@ -413,6 +436,7 @@ margin-left: 0%;
     flex-direction: column;
     gap: 1em;
     margin-top: 0;
+    box-sizing: border-box;
 }
 
 .cajasDeTextoResumen{
@@ -421,6 +445,7 @@ margin-left: 0%;
     justify-content: space-between;
     font-family: "Lato";
     font-size: medium;
+    max-width: 100%
 }
 
 h4 img{
@@ -428,4 +453,193 @@ h4 img{
     padding-right: 0.2em;
     width: auto;
     vertical-align: middle;
+}
+
+/*RESPONSIVE*/
+/* MOBILE*/
+@media (max-width: 768px) {
+    #profile_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1em;
+    }
+
+    #imagenDePerfil {
+        width: 8em;
+    }
+
+    #datosDePerfil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #userData{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #userData h4 {
+        text-align: center;
+    }
+
+    #tituloDeUsuario{
+        display: flex;
+        align-items: center;
+    }
+
+    #muestraLogros{
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+    }
+
+    #botonDeLogros{
+        border-radius: 0.5rem;
+        border: 2px;
+        border-style: solid;
+        border-color: var(--color-acento-2);
+        height: 2em;
+        margin-bottom: 1em;
+    }
+
+    #botonesLadoDerecho{
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    #botonesLadoDerecho div{
+        display: flex;
+        gap: 1em;
+    }
+
+    #botonesLadoDerecho a{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenido_pYa{
+        flex-direction: column; /* deja columna en mobile */
+        padding: 0 1em; /* padding reducido */
+        padding-bottom: 1em;
+        gap: 0.5em;
+    }
+
+    .progresoTema,
+    .cajaDeActividad {
+        width: 100%;
+    }
+
+    .tituloDeSeccion{
+        padding: 1em 2em
+    }
+    #contenidoDeResumenGeneral{
+        padding: 0 5em;
+        padding-bottom: 1.5em;
+        display: flex;
+        flex-direction: row wrap; /* o row wrap si querés que se ajusten */
+        flex-wrap: wrap;
+        gap: 0.5em;
+        padding: 1em; /* padding reducido */
+    }
+
+    .cajasDeTextoResumen {
+        flex: 1 1 45%; /* ancho flexible, se adapta al contenedor */
+        margin-bottom: 0.5em;
+    }
+}
+
+/*TABLETS*/
+@media (max-width: 1024px) {
+    #profile_card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 1em;
+    }
+
+    #imagenDePerfil {
+        width: 8em;
+    }
+
+    #datosDePerfil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #userData{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #userData h4 {
+        text-align: center;
+    }
+
+    #tituloDeUsuario{
+        display: flex;
+        align-items: center;
+    }
+
+    #muestraLogros{
+        margin-top: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+    }
+
+    #botonesLadoDerecho{
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    #botonesLadoDerecho div{
+        display: flex;
+        gap: 1em;
+    }
+
+    #botonesLadoDerecho a{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenido_pYa{
+        flex-direction: column; /* deja columna en mobile */
+        padding: 0 1em; /* padding reducido */
+        padding-bottom: 1em;
+        gap: 0.5em;
+    }
+
+    .progresoTema,
+    .cajaDeActividad {
+        width: 100%;
+    }
+
+    .tituloDeSeccion{
+        padding: 1em 2em
+    }
+    #contenidoDeResumenGeneral{
+        padding: 0 5em;
+        padding-bottom: 1.5em;
+        display: flex;
+        flex-direction: row wrap; /* o row wrap si querés que se ajusten */
+        flex-wrap: wrap;
+        gap: 0.5em;
+        padding: 1em; /* padding reducido */
+    }
+
+    .cajasDeTextoResumen {
+        flex: 1 1 45%; /* ancho flexible, se adapta al contenedor */
+        margin-bottom: 0.5em;
+    }
 }
