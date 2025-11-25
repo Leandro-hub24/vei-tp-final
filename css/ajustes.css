@@ -243,7 +243,6 @@ main {
     }
     .editarDatos2 {
         display: flex;
-        width: 100%;
         padding: 0;
     }
     .divDeForm {
